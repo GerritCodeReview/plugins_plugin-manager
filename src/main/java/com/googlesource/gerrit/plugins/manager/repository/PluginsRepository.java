@@ -11,22 +11,14 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-package com.googlesource.gerrit.plugins.manager;
 
-import com.google.inject.servlet.ServletModule;
+package com.googlesource.gerrit.plugins.manager.repository;
 
-import com.googlesource.gerrit.plugins.manager.repository.JenkinsCiPluginsRepository;
-import com.googlesource.gerrit.plugins.manager.repository.PluginsRepository;
+import java.io.IOException;
+import java.util.List;
 
-public class WebModule extends ServletModule {
+public interface PluginsRepository {
 
-  @Override
-  protected void configureServlets() {
-    bind(AvailablePluginsCollection.class);
-    bind(PluginsRepository.class).to(JenkinsCiPluginsRepository.class);
+  List<PluginInfo> list(String gerritVersion) throws IOException;
 
-    serve("/available*").with(PluginManagerRestApiServlet.class);
-
-    filterRegex(".*\\.js").through(XAuthFilter.class);
-  }
 }
