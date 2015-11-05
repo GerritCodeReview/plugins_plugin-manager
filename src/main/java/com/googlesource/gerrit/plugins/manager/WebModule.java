@@ -13,18 +13,32 @@
 // limitations under the License.
 package com.googlesource.gerrit.plugins.manager;
 
-import com.google.gerrit.extensions.restapi.RestApiModule;
 import com.google.inject.servlet.ServletModule;
+
+import com.googlesource.gerrit.plugins.manager.repository.JenkinsCiPluginsRepository;
+import com.googlesource.gerrit.plugins.manager.repository.PluginsRepository;
 
 public class WebModule extends ServletModule {
 
   @Override
   protected void configureServlets() {
-    install(new RestApiModule() {
-      @Override
-      protected void configure() {
-        filterRegex(".*\\.js").through(XAuthFilter.class);
-      }
-    });
+//    install(new RestApiModule() {
+//      @Override
+//      protected void configure() {
+//        install(new RestApiModule() {
+//          @Override
+//          protected void configure() {
+//            get(PLUGIN_KIND, "available").to(ListAvailablePlugins.class);
+//          }
+//        });
+//      }
+//    });
+
+    bind(AvailablePluginsCollection.class);
+    bind(PluginsRepository.class).to(JenkinsCiPluginsRepository.class);
+
+    serve("/available*").with(PluginManagerRestApiServlet.class);
+
+    filterRegex(".*\\.js").through(XAuthFilter.class);
   }
 }
