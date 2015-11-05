@@ -100,7 +100,7 @@ public class TokenReplaceOutputStream extends ServletOutputStream {
   }
 
 
-  public void setWriteListener(WriteListener writeListener) {
+  public void setWriteListener(@SuppressWarnings("unused") WriteListener writeListener) {
   }
 
   public boolean isReady() {
