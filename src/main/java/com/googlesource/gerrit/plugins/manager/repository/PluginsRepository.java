@@ -15,10 +15,10 @@
 package com.googlesource.gerrit.plugins.manager.repository;
 
 import java.io.IOException;
-import java.util.List;
+import java.util.Collection;
 
 public interface PluginsRepository {
 
-  List<PluginInfo> list(String gerritVersion) throws IOException;
+  Collection<PluginInfo> list(String gerritVersion) throws IOException;
 
 }

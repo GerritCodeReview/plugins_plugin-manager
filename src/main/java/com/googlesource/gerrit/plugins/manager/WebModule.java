@@ -40,5 +40,7 @@ public class WebModule extends ServletModule {
     serve("/available*").with(PluginManagerRestApiServlet.class);
 
     filterRegex(".*\\.js").through(XAuthFilter.class);
+
+    filterRegex(".*\\.js").through(XAuthInjectFilter.class);
   }
 }

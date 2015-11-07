@@ -1,0 +1,24 @@
+.inprogress {
+	background-image: url("../images/spinner-24px.gif");
+	background-repeat: no-repeat;
+	background-position-y: 7px;
+}
+
+.hidden {
+	display: none;
+}
+ h5 { 
+ 	margin: 0px;
+ }
+ 
+ td {
+ 	height: 40px;
+ }
+ 
+ .col-md-6 {
+ 	width: 
+ }
+ 
+.main {
+	margin-top: 51px;
+ }

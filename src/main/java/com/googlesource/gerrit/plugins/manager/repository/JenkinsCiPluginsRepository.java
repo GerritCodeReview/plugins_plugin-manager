@@ -119,7 +119,12 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
     }
 
     SmartJson artifactJson = SmartJson.of(artifacts.get(0));
-    String pluginFileName = artifactJson.getString("fileName");
+    String pluginPath = artifactJson.getString("relativePath");
+    String[] pluginPathParts = pluginPath.split("/");
+    String pluginName = pluginPathParts[pluginPathParts.length-2];
+    String pluginUrl =
+        String.format("%s/artifact/%s", buildExecution.getString("url"),
+            pluginPath);
 
     String pluginVersion = "";
     for (JsonElement elem : buildExecution.get("actions").get()
@@ -133,6 +138,7 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
       }
     }
 
-    return Optional.of(new PluginInfo(pluginFileName, pluginVersion));
+    return Optional
+        .of(new PluginInfo(pluginName, pluginVersion, pluginUrl));
   }
 }
