@@ -21,21 +21,22 @@ import com.google.inject.name.Named;
 import com.googlesource.gerrit.plugins.manager.PluginsCentralLoader.ListKey;
 import com.googlesource.gerrit.plugins.manager.repository.PluginInfo;
 
-import java.util.List;
+import java.util.Collection;
 import java.util.concurrent.ExecutionException;
 
 public class PluginsCentralCache {
 
-  private final LoadingCache<ListKey, List<PluginInfo>> pluginsCache;
+  private final LoadingCache<ListKey, Collection<PluginInfo>> pluginsCache;
 
   public static final String PLUGINS_LIST_CACHE_NAME = "plugins_list";
 
   @Inject
-  public PluginsCentralCache(@Named(PLUGINS_LIST_CACHE_NAME) LoadingCache<ListKey, List<PluginInfo>> pluginsCache) {
+  public PluginsCentralCache(
+      @Named(PLUGINS_LIST_CACHE_NAME) LoadingCache<ListKey, Collection<PluginInfo>> pluginsCache) {
     this.pluginsCache = pluginsCache;
   }
 
-  public List<PluginInfo> availablePlugins() throws ExecutionException {
+  public Collection<PluginInfo> availablePlugins() throws ExecutionException {
     return pluginsCache.get(ListKey.ALL);
   }
 }

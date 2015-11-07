@@ -24,7 +24,7 @@ import com.googlesource.gerrit.plugins.manager.repository.JenkinsCiPluginsReposi
 import com.googlesource.gerrit.plugins.manager.repository.PluginInfo;
 import com.googlesource.gerrit.plugins.manager.repository.PluginsRepository;
 
-import java.util.List;
+import java.util.Collection;
 import java.util.concurrent.TimeUnit;
 
 public class WebModule extends ServletModule {
@@ -35,7 +35,7 @@ public class WebModule extends ServletModule {
       @Override
       protected void configure() {
         cache(PluginsCentralCache.PLUGINS_LIST_CACHE_NAME, ListKey.class,
-            new TypeLiteral<List<PluginInfo>>() {}).expireAfterWrite(1,
+            new TypeLiteral<Collection<PluginInfo>>() {}).expireAfterWrite(1,
             TimeUnit.HOURS).loader(PluginsCentralLoader.class);
       }
     });
