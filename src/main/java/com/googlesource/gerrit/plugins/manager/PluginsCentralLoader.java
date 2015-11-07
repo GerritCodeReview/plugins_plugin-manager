@@ -22,10 +22,12 @@ import com.googlesource.gerrit.plugins.manager.repository.PluginInfo;
 import com.googlesource.gerrit.plugins.manager.repository.PluginsRepository;
 
 import java.io.IOException;
-import java.util.List;
+import java.util.Collection;
 
 @Singleton
 public class PluginsCentralLoader {
+
+  private static final String GERRIT_VERSION = Version.getVersion();
 
   private final PluginsRepository repository;
 
@@ -34,8 +36,7 @@ public class PluginsCentralLoader {
     this.repository = repository;
   }
 
-  public List<PluginInfo> availablePlugins() throws IOException {
-    return repository.list(Version.getVersion());
+  public Collection<PluginInfo> availablePlugins() throws IOException {
+    return repository.list(GERRIT_VERSION);
   }
-
 }
