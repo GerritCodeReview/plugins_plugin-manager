@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "76800614_67507209",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/TokenReplaceOutputStream.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-11-08T23:18:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "76800614_c70bde37",
+      "revId": "af08924ff1908b882eeb05ada8d6650c5a476570",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "76800614_e708e23d",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/TokenReplaceOutputStream.java",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "967d7aef_a86a3bc0",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/TokenReplaceOutputStream.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-11-08T23:18:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "76800614_e708e23d",
+      "revId": "af08924ff1908b882eeb05ada8d6650c5a476570",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "967d7aef_8898173a",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/XAuthFilter.java",
         "patchSetId": 1
@@ -47,6 +83,30 @@
       "writtenOn": "2015-11-08T03:59:50Z",
       "side": 1,
       "message": "remove?",
+      "range": {
+        "startLine": 79,
+        "startChar": 10,
+        "endLine": 79,
+        "endChar": 44
+      },
+      "revId": "af08924ff1908b882eeb05ada8d6650c5a476570",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "76800614_27467a56",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/XAuthFilter.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-11-08T23:18:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "967d7aef_8898173a",
       "range": {
         "startLine": 79,
         "startChar": 10,
