@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "76800614_c70bde37",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/TokenReplaceOutputStream.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-11-08T03:59:50Z",
+      "side": 1,
+      "message": "nit: extra blank line",
+      "revId": "af08924ff1908b882eeb05ada8d6650c5a476570",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "76800614_e708e23d",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/TokenReplaceOutputStream.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-11-08T03:59:50Z",
+      "side": 1,
+      "message": "nit: extra blank line",
+      "revId": "af08924ff1908b882eeb05ada8d6650c5a476570",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "967d7aef_8898173a",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/XAuthFilter.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-11-08T03:59:50Z",
+      "side": 1,
+      "message": "remove?",
+      "range": {
+        "startLine": 79,
+        "startChar": 10,
+        "endLine": 79,
+        "endChar": 44
+      },
+      "revId": "af08924ff1908b882eeb05ada8d6650c5a476570",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
