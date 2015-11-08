@@ -1,0 +1,291 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "76800614_a7e7cad0",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/AvailablePluginsCollection.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-11-08T03:58:16Z",
+      "side": 1,
+      "message": "2015",
+      "range": {
+        "startLine": 1,
+        "startChar": 17,
+        "endLine": 1,
+        "endChar": 21
+      },
+      "revId": "e8d48c6fb261fae810fcc0ae5081981b1c18334c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "967d7aef_e808b33d",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/AvailablePluginsCollection.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-11-08T03:58:16Z",
+      "side": 1,
+      "message": "nit: wrap this line",
+      "revId": "e8d48c6fb261fae810fcc0ae5081981b1c18334c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "76800614_c7f4be80",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/AvailablePluginsCollection.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-11-08T03:58:16Z",
+      "side": 1,
+      "message": "Is this the appropriate exception for \"not supported\"?",
+      "range": {
+        "startLine": 64,
+        "startChar": 14,
+        "endLine": 64,
+        "endChar": 38
+      },
+      "revId": "e8d48c6fb261fae810fcc0ae5081981b1c18334c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "967d7aef_08a50776",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/GerritVersionBranch.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-11-08T03:58:16Z",
+      "side": 1,
+      "message": "Add a test for this method?",
+      "range": {
+        "startLine": 21,
+        "startChar": 2,
+        "endLine": 42,
+        "endChar": 3
+      },
+      "revId": "e8d48c6fb261fae810fcc0ae5081981b1c18334c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "967d7aef_28aacb46",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/ListAvailablePlugins.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-11-08T03:58:16Z",
+      "side": 1,
+      "message": "2015",
+      "range": {
+        "startLine": 1,
+        "startChar": 17,
+        "endLine": 1,
+        "endChar": 21
+      },
+      "revId": "e8d48c6fb261fae810fcc0ae5081981b1c18334c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "76800614_e7f1c28d",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/ListAvailablePlugins.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-11-08T03:58:16Z",
+      "side": 1,
+      "message": "Replace this with a log?",
+      "range": {
+        "startLine": 57,
+        "startChar": 6,
+        "endLine": 58,
+        "endChar": 26
+      },
+      "revId": "e8d48c6fb261fae810fcc0ae5081981b1c18334c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "76800614_07fed65d",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/ListAvailablePlugins.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-11-08T03:58:16Z",
+      "side": 1,
+      "message": "wrong indentation",
+      "range": {
+        "startLine": 69,
+        "startChar": 0,
+        "endLine": 69,
+        "endChar": 8
+      },
+      "revId": "e8d48c6fb261fae810fcc0ae5081981b1c18334c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "967d7aef_48afff55",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/ListAvailablePlugins.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-11-08T03:58:16Z",
+      "side": 1,
+      "message": "wrong indentation",
+      "range": {
+        "startLine": 72,
+        "startChar": 0,
+        "endLine": 72,
+        "endChar": 6
+      },
+      "revId": "e8d48c6fb261fae810fcc0ae5081981b1c18334c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "967d7aef_68b4c3a9",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/PluginManagerRestApiServlet.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-11-08T03:58:16Z",
+      "side": 1,
+      "message": "nit: should be declared at the top of the class.",
+      "revId": "e8d48c6fb261fae810fcc0ae5081981b1c18334c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "76800614_2703da26",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/WebModule.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-11-08T03:58:16Z",
+      "side": 1,
+      "message": "remove this?",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 9
+      },
+      "revId": "e8d48c6fb261fae810fcc0ae5081981b1c18334c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "76800614_67fdd25d",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepository.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-11-08T03:58:16Z",
+      "side": 1,
+      "message": "May be worth making this configurable later.",
+      "range": {
+        "startLine": 43,
+        "startChar": 30,
+        "endLine": 43,
+        "endChar": 80
+      },
+      "revId": "e8d48c6fb261fae810fcc0ae5081981b1c18334c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "76800614_47f8ce6e",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepository.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-11-08T03:58:16Z",
+      "side": 1,
+      "message": "?",
+      "range": {
+        "startLine": 90,
+        "startChar": 2,
+        "endLine": 90,
+        "endChar": 4
+      },
+      "revId": "e8d48c6fb261fae810fcc0ae5081981b1c18334c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "76800614_8711e66d",
+        "filename": "src/main/resources/static/js/plugin-manager.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-11-08T03:58:16Z",
+      "side": 1,
+      "message": "whitespace",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 6
+      },
+      "revId": "e8d48c6fb261fae810fcc0ae5081981b1c18334c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
