@@ -21,12 +21,19 @@ import com.google.inject.Singleton;
 import com.googlesource.gerrit.plugins.manager.repository.PluginInfo;
 import com.googlesource.gerrit.plugins.manager.repository.PluginsRepository;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 @Singleton
 public class PluginsCentralLoader {
-
+  private static Logger log = LoggerFactory
+      .getLogger(PluginsCentralLoader.class);
   private static final String GERRIT_VERSION = Version.getVersion();
 
   private final PluginsRepository repository;
@@ -36,7 +43,12 @@ public class PluginsCentralLoader {
     this.repository = repository;
   }
 
-  public Collection<PluginInfo> availablePlugins() throws IOException {
-    return repository.list(GERRIT_VERSION);
+  public List<PluginInfo> availablePlugins() {
+    try {
+      return new ArrayList<>(repository.list(GERRIT_VERSION));
+    } catch (IOException e) {
+      log.error("Unable to retrieve plugins list from repository", e);
+      return Collections.emptyList();
+    }
   }
 }

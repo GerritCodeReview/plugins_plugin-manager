@@ -51,14 +51,7 @@ public class ListAvailablePlugins implements RestReadView<TopLevelResource> {
 
   public JsonElement display() {
     Map<String, PluginInfo> output = Maps.newTreeMap();
-    List<PluginInfo> plugins;
-    try {
-      plugins = new ArrayList<>(loader.availablePlugins());
-    } catch (IOException e) {
-      // FIXME Auto-generated catch block
-      e.printStackTrace();
-      return null;
-    }
+    List<PluginInfo> plugins = loader.availablePlugins();
     Collections.sort(plugins, new Comparator<PluginInfo>() {
       @Override
       public int compare(PluginInfo a, PluginInfo b) {
