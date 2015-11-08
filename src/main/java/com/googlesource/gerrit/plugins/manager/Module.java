@@ -14,14 +14,23 @@
 
 package com.googlesource.gerrit.plugins.manager;
 
+import com.google.gerrit.extensions.events.LifecycleListener;
 import com.google.gerrit.extensions.registration.DynamicSet;
 import com.google.gerrit.extensions.webui.TopMenu;
 import com.google.inject.AbstractModule;
+import com.google.inject.internal.UniqueAnnotations;
+
+import com.googlesource.gerrit.plugins.manager.repository.JenkinsCiPluginsRepository;
+import com.googlesource.gerrit.plugins.manager.repository.PluginsRepository;
 
 public class Module extends AbstractModule {
 
   @Override
   protected void configure() {
     DynamicSet.bind(binder(), TopMenu.class).to(PluginManagerTopMenu.class);
+
+    bind(PluginsRepository.class).to(JenkinsCiPluginsRepository.class);
+    bind(LifecycleListener.class).annotatedWith(UniqueAnnotations.create()).to(
+        OnStartStop.class);
   }
 }

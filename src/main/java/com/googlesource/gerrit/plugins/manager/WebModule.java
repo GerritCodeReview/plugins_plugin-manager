@@ -35,7 +35,6 @@ public class WebModule extends ServletModule {
 //    });
 
     bind(AvailablePluginsCollection.class);
-    bind(PluginsRepository.class).to(JenkinsCiPluginsRepository.class);
 
     serve("/available*").with(PluginManagerRestApiServlet.class);
 
