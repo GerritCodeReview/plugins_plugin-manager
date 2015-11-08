@@ -86,6 +86,8 @@ public class XAuthFilter implements Filter {
               "@X-Gerrit-Auth".getBytes(), gerritAuth.getBytes());
         }
       };
+
+      httpResp.setHeader("Cache-Control", "private, no-cache");
     }
 
     chain.doFilter(req, httpResp);
