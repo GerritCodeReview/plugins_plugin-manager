@@ -25,14 +25,10 @@ var app = angular.module('PluginManager', []).controller(
         $http.get('/plugins/?all', plugins.httpConfig).then(
             function successCallback(response) {
               plugins.list = response.data;
-            }, function errorCallback(response) {
-            });
-      }
-
-      $scope.refreshAvailable = function() {
-        $http.get('/plugins/plugin-manager/available', plugins.httpConfig).then(
-            function successCallback(response) {
-              plugins.available = response.data;
+              $.each( plugins.list, function(id, props) {
+                var escapedVersion = props.version.replace(/\./g, "\\.");
+                $("tr#" + id + "-" + escapedVersion).addClass("hidden");
+              });
             }, function errorCallback(response) {
             });
       }
@@ -46,15 +42,19 @@ var app = angular.module('PluginManager', []).controller(
                 function successCallback(response) {
                   $("span#installing-" + id).addClass("hidden");
                   $("span#installed-" + id).removeClass("hidden");
-                  $scope.refreshInstalled();
             }, function errorCallback(response) {
               $("span#installing-" + id).addClass("hidden");
               $("span#failed-" + id).removeClass("hidden");
             });
       }
       
-      $scope.refreshInstalled();
-      $scope.refreshAvailable();
+      $http.get('/plugins/plugin-manager/available', plugins.httpConfig).then(
+          function successCallback(response) {
+            plugins.available = response.data;
+            $scope.refreshInstalled();
+          }, function errorCallback(response) {
+          });
+      
     });
 
 app.config(function($httpProvider) {
