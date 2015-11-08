@@ -14,36 +14,28 @@
 
 package com.googlesource.gerrit.plugins.manager;
 
-import com.google.common.cache.CacheLoader;
-import com.google.gerrit.common.Version;
+import com.google.common.cache.LoadingCache;
 import com.google.inject.Inject;
-import com.google.inject.Singleton;
+import com.google.inject.name.Named;
 
 import com.googlesource.gerrit.plugins.manager.PluginsCentralLoader.ListKey;
 import com.googlesource.gerrit.plugins.manager.repository.PluginInfo;
-import com.googlesource.gerrit.plugins.manager.repository.PluginsRepository;
 
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
-@Singleton
-public class PluginsCentralLoader extends
-    CacheLoader<ListKey, List<PluginInfo>> {
+public class PluginsCentralCache {
 
-  public static class ListKey {
-    static final ListKey ALL = new ListKey();
+  private final LoadingCache<ListKey, List<PluginInfo>> pluginsCache;
 
-    private ListKey() {}
-  }
-
-  private final PluginsRepository repository;
+  public static final String PLUGINS_LIST_CACHE_NAME = "plugins_list";
 
   @Inject
-  public PluginsCentralLoader(PluginsRepository repository) {
-    this.repository = repository;
+  public PluginsCentralCache(@Named(PLUGINS_LIST_CACHE_NAME) LoadingCache<ListKey, List<PluginInfo>> pluginsCache) {
+    this.pluginsCache = pluginsCache;
   }
 
-  @Override
-  public List<PluginInfo> load(ListKey all) throws Exception {
-    return repository.list(Version.getVersion());
+  public List<PluginInfo> availablePlugins() throws ExecutionException {
+    return pluginsCache.get(ListKey.ALL);
   }
 }

@@ -13,17 +13,39 @@
 // limitations under the License.
 package com.googlesource.gerrit.plugins.manager;
 
+import com.google.gerrit.extensions.events.LifecycleListener;
+import com.google.gerrit.server.cache.CacheModule;
+import com.google.inject.TypeLiteral;
+import com.google.inject.internal.UniqueAnnotations;
 import com.google.inject.servlet.ServletModule;
 
+import com.googlesource.gerrit.plugins.manager.PluginsCentralLoader.ListKey;
 import com.googlesource.gerrit.plugins.manager.repository.JenkinsCiPluginsRepository;
+import com.googlesource.gerrit.plugins.manager.repository.PluginInfo;
 import com.googlesource.gerrit.plugins.manager.repository.PluginsRepository;
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class WebModule extends ServletModule {
 
   @Override
   protected void configureServlets() {
-    bind(AvailablePluginsCollection.class);
+    install(new CacheModule() {
+      @Override
+      protected void configure() {
+        cache(PluginsCentralCache.PLUGINS_LIST_CACHE_NAME, ListKey.class,
+            new TypeLiteral<List<PluginInfo>>() {}).expireAfterWrite(1,
+            TimeUnit.HOURS).loader(PluginsCentralLoader.class);
+      }
+    });
+    bind(PluginsCentralCache.class);
+
     bind(PluginsRepository.class).to(JenkinsCiPluginsRepository.class);
+    bind(LifecycleListener.class).annotatedWith(UniqueAnnotations.create()).to(
+        OnStartStop.class);
+
+    bind(AvailablePluginsCollection.class);
 
     serve("/available*").with(PluginManagerRestApiServlet.class);
 
