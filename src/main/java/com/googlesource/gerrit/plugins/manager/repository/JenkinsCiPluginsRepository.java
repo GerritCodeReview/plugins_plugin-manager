@@ -32,6 +32,7 @@ import org.slf4j.LoggerFactory;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 @Singleton
@@ -43,6 +44,8 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
   private static final String gerritCiUrl = "https://gerrit-ci.gerritforge.com";
 
   private static final Optional<PluginInfo> noPluginInfo = Optional.absent();
+
+  private HashMap<String, List<PluginInfo>> cache = new HashMap<>();
 
   static class View {
     String name;
@@ -64,6 +67,15 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
 
   @Override
   public List<PluginInfo> list(String gerritVersion) throws IOException {
+    List<PluginInfo> list = cache.get(gerritVersion);
+    if(list == null) {
+      list = getList(gerritVersion);
+      cache.put(gerritVersion, list);
+    }
+    return list;
+  }
+
+  private List<PluginInfo> getList(String gerritVersion) throws IOException {
     SmartGson gson = gsonProvider.get();
     String viewName = "Plugins-" + GerritVersionBranch.getBranch(gerritVersion);
     List<PluginInfo> plugins = new ArrayList<>();
