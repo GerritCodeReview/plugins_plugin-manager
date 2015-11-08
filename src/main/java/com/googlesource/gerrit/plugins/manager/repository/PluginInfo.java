@@ -15,18 +15,19 @@
 package com.googlesource.gerrit.plugins.manager.repository;
 
 import com.google.gerrit.extensions.restapi.Url;
-import com.google.gerrit.server.plugins.Plugin;
 
 public class PluginInfo {
   public final String id;
   public final String name;
   public final String version;
+  public final String sha1;
   public final String url;
 
-  public PluginInfo(String name, String version, String url) {
+  public PluginInfo(String name, String version, String sha1, String url) {
     this.id = Url.encode(name);
     this.name = name;
     this.version = version;
+    this.sha1 = sha1;
     this.url = url;
   }
 }

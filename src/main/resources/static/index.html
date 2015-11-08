@@ -20,33 +20,32 @@
         </div>
     </nav>
     <div class="container main" role="main" ng-controller="LoadInstalledPlugins as plugins">
-        <div class="col-md-6">
+        <div class="col-md-5">
             <h2>Loaded</h2>
             <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>Plugin Name</th>
                         <th>Version</th>
-                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr ng-repeat="(key, prop) in plugins.list">
                         <td>{{key}}</td>
                         <td>{{prop.version}}</td>
-                        <td></td>
                     </tr>
                 </tbody>
             </table>
         </div>
     
-        <div class="col-md-6">
+        <div class="col-md-7">
             <h2>Available</h2>
             <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>Plugin Name</th>
-                        <th>SHA-1</th>
+                        <th>Version</th>
+                        <th>SHA1</th>
                         <th>Install</th>
                     </tr>
                 </thead>
@@ -54,6 +53,7 @@
                     <tr id="{{key}}" ng-repeat="(key, prop) in plugins.available">
                         <td>{{key}}</td>
                         <td>{{prop.version}}</td>
+                        <td>{{prop.sha1}}</td>
                         <td>
                             <h5>
                             <span id="installing-{{key}}" class="label label-default hidden">Installing</span>
