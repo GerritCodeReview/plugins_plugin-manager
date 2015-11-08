@@ -1,0 +1,124 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "967d7aef_8811f76d",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/XAuthInjectFilter.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-11-08T03:49:48Z",
+      "side": 1,
+      "message": "nit: wrap this line",
+      "revId": "048a7755630231c35a5bcbcf5430c80c805f6ec2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "76800614_27dcba07",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/XAuthInjectFilter.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-11-08T03:49:48Z",
+      "side": 1,
+      "message": "private final?",
+      "range": {
+        "startLine": 43,
+        "startChar": 2,
+        "endLine": 43,
+        "endChar": 9
+      },
+      "revId": "048a7755630231c35a5bcbcf5430c80c805f6ec2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "967d7aef_68fda35d",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/PluginInfo.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-11-08T03:49:48Z",
+      "side": 1,
+      "message": "This import is unused.",
+      "revId": "048a7755630231c35a5bcbcf5430c80c805f6ec2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "967d7aef_c80bef37",
+        "filename": "src/main/resources/static/css/style.css",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-11-08T03:49:48Z",
+      "side": 1,
+      "message": "missing copyright and license header",
+      "revId": "048a7755630231c35a5bcbcf5430c80c805f6ec2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "76800614_47e1aebe",
+        "filename": "src/main/resources/static/css/style.css",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-11-08T03:49:48Z",
+      "side": 1,
+      "message": "tabs",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 1
+      },
+      "revId": "048a7755630231c35a5bcbcf5430c80c805f6ec2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "967d7aef_a80ebb48",
+        "filename": "src/main/resources/static/css/style.css",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-11-08T03:49:48Z",
+      "side": 1,
+      "message": "trailing whitespace.  also below.",
+      "range": {
+        "startLine": 10,
+        "startChar": 5,
+        "endLine": 10,
+        "endChar": 6
+      },
+      "revId": "048a7755630231c35a5bcbcf5430c80c805f6ec2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
