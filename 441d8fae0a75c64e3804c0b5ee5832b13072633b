@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a07dd4ee_48437f96",
+        "filename": "src/main/resources/static/css/style.css",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1015513
+      },
+      "writtenOn": "2015-12-08T10:46:09Z",
+      "side": 1,
+      "message": "Let\u0027s have a blank line before this one. \"h5\" should start in first column. Trailing whitespace.",
+      "revId": "441d8fae0a75c64e3804c0b5ee5832b13072633b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8080d014_c703de50",
+        "filename": "src/main/resources/static/css/style.css",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1015513
+      },
+      "writtenOn": "2015-12-08T10:46:09Z",
+      "side": 1,
+      "message": "Trailing whitespace.",
+      "revId": "441d8fae0a75c64e3804c0b5ee5832b13072633b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8080d014_a706ea61",
+        "filename": "src/main/resources/static/css/style.css",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1015513
+      },
+      "writtenOn": "2015-12-08T10:46:09Z",
+      "side": 1,
+      "message": "\"td\" should start in first column.",
+      "revId": "441d8fae0a75c64e3804c0b5ee5832b13072633b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a07dd4ee_283e4b0b",
+        "filename": "src/main/resources/static/css/style.css",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1015513
+      },
+      "writtenOn": "2015-12-08T10:46:09Z",
+      "side": 1,
+      "message": "Trailing whitespace.",
+      "revId": "441d8fae0a75c64e3804c0b5ee5832b13072633b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8080d014_8709e676",
+        "filename": "src/main/resources/static/css/style.css",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1015513
+      },
+      "writtenOn": "2015-12-08T10:46:09Z",
+      "side": 1,
+      "message": "The actual with value is missing.",
+      "revId": "441d8fae0a75c64e3804c0b5ee5832b13072633b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a07dd4ee_08398722",
+        "filename": "src/main/resources/static/css/style.css",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1015513
+      },
+      "writtenOn": "2015-12-08T10:46:09Z",
+      "side": 1,
+      "message": "Trailing whitespace.",
+      "revId": "441d8fae0a75c64e3804c0b5ee5832b13072633b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
