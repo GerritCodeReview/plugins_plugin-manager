@@ -1,0 +1,95 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6af49b02_1e502d5a",
+        "filename": "src/main/resources/static/index.html",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1015513
+      },
+      "writtenOn": "2016-01-06T09:13:41Z",
+      "side": 1,
+      "message": "Maybe remove this empty line to keep the head-tag together?",
+      "revId": "20e5f03d6b8372c01db429e43ed096d02437c32e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4aefd732_3d040f5d",
+        "filename": "src/main/resources/static/index.html",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1015513
+      },
+      "writtenOn": "2016-01-06T09:13:41Z",
+      "side": 1,
+      "message": "These lines should start at the first column.",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 8
+      },
+      "revId": "20e5f03d6b8372c01db429e43ed096d02437c32e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4aefd732_1d01534d",
+        "filename": "src/main/resources/static/index.html",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1015513
+      },
+      "writtenOn": "2016-01-06T09:13:41Z",
+      "side": 1,
+      "message": "I\u0027m not sure that the policy is, but in Java, JavaScript and CSS you\u0027re using 2 spaces for indentation, so we should probably do so in HTML, too.",
+      "revId": "20e5f03d6b8372c01db429e43ed096d02437c32e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6af49b02_3e53696a",
+        "filename": "src/main/resources/static/index.html",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1015513
+      },
+      "writtenOn": "2016-01-06T09:13:41Z",
+      "side": 1,
+      "message": "Please remove trailing whitespace.",
+      "revId": "20e5f03d6b8372c01db429e43ed096d02437c32e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6af49b02_7e5df171",
+        "filename": "src/main/resources/static/js/plugin-manager.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1015513
+      },
+      "writtenOn": "2016-01-06T09:13:41Z",
+      "side": 1,
+      "message": "Please remove trailing whitespace.",
+      "revId": "20e5f03d6b8372c01db429e43ed096d02437c32e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
