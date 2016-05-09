@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "b29a9c76_12060c79",
+        "filename": "src/main/resources/static/js/plugin-manager.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-05-09T08:25:04Z",
+      "side": 1,
+      "message": "so, let me explain the logic used by the editor :-)\n\nThe block starts for a the call:\n$http.get().then( ... )\n\nThe level of indentation for the .get() is 2 and for the .then() is another 2 \u003d\u003e result is 4 :-)",
+      "parentUuid": "d2bd50cb_33b948da",
+      "revId": "e1cb31d0218867d8d2a9ac4f6d68d0affe517a6e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d2bd50cb_53aec494",
         "filename": "src/main/resources/static/js/plugin-manager.js",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2016-05-09T07:38:48Z",
       "side": 1,
       "message": "Nit: Indentation seems to be messed up. Why is this 4 instead of 2 spaces?",
+      "revId": "e1cb31d0218867d8d2a9ac4f6d68d0affe517a6e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d2bd50cb_13dfec1c",
+        "filename": "src/main/resources/static/js/plugin-manager.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-05-09T08:25:04Z",
+      "side": 1,
+      "message": "Same as before.\n\nNot my fault ... Eclipse\u0027s docet :-)",
+      "parentUuid": "d2bd50cb_53aec494",
       "revId": "e1cb31d0218867d8d2a9ac4f6d68d0affe517a6e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
