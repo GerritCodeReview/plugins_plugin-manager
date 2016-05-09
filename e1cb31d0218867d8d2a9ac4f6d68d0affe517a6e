@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d2bd50cb_33b948da",
+        "filename": "src/main/resources/static/js/plugin-manager.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1015513
+      },
+      "writtenOn": "2016-05-09T07:38:48Z",
+      "side": 1,
+      "message": "Nit: Indentation seems to be messed up. Why is this 4 instead of 2 spaces?",
+      "revId": "e1cb31d0218867d8d2a9ac4f6d68d0affe517a6e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d2bd50cb_53aec494",
+        "filename": "src/main/resources/static/js/plugin-manager.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1015513
+      },
+      "writtenOn": "2016-05-09T07:38:48Z",
+      "side": 1,
+      "message": "Nit: Indentation seems to be messed up. Why is this 4 instead of 2 spaces?",
+      "revId": "e1cb31d0218867d8d2a9ac4f6d68d0affe517a6e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
