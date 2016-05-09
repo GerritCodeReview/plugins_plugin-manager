@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "b29a9c76_52009459",
+        "filename": "src/main/resources/static/js/plugin-manager.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1015513
+      },
+      "writtenOn": "2016-05-09T08:28:12Z",
+      "side": 1,
+      "message": "I believe the logic is flawed as the get() parentheses are already closed, but well, if that\u0027s how Eclipse enforces the formatting ...",
+      "parentUuid": "b29a9c76_12060c79",
+      "revId": "e1cb31d0218867d8d2a9ac4f6d68d0affe517a6e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d2bd50cb_53aec494",
         "filename": "src/main/resources/static/js/plugin-manager.js",
         "patchSetId": 6
