@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "523080cd_87bde678",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2016-05-13T07:50:42Z",
+      "side": 1,
+      "message": "Set the same topic on both changes, and then they will be submitted together :)",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 61
+      },
+      "revId": "fc4f63768568dadb308b1e12c16b9a2da22a2a6e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "523080cd_2788bad7",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/FirstWebLoginListener.java",
         "patchSetId": 1
