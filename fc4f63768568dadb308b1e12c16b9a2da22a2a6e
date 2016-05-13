@@ -220,6 +220,24 @@
     },
     {
       "key": {
+        "uuid": "97874ad1_a1085e1e",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/WebModule.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-05-13T08:13:39Z",
+      "side": 1,
+      "message": "Gosh, I had my right col set to 100 in CodeMirror :-) Fixing it now ...",
+      "parentUuid": "b2337cd6_aa4c6f90",
+      "revId": "fc4f63768568dadb308b1e12c16b9a2da22a2a6e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "523080cd_6792b205",
         "filename": "src/main/resources/static/index.html",
         "patchSetId": 1
