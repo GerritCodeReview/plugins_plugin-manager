@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "778e56f1_c016be38",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-05-13T07:53:47Z",
+      "side": 1,
+      "message": "Good point, will do :-)",
+      "parentUuid": "523080cd_87bde678",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 61
+      },
+      "revId": "fc4f63768568dadb308b1e12c16b9a2da22a2a6e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "523080cd_2788bad7",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/FirstWebLoginListener.java",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2016-05-13T07:46:53Z",
       "side": 1,
       "message": "nit: one parameter per line in @Inject annotated constructors.",
+      "range": {
+        "startLine": 43,
+        "startChar": 32,
+        "endLine": 43,
+        "endChar": 61
+      },
+      "revId": "fc4f63768568dadb308b1e12c16b9a2da22a2a6e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "97874ad1_8120baa0",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/FirstWebLoginListener.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-05-13T07:53:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "523080cd_2788bad7",
       "range": {
         "startLine": 43,
         "startChar": 32,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "97874ad1_21152e39",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/FirstWebLoginListener.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-05-13T07:53:47Z",
+      "side": 1,
+      "message": "Not really, we need to be sure that the sendRedirect() did not fail to mark the action as completed.\n\nIf we first create the file and then the sendRedirect() fails, you\u0027ll never receive the first-time plugin-manager screen anymore :-(",
+      "parentUuid": "b2337cd6_4a7f7399",
+      "range": {
+        "startLine": 61,
+        "startChar": 8,
+        "endLine": 62,
+        "endChar": 39
+      },
+      "revId": "fc4f63768568dadb308b1e12c16b9a2da22a2a6e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "523080cd_4795aeea",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/WebModule.java",
         "patchSetId": 1
@@ -88,6 +160,24 @@
     },
     {
       "key": {
+        "uuid": "778e56f1_000d8626",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/WebModule.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-05-13T07:53:47Z",
+      "side": 1,
+      "message": "Is it over 80 chars? My right red dotted line says \"it\u0027s ok\" :-)",
+      "parentUuid": "523080cd_4795aeea",
+      "revId": "fc4f63768568dadb308b1e12c16b9a2da22a2a6e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "523080cd_6792b205",
         "filename": "src/main/resources/static/index.html",
         "patchSetId": 1
@@ -99,6 +189,30 @@
       "writtenOn": "2016-05-13T07:46:53Z",
       "side": 1,
       "message": "Is this extra \u003e intentional?",
+      "range": {
+        "startLine": 25,
+        "startChar": 26,
+        "endLine": 25,
+        "endChar": 27
+      },
+      "revId": "fc4f63768568dadb308b1e12c16b9a2da22a2a6e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "778e56f1_a0193a69",
+        "filename": "src/main/resources/static/index.html",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-05-13T07:53:47Z",
+      "side": 1,
+      "message": "Yes but needed to be escaped :-) Fixed now.",
+      "parentUuid": "523080cd_6792b205",
       "range": {
         "startLine": 25,
         "startChar": 26,
