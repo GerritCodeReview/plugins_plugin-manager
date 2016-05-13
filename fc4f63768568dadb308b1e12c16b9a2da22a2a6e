@@ -143,6 +143,30 @@
     },
     {
       "key": {
+        "uuid": "b2337cd6_ca41a357",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/FirstWebLoginListener.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2016-05-13T07:59:35Z",
+      "side": 1,
+      "message": "OK, yes, that makes sense.",
+      "parentUuid": "97874ad1_21152e39",
+      "range": {
+        "startLine": 61,
+        "startChar": 8,
+        "endLine": 62,
+        "endChar": 39
+      },
+      "revId": "fc4f63768568dadb308b1e12c16b9a2da22a2a6e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "523080cd_4795aeea",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/WebModule.java",
         "patchSetId": 1
@@ -172,6 +196,24 @@
       "side": 1,
       "message": "Is it over 80 chars? My right red dotted line says \"it\u0027s ok\" :-)",
       "parentUuid": "523080cd_4795aeea",
+      "revId": "fc4f63768568dadb308b1e12c16b9a2da22a2a6e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b2337cd6_aa4c6f90",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/WebModule.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2016-05-13T07:59:35Z",
+      "side": 1,
+      "message": "For me the red line is after \"FirstWebLoginListener.c\".\n\nI have the preference set at 80; note that the default is 100 and that\u0027s what it will be showing you if you didn\u0027t explicitly set it to 80.",
+      "parentUuid": "778e56f1_000d8626",
       "revId": "fc4f63768568dadb308b1e12c16b9a2da22a2a6e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
