@@ -17,23 +17,26 @@ var app = angular.module('PluginManager', []).controller(
     function($scope, $http) {
       var plugins = this;
 
-      plugins.list = {};
+      plugins.list = [];
 
       plugins.available = {};
+
+      $scope.searchPlugin   = '';
 
       $scope.refreshInstalled = function() {
         $http.get('/plugins/?all', plugins.httpConfig).then(
             function successCallback(response) {
+              plugins.list = [];
 
               angular.forEach(response.data, function(plugin) {
-                plugins.list[plugin.id] = {
+                plugins.list.push({
                     id: plugin.id,
                     index_url: plugin.index_url,
                     version: plugin.version,
                     sha1: '',
                     url: plugin.url,
                     update_version: ''
-                }
+                });
               });
 
               $scope.refreshAvailable();
@@ -46,7 +49,15 @@ var app = angular.module('PluginManager', []).controller(
             .then(function successCallback(response) {
 
               angular.forEach(response.data, function(plugin) {
-                var currPlugin = plugins.list[plugin.id];
+                var currPlugin = undefined;
+                var currRow = undefined;
+                
+                angular.forEach(plugins.list, function(row, rowIndex) {
+                  if(row.id == plugin.id) {
+                    currPlugin = row;
+                    currRow = rowIndex;
+                  }
+                });
 
                 if(currPlugin === undefined) {
                   currPlugin = {
@@ -62,7 +73,11 @@ var app = angular.module('PluginManager', []).controller(
                 currPlugin.sha1 = plugin.sha1;
                 currPlugin.url = plugin.url;
 
-                plugins.list[plugin.id] = currPlugin;
+                if(currRow == undefined) {
+                  plugins.list.push(currPlugin);
+                } else {
+                  plugins.list[currRow] = currPlugin;
+                }
               });
               plugins.available = response.data;
             }, function errorCallback(response) {
