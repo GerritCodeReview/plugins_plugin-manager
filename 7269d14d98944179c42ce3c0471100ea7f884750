@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "57df92f2_cf56dd4b",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2016-05-17T12:22:43Z",
+      "side": 1,
+      "message": "nit: for readability I would break the line around the \u0026\u0026 operator rather than the `.`",
+      "revId": "7269d14d98944179c42ce3c0471100ea7f884750",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "57df92f2_ef53a158",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2016-05-17T12:22:43Z",
+      "side": 1,
+      "message": "nit: long line",
+      "revId": "7269d14d98944179c42ce3c0471100ea7f884750",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
