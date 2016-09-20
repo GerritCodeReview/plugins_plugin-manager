@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2bec8e3b_e865c7e5",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/TokenReplaceOutputStream.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1011624
+      },
+      "writtenOn": "2016-09-20T16:24:39Z",
+      "side": 1,
+      "message": "Fails against stable-2.13:\n/usr/src/tmp/gerrit/plugins/plugin-manager/src/main/java/com/googlesource/gerrit/plugins/manager/TokenReplaceOutputStream.java:100: error: method does not override or implement a method from a supertype",
+      "revId": "772b47a9db21d9dbf0a7eb615ae1fc39263ac8ad",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
