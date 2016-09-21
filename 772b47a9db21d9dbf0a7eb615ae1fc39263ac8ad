@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "9084cb25_cadcc302",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/TokenReplaceOutputStream.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-09-21T07:35:05Z",
+      "side": 1,
+      "message": "Has this something to do with the Java 8 update?",
+      "parentUuid": "2bec8e3b_e865c7e5",
+      "revId": "772b47a9db21d9dbf0a7eb615ae1fc39263ac8ad",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9084cb25_2acb9f48",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/TokenReplaceOutputStream.java",
         "patchSetId": 1
