@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "9084cb25_8a0c8b9d",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/TokenReplaceOutputStream.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-09-21T07:52:43Z",
+      "side": 1,
+      "message": "Yeah, sounds a good idea indeed :-)\nWill need to re-enable JDK 7 compile for all stable branches as well.",
+      "parentUuid": "9084cb25_2a155faa",
+      "revId": "772b47a9db21d9dbf0a7eb615ae1fc39263ac8ad",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9084cb25_2acb9f48",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/TokenReplaceOutputStream.java",
         "patchSetId": 1
