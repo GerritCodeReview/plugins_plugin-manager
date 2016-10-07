@@ -73,6 +73,24 @@
     },
     {
       "key": {
+        "uuid": "3ff210e7_0f8c4534",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/TokenReplaceOutputStream.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2016-10-07T10:01:56Z",
+      "side": 1,
+      "message": "I\u0027m not seeing these errors.  I\u0027m using Java 8, but it\u0027s building with source and target level 1.7 according to the buck config.",
+      "parentUuid": "9084cb25_8a0c8b9d",
+      "revId": "772b47a9db21d9dbf0a7eb615ae1fc39263ac8ad",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9084cb25_2acb9f48",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/TokenReplaceOutputStream.java",
         "patchSetId": 1
