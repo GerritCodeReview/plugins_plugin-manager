@@ -91,6 +91,24 @@
     },
     {
       "key": {
+        "uuid": "3ff210e7_cf9cfd63",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/TokenReplaceOutputStream.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2016-10-07T10:08:11Z",
+      "side": 1,
+      "message": "In the ServletOutputStream class this method and the one below are both annotated as:\n\n @since Servlet 3.1\n\nand we\u0027ve been using that since e01d9b7f20235a95070045e3231db90609e3605f which was in Gerrit 2.11.x",
+      "parentUuid": "3ff210e7_0f8c4534",
+      "revId": "772b47a9db21d9dbf0a7eb615ae1fc39263ac8ad",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9084cb25_2acb9f48",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/TokenReplaceOutputStream.java",
         "patchSetId": 1
