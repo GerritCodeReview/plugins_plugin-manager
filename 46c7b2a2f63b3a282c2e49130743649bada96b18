@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "239f651f_1c889507",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepository.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-01-11T07:49:19Z",
+      "side": 1,
+      "message": "As you\u0027re moving to Java 8\u0027s Optional with the map, can you use the lambdas as well instead of anonymous inner classes? Maybe a follow-up change?",
+      "revId": "46c7b2a2f63b3a282c2e49130743649bada96b18",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
