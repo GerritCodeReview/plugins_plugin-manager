@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3d7cae3c_1863cff3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "Jan 29, 2017 8:30:01 AM",
+      "side": 1,
+      "message": "Same comment as in its-bugzilla plugin.",
+      "revId": "d852d06fa15cff4f09a8faeec0a6add40261274d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ae111cf_77c4862a",
+        "filename": "BUILD",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "Jan 29, 2017 8:30:01 AM",
+      "side": 1,
+      "message": "Remove this. It\u0027s unused.",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 23
+      },
+      "revId": "d852d06fa15cff4f09a8faeec0a6add40261274d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a9c4f1ee_e28fe0d9",
+        "filename": "BUILD",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "Jan 29, 2017 8:30:01 AM",
+      "side": 1,
+      "message": "Remove this. It\u0027s done in the gerrit_plugin() rule.",
+      "range": {
+        "startLine": 14,
+        "startChar": 8,
+        "endLine": 14,
+        "endChar": 33
+      },
+      "revId": "d852d06fa15cff4f09a8faeec0a6add40261274d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e4d75914_2633f378",
+        "filename": "BUILD",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "Jan 29, 2017 8:30:01 AM",
+      "side": 1,
+      "message": "Remove this. It\u0027s included in plugin API.",
+      "range": {
+        "startLine": 21,
+        "startChar": 4,
+        "endLine": 24,
+        "endChar": 6
+      },
+      "revId": "d852d06fa15cff4f09a8faeec0a6add40261274d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
