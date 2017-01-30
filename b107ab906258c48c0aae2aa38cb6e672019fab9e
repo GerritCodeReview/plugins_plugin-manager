@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4225a3be_7939b4ac",
+        "filename": "BUILD",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1011624
+      },
+      "writtenOn": "Jan 30, 2017 12:46:57 AM",
+      "side": 1,
+      "message": "really? This would match the java tree as well, right?\nI think src/main/resources/**/* should be enogh here?",
+      "range": {
+        "startLine": 6,
+        "startChar": 23,
+        "endLine": 6,
+        "endChar": 37
+      },
+      "revId": "b107ab906258c48c0aae2aa38cb6e672019fab9e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
