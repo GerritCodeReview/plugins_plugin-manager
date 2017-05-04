@@ -20,6 +20,7 @@ import com.google.common.collect.FluentIterable;
 import com.google.gerrit.common.Version;
 import com.google.gerrit.server.config.SitePaths;
 import com.google.inject.Inject;
+import com.googlesource.gerrit.plugins.manager.gson.SmartGson;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -42,6 +43,7 @@ public class CorePluginsRepository implements PluginsRepository {
   private static final Logger log = LoggerFactory
       .getLogger(CorePluginsRepository.class);
   private static final String GERRIT_VERSION = Version.getVersion();
+  private static final String GERRIT_URL = "https://gerrit-review.googlesource.com";
   private final SitePaths site;
 
   @Inject
@@ -77,9 +79,11 @@ public class CorePluginsRepository implements PluginsRepository {
           Manifest manifestJarEntry = getManifestEntry(pluginJar);
           if (manifestJarEntry != null) {
             Attributes pluginAttributes = manifestJarEntry.getMainAttributes();
+            String pluginName = pluginAttributes.getValue("Gerrit-PluginName");
+            String pluginDescription = getDescription(pluginName);
             return new PluginInfo(
-                pluginAttributes.getValue("Gerrit-PluginName"),
-                "",
+                pluginName,
+                pluginDescription,
                 pluginAttributes.getValue("Implementation-Version"), "",
                 pluginUrl.toString());
           }
@@ -92,6 +96,18 @@ public class CorePluginsRepository implements PluginsRepository {
       } catch (URISyntaxException e) {
         log.error("Invalid plugin filename", e);
         return null;
+      }
+    }
+
+    private String getDescription(String pluginName) {
+      try {
+        return new SmartGson()
+            .get(GERRIT_URL + "/projects/plugins%2F" + pluginName + "/config")
+            .getOptionalString("description")
+            .orElse("");
+      } catch (IOException e) {
+        log.error("Cannot get project description for plugin " + pluginName);
+        return "";
       }
     }
 
