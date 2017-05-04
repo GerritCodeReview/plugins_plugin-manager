@@ -52,7 +52,7 @@
               </div>
             </td>
             <td>
-              <h5>
+              <h4>
                 <span id="installing-{{prop.id}}"
                   class="label label-default hidden">Installing</span>
                 <span
@@ -66,7 +66,7 @@
                 <button id="{{prop.id}}" type="button"
                   class="btn btn-xs btn-primary {{ (prop.version != '' && prop.update_version != '') ? '':'hidden' }}"
                   ng-click="install(prop.id,prop.url)">Upgrade</button>
-              </h5>
+              </h4>
             </td>
           </tr>
         </tbody>
