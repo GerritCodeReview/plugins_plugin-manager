@@ -16,6 +16,7 @@ package com.googlesource.gerrit.plugins.manager.repository;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
+import com.google.gson.JsonNull;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.google.inject.Singleton;
@@ -33,6 +34,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -154,19 +156,8 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
         String.format("%s/artifact/%s", buildExecution.getString("url"),
             pluginPath);
 
-    String pluginVersion = "";
-    Optional<SmartJson> verArtifactJson =
-        findArtifact(artifacts, ".jar-version");
-    if (verArtifactJson.isPresent()) {
-      String versionUrl =
-          String.format("%s/artifact/%s", buildExecution.getString("url"),
-              verArtifactJson.get().getString("relativePath"));
-      try (BufferedReader reader =
-          new BufferedReader(new InputStreamReader(
-              new URL(versionUrl).openStream()), 4096)) {
-        pluginVersion = reader.readLine();
-      }
-    }
+    String pluginVersion = fetchArtifact(buildExecution, artifacts, ".jar-version");
+    Optional<String> pluginDescription = fetchArtifactJson(buildExecution, artifacts, ".json").getOptionalString("description");
 
     String sha1 = "";
     for (JsonElement elem : buildExecution.get("actions").get()
@@ -180,8 +171,46 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
       }
     }
 
-    return Optional.of(new PluginInfo(pluginName, pluginVersion, sha1,
+    return Optional.of(new PluginInfo(pluginName, 
+        pluginDescription.orElse(""),
+        pluginVersion, 
+        sha1,
         pluginUrl));
+  }
+
+  private String fetchArtifact(SmartJson buildExecution, JsonArray artifacts, String artifactSuffix)
+      throws IOException, MalformedURLException {
+    StringBuilder artifactBody = new StringBuilder();
+    Optional<SmartJson> verArtifactJson =
+        findArtifact(artifacts, artifactSuffix);
+    if (verArtifactJson.isPresent()) {
+      String versionUrl =
+          String.format("%s/artifact/%s", buildExecution.getString("url"),
+              verArtifactJson.get().getString("relativePath"));
+      try (BufferedReader reader =
+          new BufferedReader(new InputStreamReader(
+              new URL(versionUrl).openStream()), 4096)) {
+        String line;
+        while((line = reader.readLine()) != null) {
+          if(artifactBody.length() > 0) {
+            artifactBody.append("\n");
+          }
+        artifactBody.append(line);
+        }
+      }
+    }
+    return artifactBody.toString();
+  }
+
+  private SmartJson fetchArtifactJson(SmartJson buildExecution, JsonArray artifacts, String artifactSuffix) throws IOException {
+    Optional<SmartJson> verArtifactJson =
+        findArtifact(artifacts, artifactSuffix);
+    if (verArtifactJson.isPresent()) {
+      return new SmartGson().get(
+          String.format("%s/artifact/%s", buildExecution.getString("url"),
+              verArtifactJson.get().getString("relativePath")));
+    }
+    return SmartJson.NULL;
   }
 
   private String fixPluginNameForMavenBuilds(String[] pluginPathParts) {
