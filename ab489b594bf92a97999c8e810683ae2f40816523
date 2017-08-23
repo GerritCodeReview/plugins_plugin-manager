@@ -22,6 +22,30 @@
       "revId": "ab489b594bf92a97999c8e810683ae2f40816523",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "62ca0c25_356f2de0",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/PluginsCentralCache.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-08-23T07:02:32Z",
+      "side": 1,
+      "message": "Yes, I would have never formatted this code in this way :-)",
+      "parentUuid": "ac007746_0b35150d",
+      "range": {
+        "startLine": 48,
+        "startChar": 8,
+        "endLine": 51,
+        "endChar": 61
+      },
+      "revId": "ab489b594bf92a97999c8e810683ae2f40816523",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
