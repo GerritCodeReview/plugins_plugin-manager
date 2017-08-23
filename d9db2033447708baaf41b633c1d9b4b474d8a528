@@ -45,6 +45,30 @@
       "revId": "d9db2033447708baaf41b633c1d9b4b474d8a528",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5fad1eae_3347d121",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/PluginManagerConfig.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-08-23T07:01:22Z",
+      "side": 1,
+      "message": "True, SRP. Let me factor this out into a new class.",
+      "parentUuid": "7d622e47_d57491dc",
+      "range": {
+        "startLine": 54,
+        "startChar": 2,
+        "endLine": 61,
+        "endChar": 3
+      },
+      "revId": "d9db2033447708baaf41b633c1d9b4b474d8a528",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
