@@ -137,6 +137,8 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
     String pluginUrl =
         String.format("%s/artifact/%s", buildExecution.get().getString("url"), pluginPath);
 
+    System.out.println(pluginUrl);
+
     Optional<String> pluginVersion =
         fetchArtifact(buildExecution.get(), artifacts.get(), ".jar-version");
     Optional<String> pluginDescription =
@@ -231,7 +233,8 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
   private Optional<SmartJson> findArtifact(JsonArray artifacts, String string) {
     for (int i = 0; i < artifacts.size(); i++) {
       SmartJson artifact = SmartJson.of(artifacts.get(i));
-      if (artifact.getString("relativePath").endsWith(string)) {
+      String path = artifact.getString("relativePath");
+      if (path.endsWith(string) && !path.endsWith("-static" + string)) {
         return Optional.of(artifact);
       }
     }
