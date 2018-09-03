@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6d3d52_50a4ec52",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepository.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-09-03T19:58:24Z",
+      "side": 1,
+      "message": "Alternative approach to filtering would be to filter out the intermediate artifacts on the Jenkins side. Right now static jars are respected as real final artifacts, e.g.: [1].\n\n* [1] https://gerrit-ci.gerritforge.com/job/plugin-reviewers-bazel-master/33//artifact/bazel-genfiles/plugins/reviewers/",
+      "range": {
+        "startLine": 235,
+        "startChar": 35,
+        "endLine": 235,
+        "endChar": 69
+      },
+      "revId": "5ac7df76593580d1018673e8fed531bc5dc88e9c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
