@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "acf6d52b_7ef47725",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/AvailablePluginsCollection.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-09-04T07:08:11Z",
+      "side": 0,
+      "message": "Is that correct adjustment to just remove that? or should I rather bind a new view that is derived from RestCreateView to do that, like it was done here: [1]?\n\n* [1] https://gerrit-review.googlesource.com/c/gerrit/+/185570/3/java/com/google/gerrit/server/plugins/InstallPlugin.java#97",
+      "range": {
+        "startLine": 61,
+        "startChar": 2,
+        "endLine": 65,
+        "endChar": 3
+      },
+      "revId": "5ac7df76593580d1018673e8fed531bc5dc88e9c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
