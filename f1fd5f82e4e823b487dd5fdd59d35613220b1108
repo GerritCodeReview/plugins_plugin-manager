@@ -81,6 +81,24 @@
       "revId": "f1fd5f82e4e823b487dd5fdd59d35613220b1108",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "052aed2c_f24d9a32",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsDescriptions.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-04-17T23:45:40Z",
+      "side": 1,
+      "message": "No, current branch is targeting master, but this change you are looking at is stable-2.16. I\u0027m working on similar change against master, where all other plugins are added as well.",
+      "parentUuid": "c9f61387_4534ca55",
+      "revId": "f1fd5f82e4e823b487dd5fdd59d35613220b1108",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
