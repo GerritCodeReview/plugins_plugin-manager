@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c86464b9_265b0475",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsDescriptions.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2019-04-17T23:28:10Z",
+      "side": 1,
+      "message": "Unrelated to this change, but this list of core plugins needs to be updated.",
+      "revId": "e8b00b41559a21ce0de68be7743acb00446cf014",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
