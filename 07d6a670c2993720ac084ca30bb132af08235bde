@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "08cc4920_fb11b8bc",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsDescriptions.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2019-04-18T01:51:17Z",
+      "side": 1,
+      "message": "gitiles is missing",
+      "revId": "07d6a670c2993720ac084ca30bb132af08235bde",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
