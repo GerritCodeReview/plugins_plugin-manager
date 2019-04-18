@@ -30,6 +30,7 @@ public class CorePluginsDescriptions {
     pluginsDescriptions.put(
         "commit-message-length-validator",
         "Plugin to validate that commit messages conform to length limits");
+    pluginsDescriptions.put("delete-project", "Provides the ability to delete a project");
     pluginsDescriptions.put("download-commands", "Adds the standard download schemes and commands");
     pluginsDescriptions.put("hooks", "Old-style fork+exec hooks");
     pluginsDescriptions.put("replication", "Copies to other servers using the Git protocol");
@@ -37,6 +38,8 @@ public class CorePluginsDescriptions {
         "reviewnotes", "Annotates merged commits using notes on refs/notes/review");
     pluginsDescriptions.put(
         "singleusergroup", "GroupBackend enabling users to be directly added to access rules");
+    pluginsDescriptions.put(
+        "webhooks", "Allows to propagate Gerrit events to remote http endpoints");
   }
 
   public Optional<String> get(String plugin) {
