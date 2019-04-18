@@ -16,6 +16,24 @@
       "revId": "07d6a670c2993720ac084ca30bb132af08235bde",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9f773476_69fc09e3",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsDescriptions.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-04-18T02:07:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "08cc4920_fb11b8bc",
+      "revId": "07d6a670c2993720ac084ca30bb132af08235bde",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
