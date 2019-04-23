@@ -14,14 +14,15 @@
 
 package com.googlesource.gerrit.plugins.manager;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 import com.google.gerrit.extensions.client.MenuItem;
 import com.google.gerrit.extensions.webui.TopMenu;
 import com.google.gerrit.server.plugins.PluginLoader;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 @Singleton
 public class PluginManagerTopMenu implements TopMenu {
