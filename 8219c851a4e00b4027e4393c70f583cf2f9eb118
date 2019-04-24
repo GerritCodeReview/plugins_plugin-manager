@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ab8df16_ad241b44",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/GerritVersionBranch.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2019-04-24T00:03:55Z",
+      "side": 1,
+      "message": "Should be 3.1.0",
+      "revId": "8219c851a4e00b4027e4393c70f583cf2f9eb118",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
