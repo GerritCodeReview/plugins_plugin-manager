@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "68f5778a_de883bfb",
+        "filename": "src/main/resources/Documentation/about.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-04-24T20:01:55Z",
+      "side": 1,
+      "message": "Optional: you said it already in config.md, but may be also clarify it here, that this URL can be customized, to avoid that users hit Ctrl+W key before they proceed to config.md and learn that this value can be in fact customized.",
+      "range": {
+        "startLine": 7,
+        "startChar": 23,
+        "endLine": 7,
+        "endChar": 38
+      },
+      "revId": "ca879d133566f59f3a57066d603e4f0cd17efff0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8551f559_bc6fcea5",
+        "filename": "src/main/resources/Documentation/config.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-04-24T20:01:55Z",
+      "side": 1,
+      "message": "Actually only relevant part is the current gerrit version. Or is the plugin would pick up the earlier version, if the right one is missing? This could be clarified in the documentation, how the algorithm actually decides which version to install.\n\nSay importer plugin is broken for years, and does not build on stable-2.16 branch. What happens if I try to install importer plugin when I\u0027m running 2.16 with plugin-manager? Would the plugin realize that there is no binary artifact available for the right gerrit release and try to install importer plugin from 2.15: [1] or wouldn\u0027t suggest this plugin to install at all?\n\n* [1] https://gerrit-ci.gerritforge.com/view/Plugins-stable-2.15/job/plugin-importer-bazel-stable-2.15",
+      "range": {
+        "startLine": 15,
+        "startChar": 8,
+        "endLine": 15,
+        "endChar": 36
+      },
+      "revId": "ca879d133566f59f3a57066d603e4f0cd17efff0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
