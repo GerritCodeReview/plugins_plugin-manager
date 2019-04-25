@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "db7b8f30_6406938e",
+        "filename": "src/main/resources/Documentation/config.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2019-04-25T07:04:07Z",
+      "side": 1,
+      "message": "this parenthesis is not closed",
+      "range": {
+        "startLine": 24,
+        "startChar": 25,
+        "endLine": 24,
+        "endChar": 26
+      },
+      "revId": "d1c2be3ae00a6712617834fbbda3a73788470eb6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3c89de36_653f41dd",
+        "filename": "src/main/resources/Documentation/config.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2019-04-25T07:04:07Z",
+      "side": 1,
+      "message": "Is there any guarantee that the last successful build actually works?  For example what if build #1 was successful, but then core changed an API and build #2 failed.  Build #1 might be installed, but may fail to load if it\u0027s installed on a Gerrit version that has the older API.",
+      "revId": "d1c2be3ae00a6712617834fbbda3a73788470eb6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
