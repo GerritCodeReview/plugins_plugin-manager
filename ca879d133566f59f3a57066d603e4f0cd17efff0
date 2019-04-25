@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "bf6bcaf1_4153da8c",
+        "filename": "src/main/resources/Documentation/about.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-04-25T06:52:39Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "68f5778a_de883bfb",
+      "range": {
+        "startLine": 7,
+        "startChar": 23,
+        "endLine": 7,
+        "endChar": 38
+      },
+      "revId": "ca879d133566f59f3a57066d603e4f0cd17efff0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8551f559_bc6fcea5",
         "filename": "src/main/resources/Documentation/config.md",
         "patchSetId": 4
@@ -45,6 +69,30 @@
       "revId": "ca879d133566f59f3a57066d603e4f0cd17efff0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3a93c413_ab948f3e",
+        "filename": "src/main/resources/Documentation/config.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-04-25T06:52:39Z",
+      "side": 1,
+      "message": "\u003e Actually only relevant part is the current gerrit version. Or is the plugin would pick up the earlier version, if the right one is missing? This could be clarified in the documentation, how the algorithm actually decides which version to install.\n\nIt is only for the current branch, because there is no guarantee that an earlier branch would even load. Will make the statement clearer.\n\n\u003e Say importer plugin is broken for years, and does not build on stable-2.16 branch. What happens if I try to install importer plugin when I\u0027m running 2.16 with plugin-manager? \n\nThe importer plugin would not be listed and not be searchable.\n\n\u003e Would the plugin realize that there is no binary artifact available for the right gerrit release and try to install importer plugin from 2.15: [1] or wouldn\u0027t suggest this plugin to install at all?\n\nThe latter: it won\u0027t be shown or installed by the plugin.",
+      "parentUuid": "8551f559_bc6fcea5",
+      "range": {
+        "startLine": 15,
+        "startChar": 8,
+        "endLine": 15,
+        "endChar": 36
+      },
+      "revId": "ca879d133566f59f3a57066d603e4f0cd17efff0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
