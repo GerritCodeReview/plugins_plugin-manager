@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5bd49ae9_27cd89a4",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsRepositoryIT.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-09-07T21:39:47Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "861349a2_106bcb5d",
+      "range": {
+        "startLine": 34,
+        "startChar": 30,
+        "endLine": 34,
+        "endChar": 32
+      },
+      "revId": "ca7051fbe4442378406ebf98f5544412c76182df",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "78006038_140a51c6",
         "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsRepositoryIT.java",
         "patchSetId": 4
@@ -36,6 +60,30 @@
       "writtenOn": "2019-09-07T21:32:44Z",
       "side": 1,
       "message": "This test is for the master branch, it should then not rely on the war from Maven central but instead on a locally built gerrit.war.",
+      "range": {
+        "startLine": 38,
+        "startChar": 30,
+        "endLine": 38,
+        "endChar": 54
+      },
+      "revId": "ca7051fbe4442378406ebf98f5544412c76182df",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e46aceba_4b56ef48",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsRepositoryIT.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-09-07T21:39:47Z",
+      "side": 1,
+      "message": "So, the question is how to pass/use the locally built gerrit.war in the same test. If we find a way how to do it, we can remove the whole Maven copy/link bits entirely.",
+      "parentUuid": "78006038_140a51c6",
       "range": {
         "startLine": 38,
         "startChar": 30,
