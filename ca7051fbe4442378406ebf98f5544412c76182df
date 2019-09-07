@@ -144,6 +144,30 @@
     },
     {
       "key": {
+        "uuid": "200c15e7_722706ae",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsRepositoryIT.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-09-07T22:37:16Z",
+      "side": 1,
+      "message": "\u003e Turns out, it is much cooler then that, Bazel rocks! We don\u0027t run the tests manually, and we don\u0027t build release.war in advance.\n\u003e \n\u003e All we do is just adding one single line to the plugin junit_test rule:\n\u003e \n\u003e   junit_tests(\n\u003e     name \u003d \"plugin_manager_tests\",\n\u003e     srcs \u003d glob([\"src/test/java/**/*.java\"]),\n\u003e     data \u003d [\"//:release.war\"],\n\u003e     [...]\n\u003e \n\u003e And the rest is Bazel black magic. What Bazel is doing, is building that test pre-requisite for us and allow us to retrieve that artifact from within the tests!\n\u003e \n\u003e Now we can merge the tests again together and run them from CI. How cool is that?\n\nOh yes, super-cool.\n\nBazel is the coolest build tool I have ever seen ... after Make of course ;-)\n\n\u003e In the same way we can start writing integration tests, like communicating with fresh built gerrit and testing say RefTable or Git Protocol V2, etc, p.p.\n\nYes, indeed.",
+      "parentUuid": "ac4aaa47_43441b7a",
+      "range": {
+        "startLine": 38,
+        "startChar": 30,
+        "endLine": 38,
+        "endChar": 54
+      },
+      "revId": "ca7051fbe4442378406ebf98f5544412c76182df",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6b67547b_c217b941",
         "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsRepositoryIT.java",
         "patchSetId": 4
