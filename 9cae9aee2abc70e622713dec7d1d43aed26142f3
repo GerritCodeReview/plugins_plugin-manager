@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ac5acb5b_cbb80a79",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsRepositoryIT.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-09-07T18:52:15Z",
+      "side": 1,
+      "message": "The reason it doesn\u0027t work is because CorePluginsRepository requires gerrit.war, but LightweightPluginDaemonTest doesn\u0027t provide it and I afraid, there is nothing we can about it.",
+      "revId": "9cae9aee2abc70e622713dec7d1d43aed26142f3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
