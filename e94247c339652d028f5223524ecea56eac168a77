@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a04e8bff_c1d5cdcc",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsRepositoryTest.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-09-09T22:30:45Z",
+      "side": 1,
+      "message": "Who is supposed to set those two environment variables? Would they be set automatically by Bazel?",
+      "range": {
+        "startLine": 52,
+        "startChar": 18,
+        "endLine": 52,
+        "endChar": 95
+      },
+      "revId": "e94247c339652d028f5223524ecea56eac168a77",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
