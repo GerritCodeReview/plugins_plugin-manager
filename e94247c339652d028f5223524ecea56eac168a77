@@ -22,6 +22,30 @@
       "revId": "e94247c339652d028f5223524ecea56eac168a77",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1e009cd0_5ec46296",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsRepositoryTest.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-09-10T05:01:16Z",
+      "side": 1,
+      "message": "Yes. And data \u003d [\"//:release\"] addition would lead to building release.war and linking it to runfiles directory.",
+      "parentUuid": "a04e8bff_c1d5cdcc",
+      "range": {
+        "startLine": 52,
+        "startChar": 18,
+        "endLine": 52,
+        "endChar": 95
+      },
+      "revId": "e94247c339652d028f5223524ecea56eac168a77",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
