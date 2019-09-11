@@ -22,6 +22,30 @@
       "revId": "7d9562b29c8ae277595a1e9c6a18c1018252cd16",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4603298e_60b29585",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-09-11T19:16:54Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "c2a38299_b9b96656",
+      "range": {
+        "startLine": 93,
+        "startChar": 2,
+        "endLine": 103,
+        "endChar": 3
+      },
+      "revId": "7d9562b29c8ae277595a1e9c6a18c1018252cd16",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
