@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "274adb5f_f96742e2",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-09-11T05:50:32Z",
+      "side": 1,
+      "message": "This should be changed to:\n\n            return new PluginInfo(\n                pluginName,\n                pluginsDescriptions.get(pluginName).orElse(\"\"),\n                pluginAttributes.getValue(\"Implementation-Version\"),\n                \"\",\n                pluginUrl.toString());",
+      "range": {
+        "startLine": 64,
+        "startChar": 0,
+        "endLine": 69,
+        "endChar": 36
+      },
+      "revId": "d0e77a2e10db593c876909072e0e3112451af55d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fa78afcb_2a154c2a",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-09-11T05:50:32Z",
+      "side": 1,
+      "message": "We should return an Optional\u003cManifest\u003e, so that the caller can use the Optiona.orElse construct",
+      "range": {
+        "startLine": 102,
+        "startChar": 11,
+        "endLine": 102,
+        "endChar": 15
+      },
+      "revId": "d0e77a2e10db593c876909072e0e3112451af55d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
