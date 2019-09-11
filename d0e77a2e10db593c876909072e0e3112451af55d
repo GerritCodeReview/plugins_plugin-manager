@@ -69,6 +69,30 @@
       "revId": "d0e77a2e10db593c876909072e0e3112451af55d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "db17b649_293a6143",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-09-11T06:25:46Z",
+      "side": 1,
+      "message": "This can be improved done in its own change? This method wasn\u0027t changed in this commit.",
+      "parentUuid": "fa78afcb_2a154c2a",
+      "range": {
+        "startLine": 102,
+        "startChar": 11,
+        "endLine": 102,
+        "endChar": 15
+      },
+      "revId": "d0e77a2e10db593c876909072e0e3112451af55d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
