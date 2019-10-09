@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5dd97937_0f08dfef",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsRepositoryTest.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-10-09T05:50:34Z",
+      "side": 1,
+      "message": "Either in this change or in follow-up this should be changed to assumption check, that this variable is passed. Note, that per definition of nature of this test it cannot be tested in Eclipse, because Eclipse doesn\u0027t build release.war. So that it\u0027s OK to skip the test with assumption violation.",
+      "range": {
+        "startLine": 54,
+        "startChar": 4,
+        "endLine": 54,
+        "endChar": 99
+      },
+      "revId": "e3248424c87a72b76f67454066e6a9df0dd5d9d8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
