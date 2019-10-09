@@ -46,6 +46,30 @@
       "revId": "58ac34bfebc787219c1e13d7cdc699e918067a0d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "490e034d_2ad15e22",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1003935
+      },
+      "writtenOn": "2019-10-09T06:37:41Z",
+      "side": 1,
+      "message": "Filed an issue for this:\nhttps://bugs.chromium.org/p/gerrit/issues/detail?id\u003d11700",
+      "parentUuid": "6522db3e_c182ae91",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 3
+      },
+      "revId": "58ac34bfebc787219c1e13d7cdc699e918067a0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
