@@ -22,6 +22,30 @@
       "revId": "58ac34bfebc787219c1e13d7cdc699e918067a0d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6522db3e_c182ae91",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1003935
+      },
+      "writtenOn": "2019-10-09T06:29:39Z",
+      "side": 1,
+      "message": "That\u0027s a bug in the commit-msg hook :(\nIt inserted it here, and I moved it down, but it seems at that moment it inserted yet another Change-Id here.",
+      "parentUuid": "a194a319_899d1190",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 3
+      },
+      "revId": "58ac34bfebc787219c1e13d7cdc699e918067a0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
