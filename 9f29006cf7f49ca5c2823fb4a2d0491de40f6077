@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "62c9a363_da443997",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/GerritVersionBranch.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-11-07T13:35:07Z",
+      "side": 1,
+      "message": "Should this be just \"3.1\", like it was in base version? There was only major.minor and not major.minor.fix version.\n\nNext question, should this be 3.2 next week after 3.1 is released?",
+      "range": {
+        "startLine": 18,
+        "startChar": 53,
+        "endLine": 18,
+        "endChar": 58
+      },
+      "revId": "9f29006cf7f49ca5c2823fb4a2d0491de40f6077",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
