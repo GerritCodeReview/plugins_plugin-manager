@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6babafcf_56198e29",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/GerritVersionBranch.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-11-07T14:02:25Z",
+      "side": 1,
+      "message": "Adapt the commit message correspondingly?",
+      "range": {
+        "startLine": 18,
+        "startChar": 53,
+        "endLine": 18,
+        "endChar": 56
+      },
+      "revId": "f7a5461df9283c2d2a2193156fb5726951ef42a1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
