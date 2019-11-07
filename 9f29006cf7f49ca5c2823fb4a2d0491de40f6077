@@ -22,6 +22,30 @@
       "revId": "9f29006cf7f49ca5c2823fb4a2d0491de40f6077",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b62ff14b_49cb0d6d",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/GerritVersionBranch.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-11-07T13:41:46Z",
+      "side": 1,
+      "message": "\u003e Should this be just \"3.1\", like it was in base version? There was only major.minor and not major.minor.fix version.\n\nAck.\n\n\u003e Next question, should this be 3.2 next week after 3.1 is released?\n\nThat\u0027s the thing: it will still be 3.1, because that\u0027s the way the \u0027master\u0027 version will still identify in terms of its version string.\n\nWe don\u0027t have a \u0027master\u0027 version label and there is no reliable way to understand if you are on master or not.\n\nP.S. This is branch stable-2.16, so it is unlikely that someone would install the plugin-manager of v2.16 on v3.1 and then even complain that isn\u0027t doing the proper thing. So I guess on stable-2.16 we\u0027re good anyway.",
+      "parentUuid": "62c9a363_da443997",
+      "range": {
+        "startLine": 18,
+        "startChar": 53,
+        "endLine": 18,
+        "endChar": 58
+      },
+      "revId": "9f29006cf7f49ca5c2823fb4a2d0491de40f6077",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
