@@ -14,7 +14,7 @@
 
 package com.googlesource.gerrit.plugins.manager;
 
-import com.google.gerrit.extensions.client.MenuItem;
+import com.google.gerrit.extensions.types.MenuItem;
 import com.google.gerrit.extensions.webui.TopMenu;
 import com.google.gerrit.server.plugins.PluginLoader;
 import com.google.inject.Inject;

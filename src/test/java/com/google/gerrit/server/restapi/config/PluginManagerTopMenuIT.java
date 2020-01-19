@@ -21,7 +21,7 @@ import com.google.gerrit.acceptance.NoHttpd;
 import com.google.gerrit.acceptance.TestPlugin;
 import com.google.gerrit.acceptance.config.GerritConfig;
 import com.google.gerrit.acceptance.testsuite.request.RequestScopeOperations;
-import com.google.gerrit.extensions.client.MenuItem;
+import com.google.gerrit.extensions.types.MenuItem;
 import com.google.gerrit.extensions.webui.TopMenu.MenuEntry;
 import com.google.gerrit.server.config.ConfigResource;
 import com.google.inject.Inject;
