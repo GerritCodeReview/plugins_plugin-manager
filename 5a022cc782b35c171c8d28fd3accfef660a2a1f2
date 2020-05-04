@@ -45,6 +45,30 @@
       "revId": "5a022cc782b35c171c8d28fd3accfef660a2a1f2",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cfc0643f_8f6c2cdd",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-04T13:02:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ddc4551b_b507a90f",
+      "range": {
+        "startLine": 22,
+        "startChar": 7,
+        "endLine": 22,
+        "endChar": 39
+      },
+      "revId": "5a022cc782b35c171c8d28fd3accfef660a2a1f2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
