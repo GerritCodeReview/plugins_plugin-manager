@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "b68aa28b_3c36f2d7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-05T00:44:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "687a3e53_a17067c8",
+      "range": {
+        "startLine": 9,
+        "startChar": 46,
+        "endLine": 9,
+        "endChar": 51
+      },
+      "revId": "5a022cc782b35c171c8d28fd3accfef660a2a1f2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ddc4551b_b507a90f",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
         "patchSetId": 1
