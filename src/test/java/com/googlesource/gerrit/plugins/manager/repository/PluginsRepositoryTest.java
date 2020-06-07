@@ -59,6 +59,7 @@ public class PluginsRepositoryTest {
     assertThat(plugins.stream().map(p -> p.name).sorted().collect(toList()))
         .containsExactlyElementsIn(GERRIT_CORE_PLUGINS)
         .inOrder();
+    assertThat(plugins.stream().map(p -> p.url).collect(toList()).get(0)).doesNotContain("\\");
   }
 
   private static String getenv(String name) {
