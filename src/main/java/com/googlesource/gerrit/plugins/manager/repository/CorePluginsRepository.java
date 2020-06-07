@@ -44,11 +44,13 @@ public class CorePluginsRepository implements PluginsRepository {
 
   private final SitePaths site;
   private final CorePluginsDescriptions pluginsDescriptions;
+  private final String gerrit_war;
 
   @Inject
   public CorePluginsRepository(SitePaths site, CorePluginsDescriptions pd) {
     this.site = site;
     this.pluginsDescriptions = pd;
+    this.gerrit_war = site.gerrit_war.toString().replace("\\", "/");
   }
 
   @Nullable
@@ -56,7 +58,7 @@ public class CorePluginsRepository implements PluginsRepository {
     try {
       Path entryName = Paths.get(entry.getName());
       URI pluginUrl =
-          new URI("jar:file:" + requireNonNull(site.gerrit_war) + "!/" + entry.getName());
+          new URI("jar:file:" + this.gerrit_war + "!/" + entry.getName());
       try (JarInputStream pluginJar = new JarInputStream(pluginUrl.toURL().openStream())) {
         return getManifestEntry(pluginJar)
             .map(
