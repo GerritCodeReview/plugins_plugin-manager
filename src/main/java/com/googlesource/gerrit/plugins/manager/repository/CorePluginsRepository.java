@@ -16,7 +16,6 @@ package com.googlesource.gerrit.plugins.manager.repository;
 
 import static com.google.common.collect.ImmutableList.toImmutableList;
 import static java.util.Comparator.comparing;
-import static java.util.Objects.requireNonNull;
 
 import com.google.common.collect.ImmutableList;
 import com.google.gerrit.common.Nullable;
@@ -44,11 +43,15 @@ public class CorePluginsRepository implements PluginsRepository {
 
   private final SitePaths site;
   private final CorePluginsDescriptions pluginsDescriptions;
+  private final String gerrit_war;
 
   @Inject
   public CorePluginsRepository(SitePaths site, CorePluginsDescriptions pd) {
     this.site = site;
     this.pluginsDescriptions = pd;
+    final String war = site.gerrit_war.toString();
+    final String sep = System.getProperty("file.separator");
+    gerrit_war = sep.equals("/") ? war : war.replace(sep, "/");
   }
 
   @Nullable
@@ -56,7 +59,7 @@ public class CorePluginsRepository implements PluginsRepository {
     try {
       Path entryName = Paths.get(entry.getName());
       URI pluginUrl =
-          new URI("jar:file:" + requireNonNull(site.gerrit_war) + "!/" + entry.getName());
+          new URI("jar:file:" + gerrit_war + "!/" + entry.getName());
       try (JarInputStream pluginJar = new JarInputStream(pluginUrl.toURL().openStream())) {
         return getManifestEntry(pluginJar)
             .map(
