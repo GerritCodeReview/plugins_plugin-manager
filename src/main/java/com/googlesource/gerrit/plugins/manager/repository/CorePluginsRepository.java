@@ -16,13 +16,14 @@ package com.googlesource.gerrit.plugins.manager.repository;
 
 import static com.google.common.collect.ImmutableList.toImmutableList;
 import static java.util.Comparator.comparing;
-import static java.util.Objects.requireNonNull;
 
+import com.google.common.annotations.VisibleForTesting;
 import com.google.common.collect.ImmutableList;
 import com.google.gerrit.common.Nullable;
 import com.google.gerrit.common.Version;
 import com.google.gerrit.server.config.SitePaths;
 import com.google.inject.Inject;
+import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -42,21 +43,27 @@ public class CorePluginsRepository implements PluginsRepository {
   private static final Logger log = LoggerFactory.getLogger(CorePluginsRepository.class);
   private static final String GERRIT_VERSION = Version.getVersion();
 
-  private final SitePaths site;
   private final CorePluginsDescriptions pluginsDescriptions;
+  private final String gerritWarUri;
+  private final Path siteGerritWar;
 
   @Inject
   public CorePluginsRepository(SitePaths site, CorePluginsDescriptions pd) {
-    this.site = site;
+    this(site.gerrit_war, site.gerrit_war.toString(), pd);
+  }
+
+  @VisibleForTesting
+  public CorePluginsRepository(Path siteGerritWar, String gerritWar, CorePluginsDescriptions pd) {
     this.pluginsDescriptions = pd;
+    this.gerritWarUri = Paths.get(gerritWar).toUri().toString();
+    this.siteGerritWar = siteGerritWar;
   }
 
   @Nullable
   private PluginInfo extractPluginInfoFromJarEntry(JarEntry entry) {
     try {
       Path entryName = Paths.get(entry.getName());
-      URI pluginUrl =
-          new URI("jar:file:" + requireNonNull(site.gerrit_war) + "!/" + entry.getName());
+      URI pluginUrl = new URI("jar:" + gerritWarUri + "!/" + entry.getName());
       try (JarInputStream pluginJar = new JarInputStream(pluginUrl.toURL().openStream())) {
         return getManifestEntry(pluginJar)
             .map(
@@ -115,12 +122,12 @@ public class CorePluginsRepository implements PluginsRepository {
       return ImmutableList.of();
     }
 
-    if (site.gerrit_war == null) {
+    if (gerritWarFile == null) {
       log.warn("Core plugins not available on non-war Gerrit distributions");
       return ImmutableList.of();
     }
 
-    try (JarFile gerritWar = new JarFile(site.gerrit_war.toFile())) {
+    try (JarFile gerritWar = new JarFile(siteGerritWar.toFile())) {
       return gerritWar.stream()
           .filter(e -> e.getName().startsWith("WEB-INF/plugins") && e.getName().endsWith(".jar"))
           .map(this::extractPluginInfoFromJarEntry)
