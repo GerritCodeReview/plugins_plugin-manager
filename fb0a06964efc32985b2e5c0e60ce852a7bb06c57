@@ -16,6 +16,46 @@
       "revId": "fb0a06964efc32985b2e5c0e60ce852a7bb06c57",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e81f6261_d081acbb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-07-01T14:38:52Z",
+      "side": 1,
+      "message": "Thanks for your fix, can you also add one validation test, so that we will be sure that this fix isn\u0027t going to be break in the future?",
+      "revId": "fb0a06964efc32985b2e5c0e60ce852a7bb06c57",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a9d5f5f7_1a573392",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-07-01T14:38:52Z",
+      "side": 1,
+      "message": "System.getProperty(\"file.separator\")",
+      "range": {
+        "startLine": 53,
+        "startChar": 57,
+        "endLine": 53,
+        "endChar": 61
+      },
+      "revId": "fb0a06964efc32985b2e5c0e60ce852a7bb06c57",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
