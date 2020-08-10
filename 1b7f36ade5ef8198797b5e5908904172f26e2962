@@ -16,6 +16,24 @@
       "revId": "1b7f36ade5ef8198797b5e5908904172f26e2962",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9b5c2ea5_ca68e98e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010516
+      },
+      "writtenOn": "2020-08-10T12:01:18Z",
+      "side": 1,
+      "message": "Can you suggest how this test would look like?",
+      "parentUuid": "0a0b2e3d_d1e675f6",
+      "revId": "1b7f36ade5ef8198797b5e5908904172f26e2962",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
