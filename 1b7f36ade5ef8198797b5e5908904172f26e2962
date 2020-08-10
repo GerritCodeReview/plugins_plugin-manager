@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0a0b2e3d_d1e675f6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-08-10T10:47:24Z",
+      "side": 1,
+      "message": "@Orgad thanks for adapting the fix. Can you add one validation test? And then I believe we\u0027re good to go :-) Thanks again for fixing this issue.",
+      "revId": "1b7f36ade5ef8198797b5e5908904172f26e2962",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
