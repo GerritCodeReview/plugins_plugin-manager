@@ -34,6 +34,41 @@
       "revId": "1b7f36ade5ef8198797b5e5908904172f26e2962",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "93185940_cbcb2151",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-08-10T20:43:55Z",
+      "side": 1,
+      "message": "Should be moved to stable-3.2, where the problem has been reported.",
+      "revId": "1b7f36ade5ef8198797b5e5908904172f26e2962",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5d289bb5_d8ff4c25",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-08-10T20:43:55Z",
+      "side": 1,
+      "message": "\u003e Can you suggest how this test would look like?\n\nThe CorePluginsRepository() has already test coverage in PluginsRepositoryTest() but not with a path containing backslashes.\n\nYou can try to pass a Path interface that returns a name with backslashes and assert that the result should be an non-empty list and should not throw any exception.\n\nWhat do you think?",
+      "parentUuid": "9b5c2ea5_ca68e98e",
+      "revId": "1b7f36ade5ef8198797b5e5908904172f26e2962",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
