@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "21bba32e_b7f1bdfe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010516
+      },
+      "writtenOn": "2020-08-10T10:18:36Z",
+      "side": 1,
+      "message": "Where? How?",
+      "parentUuid": "e81f6261_d081acbb",
+      "revId": "fb0a06964efc32985b2e5c0e60ce852a7bb06c57",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a9d5f5f7_1a573392",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
         "patchSetId": 2
