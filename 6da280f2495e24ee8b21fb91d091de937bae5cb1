@@ -16,6 +16,24 @@
       "revId": "6da280f2495e24ee8b21fb91d091de937bae5cb1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "894623df_43838aca",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsRepositoryTest.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1010516
+      },
+      "writtenOn": "2020-08-20T20:12:23Z",
+      "side": 1,
+      "message": "I tried to test on linux by setting file.separator and recreating CorePluginsRepository, but it failed on list() when it tried to extract the war file.",
+      "parentUuid": "dbf37fea_8f6f56e8",
+      "revId": "6da280f2495e24ee8b21fb91d091de937bae5cb1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
