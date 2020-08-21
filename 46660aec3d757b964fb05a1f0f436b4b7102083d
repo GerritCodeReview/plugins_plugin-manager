@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "05accce6_3bcfa121",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-08-21T08:29:25Z",
+      "side": 1,
+      "message": "Sorry, I haven\u0027t used Windows in decades :-( and I am not really sure how to sort out Bazel builds on Windows either.",
+      "parentUuid": "57c8cd5e_9b72047e",
+      "revId": "46660aec3d757b964fb05a1f0f436b4b7102083d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1cf694ba_a6a21f85",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
         "patchSetId": 7
@@ -39,6 +57,30 @@
       "revId": "46660aec3d757b964fb05a1f0f436b4b7102083d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a4562340_8ab0bc5e",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-08-21T08:29:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1cf694ba_a6a21f85",
+      "range": {
+        "startLine": 52,
+        "startChar": 4,
+        "endLine": 52,
+        "endChar": 10
+      },
+      "revId": "46660aec3d757b964fb05a1f0f436b4b7102083d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     },
     {
       "key": {
@@ -65,6 +107,30 @@
     },
     {
       "key": {
+        "uuid": "5dfdd23b_f3b57bf2",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-08-21T08:29:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2235fd36_3df0e44f",
+      "range": {
+        "startLine": 53,
+        "startChar": 4,
+        "endLine": 53,
+        "endChar": 9
+      },
+      "revId": "46660aec3d757b964fb05a1f0f436b4b7102083d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1c840356_e1313c38",
         "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsRepositoryTest.java",
         "patchSetId": 7
@@ -85,6 +151,30 @@
       "revId": "46660aec3d757b964fb05a1f0f436b4b7102083d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "709c78d8_3297b9b4",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsRepositoryTest.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-08-21T08:29:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1c840356_e1313c38",
+      "range": {
+        "startLine": 62,
+        "startChar": 47,
+        "endLine": 62,
+        "endChar": 94
+      },
+      "revId": "46660aec3d757b964fb05a1f0f436b4b7102083d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
