@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "69dc56f5_5b735bcb",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-08-21T07:26:34Z",
+      "side": 1,
+      "message": "This is now unused.",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 47
+      },
+      "revId": "52c5b0a58e58315a3ff8a4eed745aa03314c8516",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d10fdc55_84970add",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsRepositoryTest.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-08-21T07:26:34Z",
+      "side": 1,
+      "message": "This is good, however, I do not see this failing if I remove the patch in the code.\nA test that is always green, even if the code is broken, isn\u0027t really test that code.\n\nLet me find a solution for you and upload as next PS.",
+      "revId": "52c5b0a58e58315a3ff8a4eed745aa03314c8516",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
