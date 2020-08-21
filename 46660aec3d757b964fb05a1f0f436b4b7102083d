@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "57c8cd5e_9b72047e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010516
+      },
+      "writtenOn": "2020-08-21T08:24:31Z",
+      "side": 1,
+      "message": "I can\u0027t build plugin-manager on Windows (even without this patch):\n\nERROR: C:/users/orgads/_bazel_orgads/s3m6et7e/external/bazel_tools/tools/jdk/BUILD:350:14: Action external/bazel_tools/tools/jdk/platformclasspath.jar failed (Exit\n 1)\nException in thread \"main\" java.lang.IllegalArgumentException: external\\local_jdk\n        at jdk.compiler/com.sun.tools.javac.file.Locations$SystemModulesLocationHandler.update(Locations.java:1853)\n        at jdk.compiler/com.sun.tools.javac.file.Locations$SystemModulesLocationHandler.handleOption(Locations.java:1798)\n        at jdk.compiler/com.sun.tools.javac.file.Locations.handleOption(Locations.java:2062)\n        at jdk.compiler/com.sun.tools.javac.file.BaseFileManager.handleOption(BaseFileManager.java:269)\n        at jdk.compiler/com.sun.tools.javac.file.BaseFileManager$2.handleFileManagerOption(BaseFileManager.java:222)\n        at jdk.compiler/com.sun.tools.javac.main.Option.process(Option.java:1138)\n        at jdk.compiler/com.sun.tools.javac.main.Option.handleOption(Option.java:1086)\n        at jdk.compiler/com.sun.tools.javac.file.BaseFileManager.handleOption(BaseFileManager.java:232)\n        at jdk.compiler/com.sun.tools.javac.main.Arguments.doProcessArgs(Arguments.java:390)\n        at jdk.compiler/com.sun.tools.javac.main.Arguments.processArgs(Arguments.java:347)\n        at jdk.compiler/com.sun.tools.javac.main.Arguments.init(Arguments.java:246)\n        at jdk.compiler/com.sun.tools.javac.api.JavacTool.getTask(JavacTool.java:185)\n        at DumpPlatformClassPath.dumpJDK9AndNewerBootClassPath(DumpPlatformClassPath.java:106)\n        at DumpPlatformClassPath.main(DumpPlatformClassPath.java:67)\nTarget //plugins/plugin-manager:plugin-manager failed to build\n\nAny idea what can be done?",
+      "revId": "46660aec3d757b964fb05a1f0f436b4b7102083d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1cf694ba_a6a21f85",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
         "patchSetId": 7
