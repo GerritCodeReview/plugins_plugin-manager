@@ -16,6 +16,23 @@
       "revId": "218e463adb2aa2d57b2b530c9b442cf874ca727a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e8afa62b_bcd13eff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-08-21T08:43:21Z",
+      "side": 1,
+      "message": "Verified locally. Zuul build fails for a missing submodule update.",
+      "revId": "218e463adb2aa2d57b2b530c9b442cf874ca727a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
