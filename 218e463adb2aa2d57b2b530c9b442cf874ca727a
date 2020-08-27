@@ -67,6 +67,86 @@
       "revId": "218e463adb2aa2d57b2b530c9b442cf874ca727a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e4be1224_ba09cb15",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2020-08-27T07:46:16Z",
+      "side": 1,
+      "message": "we don\u0027t run Gerrit on Windows and I have no Windows machine available",
+      "revId": "218e463adb2aa2d57b2b530c9b442cf874ca727a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "780d9263_db356975",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2020-08-27T07:46:16Z",
+      "side": 1,
+      "message": "I\u0027d stick to site",
+      "range": {
+        "startLine": 49,
+        "startChar": 0,
+        "endLine": 50,
+        "endChar": 35
+      },
+      "revId": "218e463adb2aa2d57b2b530c9b442cf874ca727a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c245c1e8_e6aa8854",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2020-08-27T07:46:16Z",
+      "side": 1,
+      "message": "use Path.toURI() [1] and inline that in line 68 ?\n\n[1] https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html#toUri--",
+      "revId": "218e463adb2aa2d57b2b530c9b442cf874ca727a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d000bbe5_6197914e",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2020-08-27T07:46:16Z",
+      "side": 1,
+      "message": "I\u0027d replace this by site.toURI()\n\nhttps://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html#toUri--",
+      "range": {
+        "startLine": 68,
+        "startChar": 35,
+        "endLine": 68,
+        "endChar": 67
+      },
+      "revId": "218e463adb2aa2d57b2b530c9b442cf874ca727a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
