@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "483be969_2adb5f1e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010516
+      },
+      "writtenOn": "2020-09-06T13:30:11Z",
+      "side": 1,
+      "message": "I verified that the tests pass on linux, and the bug is fixed on Windows.",
+      "revId": "d09f3f30e395396acdf7baaf2e90e296b00098b4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
