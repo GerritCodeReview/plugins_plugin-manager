@@ -110,6 +110,30 @@
     },
     {
       "key": {
+        "uuid": "60de149a_d1d37e38",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1010516
+      },
+      "writtenOn": "2020-09-06T12:44:40Z",
+      "side": 1,
+      "message": "Changed to:\n\n private final Path siteGerritWar;\n\nHope I got it right.",
+      "parentUuid": "780d9263_db356975",
+      "range": {
+        "startLine": 49,
+        "startChar": 0,
+        "endLine": 50,
+        "endChar": 35
+      },
+      "revId": "218e463adb2aa2d57b2b530c9b442cf874ca727a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c245c1e8_e6aa8854",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
         "patchSetId": 8
@@ -127,6 +151,24 @@
     },
     {
       "key": {
+        "uuid": "b5c052c2_e46b895a",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1010516
+      },
+      "writtenOn": "2020-09-06T12:44:40Z",
+      "side": 1,
+      "message": "How can this be tested on Linux?",
+      "parentUuid": "c245c1e8_e6aa8854",
+      "revId": "218e463adb2aa2d57b2b530c9b442cf874ca727a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "d000bbe5_6197914e",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
         "patchSetId": 8
@@ -138,6 +180,30 @@
       "writtenOn": "2020-08-27T07:46:16Z",
       "side": 1,
       "message": "I\u0027d replace this by site.toURI()\n\nhttps://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html#toUri--",
+      "range": {
+        "startLine": 68,
+        "startChar": 35,
+        "endLine": 68,
+        "endChar": 67
+      },
+      "revId": "218e463adb2aa2d57b2b530c9b442cf874ca727a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f0d911fd_b490291d",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1010516
+      },
+      "writtenOn": "2020-09-06T12:44:40Z",
+      "side": 1,
+      "message": "Done, but unable to test on linux.",
+      "parentUuid": "d000bbe5_6197914e",
       "range": {
         "startLine": 68,
         "startChar": 35,
