@@ -93,6 +93,30 @@
       "revId": "d115dac11a20e6fba8359d28cf2f3004f6447483",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f47b106b_3fdcdb1b",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2020-09-08T13:36:09Z",
+      "side": 1,
+      "message": "you didn\u0027t push another patchset",
+      "parentUuid": "2971dc37_5d9d1fda",
+      "range": {
+        "startLine": 118,
+        "startChar": 57,
+        "endLine": 118,
+        "endChar": 59
+      },
+      "revId": "d115dac11a20e6fba8359d28cf2f3004f6447483",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
