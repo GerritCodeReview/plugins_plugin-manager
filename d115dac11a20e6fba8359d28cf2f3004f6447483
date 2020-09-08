@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "524d5165_a2908a9e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010516
+      },
+      "writtenOn": "2020-09-08T21:01:42Z",
+      "side": 1,
+      "message": "Well?",
+      "revId": "d115dac11a20e6fba8359d28cf2f3004f6447483",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "68d5a0fb_d7958347",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/OnStartStop.java",
         "patchSetId": 1
