@@ -158,6 +158,30 @@
       "revId": "d115dac11a20e6fba8359d28cf2f3004f6447483",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2df004c4_6542d1d7",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-09T21:46:26Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "7310d3e3_1010e690",
+      "range": {
+        "startLine": 118,
+        "startChar": 57,
+        "endLine": 118,
+        "endChar": 59
+      },
+      "revId": "d115dac11a20e6fba8359d28cf2f3004f6447483",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
