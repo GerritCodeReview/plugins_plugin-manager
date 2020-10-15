@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "69dc56f5_5b735bcb",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
@@ -20,10 +21,34 @@
         "endChar": 47
       },
       "revId": "52c5b0a58e58315a3ff8a4eed745aa03314c8516",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0042795a_4f9c7d87",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-15T13:31:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "69dc56f5_5b735bcb",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 47
+      },
+      "revId": "52c5b0a58e58315a3ff8a4eed745aa03314c8516",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "d10fdc55_84970add",
         "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsRepositoryTest.java",
@@ -37,10 +62,10 @@
       "side": 1,
       "message": "This is good, however, I do not see this failing if I remove the patch in the code.\nA test that is always green, even if the code is broken, isn\u0027t really test that code.\n\nLet me find a solution for you and upload as next PS.",
       "revId": "52c5b0a58e58315a3ff8a4eed745aa03314c8516",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "51617c02_96c0fa1b",
         "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsRepositoryTest.java",
@@ -55,10 +80,10 @@
       "message": "Did you run it on Windows? And it didn\u0027t fail without the patch? If you ran it on Linux, this is expected. See my previous comment.",
       "parentUuid": "d10fdc55_84970add",
       "revId": "52c5b0a58e58315a3ff8a4eed745aa03314c8516",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "1e720213_a0bb90c8",
         "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsRepositoryTest.java",
@@ -73,8 +98,25 @@
       "message": "Yes, but the problem is that we do not run any build on Windows. I am trying to find the way to have a test that runs on our builds and make sure that doesn\u0027t break the Windows compatibility.",
       "parentUuid": "51617c02_96c0fa1b",
       "revId": "52c5b0a58e58315a3ff8a4eed745aa03314c8516",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "11dc095c_4efde8f4",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsRepositoryTest.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-15T13:31:05Z",
+      "side": 1,
+      "message": "I believe I resolved this and we have tests that are now simulating a Windows behaviour.",
+      "parentUuid": "1e720213_a0bb90c8",
+      "revId": "52c5b0a58e58315a3ff8a4eed745aa03314c8516",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }

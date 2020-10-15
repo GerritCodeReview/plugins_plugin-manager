@@ -16,6 +16,23 @@
       "message": "Well?",
       "revId": "00e57948f4f112c226028bc5c8d8fe60f770038f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "afaa8aba_43a7a194",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-15T13:31:05Z",
+      "side": 1,
+      "message": "I believe we\u0027re getting there. @Matthias can you comment on the last comment which remains open?\n\nP.S. The Zuul CI would always fail, unfortunately. That is because the current build doesn\u0027t update the Gerrit submodules and therefore the tests would fail. It should then work with the legacy Gerrit-CI system, because we do run the submodule update.",
+      "revId": "00e57948f4f112c226028bc5c8d8fe60f770038f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }

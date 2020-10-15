@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "e52acbfc_b3483ae8",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
@@ -14,8 +15,25 @@
       "side": 1,
       "message": "Do we really need the requireNonNull for this? It doesn\u0027t look like NPE is caught anyway.\n\nShould we limit this translation only to Windows (how?)? On other FS one *could* have a path with backslash, though it\u0027s very uncommon.",
       "revId": "b30386af4871a08e6ce10ad5cb45a00c7f8a0f7a",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8fef0044_eb4898ab",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-15T13:31:05Z",
+      "side": 1,
+      "message": "No to both.",
+      "parentUuid": "e52acbfc_b3483ae8",
+      "revId": "b30386af4871a08e6ce10ad5cb45a00c7f8a0f7a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
