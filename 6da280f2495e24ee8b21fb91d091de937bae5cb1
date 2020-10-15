@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "dbf37fea_8f6f56e8",
         "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsRepositoryTest.java",
@@ -14,10 +15,10 @@
       "side": 1,
       "message": "Is this good enough? I can\u0027t test on Windows (I build gerrit on linux, and run it on Windows), and on linux it obviously passes.\n\nI tested on linux by replacing \"\\\\\" with \"e\", which failed the test.",
       "revId": "6da280f2495e24ee8b21fb91d091de937bae5cb1",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "894623df_43838aca",
         "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsRepositoryTest.java",
@@ -32,8 +33,25 @@
       "message": "I tried to test on linux by setting file.separator and recreating CorePluginsRepository, but it failed on list() when it tried to extract the war file.",
       "parentUuid": "dbf37fea_8f6f56e8",
       "revId": "6da280f2495e24ee8b21fb91d091de937bae5cb1",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "083b79ba_58123c97",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsRepositoryTest.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-15T13:31:05Z",
+      "side": 1,
+      "message": "I don\u0027t believe the assertion was strictly necessary anyway: we just want to make sure that the feature works and doesn\u0027t throw exceptions, isn\u0027t it?",
+      "parentUuid": "894623df_43838aca",
+      "revId": "6da280f2495e24ee8b21fb91d091de937bae5cb1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }

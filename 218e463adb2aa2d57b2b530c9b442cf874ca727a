@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": false,
       "key": {
         "uuid": "7a5a7155_8116fe89",
         "filename": "/PATCHSET_LEVEL",
@@ -14,10 +15,10 @@
       "side": 1,
       "message": "This new PS works as expected:\n- the test is green with the code fixed\n- the test is red with code NOT fixed\n\nThe effective code is the same, with just some nits fixed.",
       "revId": "218e463adb2aa2d57b2b530c9b442cf874ca727a",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": false
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
       "key": {
         "uuid": "e8afa62b_bcd13eff",
         "filename": "/PATCHSET_LEVEL",
@@ -31,10 +32,10 @@
       "side": 1,
       "message": "Verified locally. Zuul build fails for a missing submodule update.",
       "revId": "218e463adb2aa2d57b2b530c9b442cf874ca727a",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": false
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
       "key": {
         "uuid": "d73ced3f_75bd41ed",
         "filename": "/PATCHSET_LEVEL",
@@ -48,10 +49,10 @@
       "side": 1,
       "message": "Thank you very much.",
       "revId": "218e463adb2aa2d57b2b530c9b442cf874ca727a",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": false
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
       "key": {
         "uuid": "45028608_c6d99895",
         "filename": "/PATCHSET_LEVEL",
@@ -65,10 +66,10 @@
       "side": 1,
       "message": "@Matthias is your team interested in this Windows-only fix? If yes, can you double-check?",
       "revId": "218e463adb2aa2d57b2b530c9b442cf874ca727a",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": false
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
       "key": {
         "uuid": "e4be1224_ba09cb15",
         "filename": "/PATCHSET_LEVEL",
@@ -82,10 +83,10 @@
       "side": 1,
       "message": "we don\u0027t run Gerrit on Windows and I have no Windows machine available",
       "revId": "218e463adb2aa2d57b2b530c9b442cf874ca727a",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": false
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "780d9263_db356975",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
@@ -105,10 +106,10 @@
         "endChar": 35
       },
       "revId": "218e463adb2aa2d57b2b530c9b442cf874ca727a",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "60de149a_d1d37e38",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
@@ -129,10 +130,34 @@
         "endChar": 35
       },
       "revId": "218e463adb2aa2d57b2b530c9b442cf874ca727a",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ae77de9a_80f9754c",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-15T13:31:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "60de149a_d1d37e38",
+      "range": {
+        "startLine": 49,
+        "startChar": 0,
+        "endLine": 50,
+        "endChar": 35
+      },
+      "revId": "218e463adb2aa2d57b2b530c9b442cf874ca727a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "c245c1e8_e6aa8854",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
@@ -146,10 +171,10 @@
       "side": 1,
       "message": "use Path.toURI() [1] and inline that in line 68 ?\n\n[1] https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html#toUri--",
       "revId": "218e463adb2aa2d57b2b530c9b442cf874ca727a",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "b5c052c2_e46b895a",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
@@ -164,10 +189,28 @@
       "message": "How can this be tested on Linux?",
       "parentUuid": "c245c1e8_e6aa8854",
       "revId": "218e463adb2aa2d57b2b530c9b442cf874ca727a",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "beed91c9_63d253de",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-15T13:31:05Z",
+      "side": 1,
+      "message": "I agree with Orgad: we need to test the behaviour that we would see on Windows.\n@Matthias WDYT?",
+      "parentUuid": "b5c052c2_e46b895a",
+      "revId": "218e463adb2aa2d57b2b530c9b442cf874ca727a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "d000bbe5_6197914e",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
@@ -187,10 +230,10 @@
         "endChar": 67
       },
       "revId": "218e463adb2aa2d57b2b530c9b442cf874ca727a",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "f0d911fd_b490291d",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
@@ -211,8 +254,31 @@
         "endChar": 67
       },
       "revId": "218e463adb2aa2d57b2b530c9b442cf874ca727a",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3812f4b_95625883",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-15T13:31:05Z",
+      "side": 1,
+      "message": "The Zuul build should give you the test results.",
+      "parentUuid": "f0d911fd_b490291d",
+      "range": {
+        "startLine": 68,
+        "startChar": 35,
+        "endLine": 68,
+        "endChar": 67
+      },
+      "revId": "218e463adb2aa2d57b2b530c9b442cf874ca727a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
