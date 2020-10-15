@@ -246,6 +246,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "75e4c1bf_27d80808",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1010516
+      },
+      "writtenOn": "2020-10-15T14:31:09Z",
+      "side": 1,
+      "message": "(and I guess I\u0027m the only Windows user in the world :D)\n\nThis is my test env. The production env is on linux.",
+      "parentUuid": "1a7e243c_38b37d44",
+      "revId": "218e463adb2aa2d57b2b530c9b442cf874ca727a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d000bbe5_6197914e",
