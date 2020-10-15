@@ -212,6 +212,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "885a327c_a449921d",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2020-10-15T13:50:09Z",
+      "side": 1,
+      "message": "yep, should be tested both on Posix and Windows\nI don\u0027t have any Windows machine around so can\u0027t help with that test.\nTesting on linux is done by the CI",
+      "parentUuid": "beed91c9_63d253de",
+      "revId": "218e463adb2aa2d57b2b530c9b442cf874ca727a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d000bbe5_6197914e",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
         "patchSetId": 8
