@@ -50,6 +50,23 @@
       "message": "Anything else?",
       "revId": "00e57948f4f112c226028bc5c8d8fe60f770038f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5cb98684_72ba0b0e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-16T23:15:43Z",
+      "side": 1,
+      "message": "Thanks Orgad for your fix and patience in getting it reviewed.",
+      "revId": "00e57948f4f112c226028bc5c8d8fe60f770038f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
