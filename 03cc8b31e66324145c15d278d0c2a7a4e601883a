@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3be16e17_f81ef431",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1127090
+      },
+      "writtenOn": "2021-02-26T10:48:51Z",
+      "side": 1,
+      "message": "Issue reported: https://bugs.chromium.org/p/gerrit/issues/detail?id\u003d13521\n\nFeel free to review/make changes to code.",
+      "revId": "03cc8b31e66324145c15d278d0c2a7a4e601883a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
