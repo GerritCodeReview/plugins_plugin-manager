@@ -35,8 +35,18 @@ var app = angular.module('PluginManager', []).controller(
         return pluginIndex;
       }
 
+      $scope.getBaseUrl = function () {
+        var currUrl = $location.absUrl();
+        var indexOfHash = currUrl.indexOf("#")
+        if (indexOfHash > 0) {
+          currUrl = currUrl.substring(0, indexOfHash)
+        }
+        var baseUrl = currUrl + "/../../../.."
+        return baseUrl;
+      }
+
       $scope.refreshInstalled = function(refreshPluginId) {
-        $http.get('/plugins/?all', plugins.httpConfig).then(
+        $http.get($scope.getBaseUrl() + '/plugins/?all', plugins.httpConfig).then(
             function successCallback(response) {
 
               angular.forEach(response.data, function(plugin) {
@@ -74,7 +84,7 @@ var app = angular.module('PluginManager', []).controller(
       }
 
       $scope.refreshAvailable = function(refreshPluginId) {
-        $http.get('/plugins/plugin-manager/available', plugins.httpConfig)
+        $http.get($scope.getBaseUrl() + '/plugins/plugin-manager/available', plugins.httpConfig)
             .then(
                 function successCallback(response) {
 
@@ -118,7 +128,7 @@ var app = angular.module('PluginManager', []).controller(
         };
         $("button#" + id).addClass("hidden");
         $("span#installing-" + id).removeClass("hidden");
-        $http.put('/a/plugins/' + id + ".jar", pluginInstallData).then(
+        $http.put($scope.getBaseUrl() + '/a/plugins/' + id + ".jar", pluginInstallData).then(
             function successCallback(response) {
               $("span#installing-" + id).addClass("hidden");
               $("span#installed-" + id).removeClass("hidden");
@@ -130,12 +140,7 @@ var app = angular.module('PluginManager', []).controller(
       }
 
       plugins.goToGerrit = function () {
-        var currUrl = $location.absUrl();
-        var indexOfHash = currUrl.indexOf("#")
-        if(indexOfHash > 0) {
-          currUrl = currUrl.substring(0,indexOfHash)
-        }
-        var newUrl = currUrl + "/../../../.."
+        var newUrl = $scope.getBaseUrl();
         $window.location.href = newUrl
       };
 
