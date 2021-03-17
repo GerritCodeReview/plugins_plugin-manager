@@ -33,6 +33,24 @@
       "message": "Thanks, Parth, for your fix.\n\nCan you move it to the earliest supported branch?\n(stable-3.1)",
       "revId": "03cc8b31e66324145c15d278d0c2a7a4e601883a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "41b83d50_92ced3b2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1127090
+      },
+      "writtenOn": "2021-03-17T10:47:07Z",
+      "side": 1,
+      "message": "Sorry for late reply, just did: https://gerrit-review.googlesource.com/c/plugins/plugin-manager/+/300362",
+      "parentUuid": "c80e6fa2_ae98ea58",
+      "revId": "03cc8b31e66324145c15d278d0c2a7a4e601883a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
