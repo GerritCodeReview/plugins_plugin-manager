@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "462d1503_6e0e39ef",
+        "filename": "src/main/resources/static/js/plugin-manager.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-03-31T07:27:44Z",
+      "side": 1,
+      "message": "When do you see Gerrit would have the \u0027#\u0027 in the current URL for the plugin manager use-cases?\n\nThe plugin manager was initially written for both GWT and PoliGerrit; however, nowadays, the GWT UI has gone so the \u0027#\u0027 isn\u0027t used anymore anywhere.",
+      "range": {
+        "startLine": 40,
+        "startChar": 26,
+        "endLine": 40,
+        "endChar": 46
+      },
+      "revId": "81c6795b9e30437e5627fc17238a33a4f5da6faa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c75ebc9e_fbb8b4a8",
+        "filename": "src/main/resources/static/js/plugin-manager.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-03-31T07:27:44Z",
+      "side": 1,
+      "message": "Can this be inlined as currUrl + \"/../../../..\"?",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 23
+      },
+      "revId": "81c6795b9e30437e5627fc17238a33a4f5da6faa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
