@@ -60,6 +60,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a754c3b4_bfe1924f",
+        "filename": "src/main/resources/static/js/plugin-manager.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1127090
+      },
+      "writtenOn": "2021-05-27T05:27:31Z",
+      "side": 1,
+      "message": "Yeah I think this should be modified now, I just copied this part from existing code below so didn\u0027t make any changes there.\n\nAlso, I\u0027m not so familiar with gerrit/plugins code so I think I\u0027ll this change up to guys? I may break it lol, I just made this patch to fix plugin for my own use case initially, then thought to upload it to gerrit 😜",
+      "parentUuid": "462d1503_6e0e39ef",
+      "range": {
+        "startLine": 40,
+        "startChar": 26,
+        "endLine": 40,
+        "endChar": 46
+      },
+      "revId": "81c6795b9e30437e5627fc17238a33a4f5da6faa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c75ebc9e_fbb8b4a8",
         "filename": "src/main/resources/static/js/plugin-manager.js",
         "patchSetId": 1
@@ -71,6 +95,30 @@
       "writtenOn": "2021-03-31T07:27:44Z",
       "side": 1,
       "message": "Can this be inlined as currUrl + \"/../../../..\"?",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 23
+      },
+      "revId": "81c6795b9e30437e5627fc17238a33a4f5da6faa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f3cbdc15_1b5fbcc3",
+        "filename": "src/main/resources/static/js/plugin-manager.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1127090
+      },
+      "writtenOn": "2021-05-27T05:27:31Z",
+      "side": 1,
+      "message": "Sure, again, this function is just a copy paste of old L133 to L138, just put it in a function so that can call it multiple places that fixes the issue by giving correct link with reverse-proxy support...\nWill make the requested changes.",
+      "parentUuid": "c75ebc9e_fbb8b4a8",
       "range": {
         "startLine": 44,
         "startChar": 0,
