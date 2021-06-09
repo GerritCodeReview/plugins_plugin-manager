@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "64cd0000_5d60b3a1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1011624
+      },
+      "writtenOn": "2021-06-09T13:13:10Z",
+      "side": 1,
+      "message": "abandon the version  on 3.1 as well?",
+      "range": {
+        "startLine": 16,
+        "startChar": 10,
+        "endLine": 16,
+        "endChar": 31
+      },
+      "revId": "02d116ac10a72eee501dcbab55319c2dadbb9efd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "15eaa43e_5e108ae9",
@@ -14,6 +37,23 @@
       "writtenOn": "2021-06-09T01:11:00Z",
       "side": 1,
       "message": "Manually verified and working E2E",
+      "revId": "02d116ac10a72eee501dcbab55319c2dadbb9efd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9bfbfaab_29ea87e8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011624
+      },
+      "writtenOn": "2021-06-09T13:13:10Z",
+      "side": 1,
+      "message": "Shouldn\u0027t it go to branch stable-3.2?",
       "revId": "02d116ac10a72eee501dcbab55319c2dadbb9efd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
