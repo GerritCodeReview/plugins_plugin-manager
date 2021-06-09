@@ -16,6 +16,29 @@
       "message": "Manually verified and working E2E",
       "revId": "02d116ac10a72eee501dcbab55319c2dadbb9efd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c9a1216b_8f3f5142",
+        "filename": "src/main/resources/static/js/plugin-manager.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-06-09T05:36:52Z",
+      "side": 1,
+      "message": "Add a comment fr this hack and why it\u0027s needed and ask Frontend team if there is a better way?",
+      "range": {
+        "startLine": 38,
+        "startChar": 6,
+        "endLine": 40,
+        "endChar": 7
+      },
+      "revId": "02d116ac10a72eee501dcbab55319c2dadbb9efd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
