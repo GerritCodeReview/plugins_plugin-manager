@@ -39,6 +39,30 @@
       },
       "revId": "02d116ac10a72eee501dcbab55319c2dadbb9efd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "52cc0466_9b4a989b",
+        "filename": "src/main/resources/static/js/plugin-manager.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-06-09T07:32:12Z",
+      "side": 1,
+      "message": "we could make yet another call to the backend to get the Canonical Web URL.\n\nwhy do you think that relative URLs are a hack? I saw them widely used everywhere, but I must confess I am not a front end dev :-)",
+      "parentUuid": "c9a1216b_8f3f5142",
+      "range": {
+        "startLine": 38,
+        "startChar": 6,
+        "endLine": 40,
+        "endChar": 7
+      },
+      "revId": "02d116ac10a72eee501dcbab55319c2dadbb9efd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
