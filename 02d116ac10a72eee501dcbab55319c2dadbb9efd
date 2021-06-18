@@ -169,6 +169,30 @@
       },
       "revId": "02d116ac10a72eee501dcbab55319c2dadbb9efd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c59f6033_2e68bf50",
+        "filename": "src/main/resources/static/js/plugin-manager.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-06-18T22:42:54Z",
+      "side": 1,
+      "message": "Will add a comment explaining the context.",
+      "parentUuid": "39498e3d_c96d16b8",
+      "range": {
+        "startLine": 38,
+        "startChar": 6,
+        "endLine": 40,
+        "endChar": 7
+      },
+      "revId": "02d116ac10a72eee501dcbab55319c2dadbb9efd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
