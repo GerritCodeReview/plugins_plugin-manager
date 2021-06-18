@@ -26,6 +26,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "3be6ba49_51bdd270",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-06-18T01:01:40Z",
+      "side": 1,
+      "message": "3.1 is EOL",
+      "parentUuid": "64cd0000_5d60b3a1",
+      "range": {
+        "startLine": 16,
+        "startChar": 10,
+        "endLine": 16,
+        "endChar": 31
+      },
+      "revId": "02d116ac10a72eee501dcbab55319c2dadbb9efd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "15eaa43e_5e108ae9",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 1
@@ -54,6 +78,24 @@
       "writtenOn": "2021-06-09T13:13:10Z",
       "side": 1,
       "message": "Shouldn\u0027t it go to branch stable-3.2?",
+      "revId": "02d116ac10a72eee501dcbab55319c2dadbb9efd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c2b7c7ce_7887a047",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-06-18T01:01:40Z",
+      "side": 1,
+      "message": "The master branch of the plugin-manager is used for all versions from v3.2 onwards.",
+      "parentUuid": "9bfbfaab_29ea87e8",
       "revId": "02d116ac10a72eee501dcbab55319c2dadbb9efd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
