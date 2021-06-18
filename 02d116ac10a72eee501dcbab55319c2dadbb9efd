@@ -193,6 +193,30 @@
       },
       "revId": "02d116ac10a72eee501dcbab55319c2dadbb9efd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7f310f69_82fdc312",
+        "filename": "src/main/resources/static/js/plugin-manager.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-06-18T23:09:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c59f6033_2e68bf50",
+      "range": {
+        "startLine": 38,
+        "startChar": 6,
+        "endLine": 40,
+        "endChar": 7
+      },
+      "revId": "02d116ac10a72eee501dcbab55319c2dadbb9efd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
