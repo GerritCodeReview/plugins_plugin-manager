@@ -16,6 +16,29 @@
       "message": "Increasing the number of potential approvers",
       "revId": "f574d9e344db3b0d11b26ef4145b024ffe30b705",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b00f8571_f9b5432b",
+        "filename": "src/main/resources/static/js/plugin-manager.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2021-06-23T08:18:47Z",
+      "side": 1,
+      "message": "nit: misformatted indentation",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 5
+      },
+      "revId": "f574d9e344db3b0d11b26ef4145b024ffe30b705",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
