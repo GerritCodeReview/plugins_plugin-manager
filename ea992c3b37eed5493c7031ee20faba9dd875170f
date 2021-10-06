@@ -16,6 +16,24 @@
       "message": "The Zuul pipeline is broken for this plugin, because it needs a Gerrit repo with submodules updated and initialised.",
       "revId": "ea992c3b37eed5493c7031ee20faba9dd875170f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c788534e_a1f8a9ea",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1091982
+      },
+      "writtenOn": "2021-10-06T07:34:16Z",
+      "side": 1,
+      "message": "Great! Thanks for verifying.",
+      "parentUuid": "67e008ec_cb733b55",
+      "revId": "ea992c3b37eed5493c7031ee20faba9dd875170f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
