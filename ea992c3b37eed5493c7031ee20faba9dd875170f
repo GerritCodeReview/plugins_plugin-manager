@@ -51,6 +51,24 @@
       "message": "Luca, is it better to add \"//lib/commons:lang3\" to the plugins EXPORTS here: https://gerrit.googlesource.com/gerrit/+/0a35cc6ee06dfee1208995c9c5abd0db865238cd/plugins/BUILD#41?\n\nIt would then be part of PLUGIN_DEPS.",
       "revId": "ea992c3b37eed5493c7031ee20faba9dd875170f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "79e44c28_37d085d5",
+        "filename": "BUILD",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-10-07T15:00:35Z",
+      "side": 1,
+      "message": "Yeah +1",
+      "parentUuid": "7ea569c7_a3fbeaa4",
+      "revId": "ea992c3b37eed5493c7031ee20faba9dd875170f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
