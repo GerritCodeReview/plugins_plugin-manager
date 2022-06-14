@@ -21,6 +21,8 @@ import com.google.gerrit.httpd.WebLoginListener;
 import com.google.gerrit.server.IdentifiedUser;
 import com.google.gerrit.server.plugins.PluginLoader;
 import com.google.inject.Inject;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -28,8 +30,6 @@ import java.nio.file.StandardOpenOption;
 import java.time.Instant;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 public class FirstWebLoginListener implements WebLoginListener {
   private final Path pluginData;
