@@ -13,37 +13,29 @@ MANIFEST_ENTRIES = [
     "Implementation-URL: https://gerrit-review.googlesource.com/#/admin/projects/plugins/plugin-manager",
 ]
 
-# The default (javax.servlet) jar. With the ee11 twin below, the plugin is
-# explicitly flavour-managed: `flavour = "ee8"` stamps `Gerrit-Flavour: ee8`
-# (loader-equivalent to the unmarked jar) and guards the target to the ee8
-# configuration, so the ee11 wildcard pass skips the javax side instead of
-# failing -- both wildcard passes stay green at every stage:
+# The sources are jakarta-canonical (the JGit-style reversed bridge): the
+# default ee8 jar is generated through the shared bazlets `to_javax`
+# transform and stamps `Gerrit-Flavour: ee8`; the ee11 jar compiles the
+# canonical sources directly and self-selects the jakarta configuration.
+# Each flavour's targets are guarded to their configuration, so both
+# wildcard passes stay green:
 #   bazelisk test plugins/plugin-manager/...
 #   bazelisk test --@com_googlesource_gerrit_bazlets//flags:flavour=ee11 \
 #       plugins/plugin-manager/...
 gerrit_plugin(
     name = "plugin-manager",
     srcs = SRCS,
+    canonical = "jakarta",
     flavour = "ee8",
     manifest_entries = MANIFEST_ENTRIES,
     resources = RESOURCES,
 )
 
-# EE11 (jakarta.servlet) flavour. The shared bazlets `flavour = "ee11"` rewrites
-# the plugin's javax.servlet imports to jakarta.servlet, injects
-# `Gerrit-Flavour: ee11`, compiles against the jakarta plugin API (in-tree:
-# //plugins:plugin-lib-neverlink), and wraps the target in a flavour=ee11
-# transition -- so building :plugin-manager-ee11 self-selects the jakarta config
-# with no command-line flag. plugin-manager has no external servlet deps, so the
-# transition alone flips its classpath. Build with:
-#   bazelisk build //plugins/plugin-manager:plugin-manager-ee11
-# (or both flavours at once:
-#  `bazelisk build //plugins/plugin-manager:plugin-manager \
-#      //plugins/plugin-manager:plugin-manager-ee11`).
 # `dir_name = "plugin-manager"` keeps stamping/versioning shared with the default.
 gerrit_plugin(
     name = "plugin-manager-ee11",
     srcs = SRCS,
+    canonical = "jakarta",
     dir_name = "plugin-manager",
     flavour = "ee11",
     manifest_entries = MANIFEST_ENTRIES,
@@ -55,6 +47,7 @@ gerrit_plugin(
 gerrit_plugin_tests(
     name = "plugin_manager_tests",
     srcs = glob(["src/test/java/**/*.java"]),
+    canonical = "jakarta",
     data = ["//:release.war"],
     flavour = "ee8",
     visibility = ["//visibility:public"],
@@ -63,8 +56,9 @@ gerrit_plugin_tests(
     ],
 )
 
-# EE11 test twin: the same canonical test sources through the shared
-# `to_jakarta` transform, executed against :plugin-manager-ee11__plugin and
+# EE11 test twin: the canonical test sources compiled directly (no
+# transform -- since the jakarta-canonical migration the EE11 side IS the
+# canonical side), executed against :plugin-manager-ee11__plugin and
 # inspecting the matching flavour's WAR (release-ee11.war; the test reads
 # the runfile name from PLUGIN_MANAGER_TEST_WAR). This also proves the
 # core-plugins listing derives names from the Gerrit-PluginName manifest
@@ -74,6 +68,7 @@ gerrit_plugin_tests(
 gerrit_plugin_tests(
     name = "plugin_manager_tests-ee11",
     srcs = glob(["src/test/java/**/*.java"]),
+    canonical = "jakarta",
     data = ["//:release-ee11"],
     env = {"PLUGIN_MANAGER_TEST_WAR": "release-ee11.war"},
     flavour = "ee11",
