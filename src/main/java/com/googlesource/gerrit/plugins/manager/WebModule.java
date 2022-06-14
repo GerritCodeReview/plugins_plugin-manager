@@ -15,7 +15,7 @@ package com.googlesource.gerrit.plugins.manager;
 
 import com.google.gerrit.extensions.registration.DynamicSet;
 import com.google.gerrit.httpd.WebLoginListener;
-import com.google.inject.servlet.ServletModule;
+import com.google.inject.jakarta.ServletModule;
 
 public class WebModule extends ServletModule {
 
