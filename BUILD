@@ -13,28 +13,27 @@ MANIFEST_ENTRIES = [
     "Implementation-URL: https://gerrit-review.googlesource.com/#/admin/projects/plugins/plugin-manager",
 ]
 
+# The sources are jakarta-canonical (the JGit-style reversed bridge): the
+# default ee8 jar is generated through the shared bazlets `to_javax`
+# transform and stamps `Gerrit-Flavour: ee8`; the ee11 jar compiles the
+# canonical sources directly and self-selects the jakarta configuration.
+# Build one or both:
+#   bazelisk build //plugins/plugin-manager:plugin-manager \
+#       //plugins/plugin-manager:plugin-manager-ee11
 gerrit_plugin(
     name = "plugin-manager",
     srcs = SRCS,
+    canonical = "jakarta",
+    flavour = "ee8",
     manifest_entries = MANIFEST_ENTRIES,
     resources = RESOURCES,
 )
 
-# EE11 (jakarta.servlet) flavour. The shared bazlets `flavour = "ee11"` rewrites
-# the plugin's javax.servlet imports to jakarta.servlet, injects
-# `Gerrit-Flavour: ee11`, compiles against the jakarta plugin API (in-tree:
-# //plugins:plugin-lib-neverlink), and wraps the target in a flavour=ee11
-# transition -- so building :plugin-manager-ee11 self-selects the jakarta config
-# with no command-line flag. plugin-manager has no external servlet deps, so the
-# transition alone flips its classpath. Build with:
-#   bazelisk build //plugins/plugin-manager:plugin-manager-ee11
-# (or both flavours at once:
-#  `bazelisk build //plugins/plugin-manager:plugin-manager \
-#      //plugins/plugin-manager:plugin-manager-ee11`).
 # `dir_name = "plugin-manager"` keeps stamping/versioning shared with the default.
 gerrit_plugin(
     name = "plugin-manager-ee11",
     srcs = SRCS,
+    canonical = "jakarta",
     dir_name = "plugin-manager",
     flavour = "ee11",
     manifest_entries = MANIFEST_ENTRIES,
