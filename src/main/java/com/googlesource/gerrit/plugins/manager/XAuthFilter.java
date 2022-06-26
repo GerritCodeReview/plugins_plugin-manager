@@ -18,8 +18,8 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 
 import com.google.common.flogger.FluentLogger;
 import com.google.gerrit.extensions.registration.DynamicItem;
-import com.google.gerrit.httpd.WebSession;
 import com.google.gerrit.server.AccessPath;
+import com.google.gerrit.server.WebSession;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import java.io.IOException;
