@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f5eeb7da_9099b1f7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-07-13T19:30:16Z",
+      "side": 1,
+      "message": "The Zuul verification failure is unrelated: tested both locally and E2E and it is fully working.",
+      "revId": "c0e211371d9ad3cac985d01a9e20d6ea81a0f951",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
