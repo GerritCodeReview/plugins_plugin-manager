@@ -51,6 +51,24 @@
       "parentUuid": "1b7f5290_52be965c",
       "revId": "c0e211371d9ad3cac985d01a9e20d6ea81a0f951",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a247cd2e_d785d523",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/gson/SmartJson.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1149185
+      },
+      "writtenOn": "2023-07-13T20:57:41Z",
+      "side": 1,
+      "message": "You are right.",
+      "parentUuid": "1479686d_9ce20d41",
+      "revId": "c0e211371d9ad3cac985d01a9e20d6ea81a0f951",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
