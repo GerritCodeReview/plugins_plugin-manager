@@ -69,6 +69,23 @@
       "parentUuid": "1479686d_9ce20d41",
       "revId": "c0e211371d9ad3cac985d01a9e20d6ea81a0f951",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "68841b62_c6ee6011",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/gson/SmartJson.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1149185
+      },
+      "writtenOn": "2023-07-13T21:38:57Z",
+      "side": 1,
+      "message": "I know that this is not part of this change but the name getOptional is not very descriptive. Maybe “findField’ would be more intuitive.\nThis is a personal opinion.",
+      "revId": "c0e211371d9ad3cac985d01a9e20d6ea81a0f951",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
