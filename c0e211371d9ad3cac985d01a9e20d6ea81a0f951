@@ -18,6 +18,23 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dd0d35df_0fee1760",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2023-07-14T05:18:40Z",
+      "side": 1,
+      "message": "Luca feel free to address the nit issue",
+      "revId": "c0e211371d9ad3cac985d01a9e20d6ea81a0f951",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1b7f5290_52be965c",
@@ -67,6 +84,24 @@
       "side": 1,
       "message": "You are right.",
       "parentUuid": "1479686d_9ce20d41",
+      "revId": "c0e211371d9ad3cac985d01a9e20d6ea81a0f951",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8411358c_62d4df98",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/gson/SmartJson.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2023-07-14T05:18:40Z",
+      "side": 1,
+      "message": "I would vote for moving it there so that we either have `Optional` or `Empty` not `Optional` that is in fact empty ;)",
+      "parentUuid": "a247cd2e_d785d523",
       "revId": "c0e211371d9ad3cac985d01a9e20d6ea81a0f951",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
