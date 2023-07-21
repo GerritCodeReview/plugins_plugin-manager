@@ -16,6 +16,23 @@
       "message": "Much better now, thanks for the feedback.",
       "revId": "ba74d4969462c2592bcf97868dd76c33041d47b2",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b879a887_d983c9dd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-07-21T16:33:13Z",
+      "side": 1,
+      "message": "Manually verified (the Zuul pipeline for this plugin is broken)",
+      "revId": "ba74d4969462c2592bcf97868dd76c33041d47b2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
