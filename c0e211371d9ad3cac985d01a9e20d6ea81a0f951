@@ -124,6 +124,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6767af2d_f1e887e2",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/gson/SmartJson.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-07-21T16:13:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7e083ad8_2181ce46",
+      "revId": "c0e211371d9ad3cac985d01a9e20d6ea81a0f951",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "68841b62_c6ee6011",
