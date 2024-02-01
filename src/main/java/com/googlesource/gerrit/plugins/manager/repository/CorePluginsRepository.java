@@ -28,7 +28,6 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.jar.Attributes;
@@ -56,14 +55,14 @@ public class CorePluginsRepository implements PluginsRepository {
   public CorePluginsRepository(Path siteGerritWar, String gerritWar, CorePluginsDescriptions pd) {
     this.pluginsDescriptions = pd;
     final String normalizedWar = gerritWar.replace(WINDOWS_FILE_SEPARATOR, UNIX_FILE_SEPARATOR);
-    this.gerritWarUri = Paths.get(normalizedWar).toUri().toString();
+    this.gerritWarUri = Path.of(normalizedWar).toUri().toString();
     this.siteGerritWar = siteGerritWar;
   }
 
   @Nullable
   private PluginInfo extractPluginInfoFromJarEntry(JarEntry entry) {
     try {
-      Path entryName = Paths.get(entry.getName());
+      Path entryName = Path.of(entry.getName());
       URI pluginUrl = new URI("jar:" + gerritWarUri + "!/" + entry.getName());
       try (JarInputStream pluginJar = new JarInputStream(pluginUrl.toURL().openStream())) {
         return getManifestEntry(pluginJar)

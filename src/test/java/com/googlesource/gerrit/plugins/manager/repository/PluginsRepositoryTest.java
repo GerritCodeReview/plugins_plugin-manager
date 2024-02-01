@@ -24,7 +24,6 @@ import com.google.gerrit.server.config.SitePaths;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Collection;
 import org.junit.Test;
 
@@ -72,8 +71,7 @@ public class PluginsRepositoryTest {
 
   private SitePaths prepareSiteDirWithReleaseWar() throws IOException {
     SitePaths site = new SitePaths(random());
-    Path pathToReleaseWar =
-        Paths.get(getenv("TEST_SRCDIR"), getenv("TEST_WORKSPACE"), "release.war");
+    Path pathToReleaseWar = Path.of(getenv("TEST_SRCDIR"), getenv("TEST_WORKSPACE"), "release.war");
     assume().that(pathToReleaseWar.toFile().exists()).isTrue();
     Files.createDirectories(site.bin_dir);
     Files.createSymbolicLink(site.gerrit_war, pathToReleaseWar);
