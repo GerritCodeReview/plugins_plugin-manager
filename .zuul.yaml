@@ -1,0 +1,22 @@
+- job:
+    name: plugins-plugin-manager-build
+    parent: gerrit-plugin-build
+    required-projects:
+      - polymer-bridges
+      - plugins/codemirror-editor
+      - plugins/commit-message-length-validator
+      - plugins/delete-project
+      - plugins/download-commands
+      - plugins/gitiles
+      - plugins/hooks
+      - plugins/replication
+      - plugins/reviewnotes
+      - plugins/singleusergroup
+      - plugins/webhooks
+
+- project:
+    description: |
+      Build the plugin in check.
+    check:
+      jobs:
+        - plugins-plugin-manager-build
