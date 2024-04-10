@@ -16,6 +16,24 @@
       "message": "This actually [worked](https://ci.gerritcodereview.com/t/gerrit/build/6b10a213e0ac4ae6bb7701ef0ff34149/console), but it also ran the old build and that one failed. I think once this is merged it will only run the new build.",
       "revId": "741f4e6dd985fd9ee7f8d2fab25ed23aef5ad92d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ca9c9182_b17058f2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2024-04-10T19:58:33Z",
+      "side": 1,
+      "message": "Actually we need to [remove](https://gerrit-review.googlesource.com/c/zuul/config/+/419037) the other job in order for this new job to be the only one that gets run.\n\nI also fixed the job definition to match the other core plugins.",
+      "parentUuid": "aaf89ca1_02f5f467",
+      "revId": "741f4e6dd985fd9ee7f8d2fab25ed23aef5ad92d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
