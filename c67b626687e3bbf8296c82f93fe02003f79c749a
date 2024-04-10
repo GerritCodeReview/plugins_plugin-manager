@@ -50,6 +50,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "3a0ae09f_377f2d39",
+        "filename": ".zuul.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-04-10T22:40:06Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "693553cc_7d104acd",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 23
+      },
+      "revId": "c67b626687e3bbf8296c82f93fe02003f79c749a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "6d361e3c_d682b790",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 2
