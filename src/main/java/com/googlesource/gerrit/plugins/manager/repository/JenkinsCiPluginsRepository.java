@@ -119,7 +119,7 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
     Optional<SmartJson> buildExecution = tryGetJson(url + "/api/json");
     Optional<JsonArray> artifacts =
         buildExecution.map(json -> json.get("artifacts").get().getAsJsonArray());
-    if (artifacts.orElse(new JsonArray()).size() == 0) {
+    if (artifacts.orElseGet(() -> new JsonArray()).size() == 0) {
       return Optional.empty();
     }
 

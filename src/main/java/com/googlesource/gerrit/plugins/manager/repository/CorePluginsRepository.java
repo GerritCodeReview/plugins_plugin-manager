@@ -77,13 +77,14 @@ public class CorePluginsRepository implements PluginsRepository {
                       "",
                       pluginUrl.toString());
                 })
-            .orElse(
-                new PluginInfo(
-                    dropSuffix(entryName.getFileName().toString(), ".jar"),
-                    "",
-                    "",
-                    "",
-                    pluginUrl.toString()));
+            .orElseGet(
+                () ->
+                    new PluginInfo(
+                        dropSuffix(entryName.getFileName().toString(), ".jar"),
+                        "",
+                        "",
+                        "",
+                        pluginUrl.toString()));
       } catch (IOException e) {
         logger.atSevere().withCause(e).log("Unable to open plugin %s", pluginUrl);
         return null;
