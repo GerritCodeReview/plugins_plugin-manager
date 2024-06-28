@@ -39,6 +39,7 @@ public class PluginsRepositoryTest {
           "hooks",
           "plugin-manager",
           "replication",
+          "replication-api",
           "reviewnotes",
           "singleusergroup",
           "webhooks");
