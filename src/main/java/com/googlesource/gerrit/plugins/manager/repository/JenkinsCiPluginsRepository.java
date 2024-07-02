@@ -123,11 +123,27 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
       return Optional.empty();
     }
 
-    Optional<SmartJson> artifactJson = artifacts.flatMap(a -> findArtifact(a, ".jar"));
-    if (!artifactJson.isPresent()) {
-      return Optional.empty();
+    Optional<SmartJson> artifactJavaJson = artifacts.flatMap(a -> findArtifact(a, ".jar"));
+    if (artifactJavaJson.isPresent()) {
+      Optional<PluginInfo>javaArtifact = getJavaPluginArtifactInfo(buildExecution, artifacts, artifactJavaJson);
+      if (javaArtifact.isPresent()) {
+        return javaArtifact;
+      }
     }
 
+    Optional<SmartJson> artifactJsJson = artifacts.flatMap(a -> findArtifact(a, ".js"));
+    if (artifactJsJson.isPresent()) {
+      Optional<PluginInfo> jsArtifact = getJsPluginArtifactInfo(buildExecution, artifacts, artifactJsJson);
+      if (jsArtifact.isPresent()) {
+        return jsArtifact;
+      }
+    }
+
+    return Optional.empty();
+  }
+
+
+  private Optional<PluginInfo> getJavaPluginArtifactInfo(Optional<SmartJson> buildExecution, Optional<JsonArray> artifacts, Optional<SmartJson> artifactJson) {
     String pluginPath = artifactJson.get().getString("relativePath");
 
     String[] pluginPathParts = pluginPath.split("/");
@@ -154,6 +170,40 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
         return pluginVersion.map(
             version ->
                 new PluginInfo(pluginName, pluginDescription.orElse(""), version, sha1, pluginUrl));
+      }
+    }
+
+    return Optional.empty();
+  }
+
+  private Optional<PluginInfo> getJsPluginArtifactInfo(Optional<SmartJson> buildExecution, Optional<JsonArray> artifacts, Optional<SmartJson> artifactJson) {
+    String pluginPath = artifactJson.get().getString("relativePath");
+
+    String[] pluginPathParts = pluginPath.split("/");
+    String pluginName = pluginNameOfJs(pluginPathParts);
+
+    String pluginUrl =
+        String.format("%s/artifact/%s", buildExecution.get().getString("url"), pluginPath);
+
+    Optional<String> pluginVersion =
+        fetchArtifact(buildExecution.get(), artifacts.get(), ".js-version");
+    Optional<String> pluginDescription =
+        fetchArtifactJson(buildExecution.get(), artifacts.get(), ".json")
+            .flatMap(json -> json.getOptionalString("description"));
+
+    for (JsonElement elem : buildExecution.get().get("actions").get().getAsJsonArray()) {
+      SmartJson elemJson = SmartJson.of(elem);
+      Optional<SmartJson> lastBuildRevision = elemJson.getOptional("lastBuiltRevision");
+
+      if (lastBuildRevision.isPresent()) {
+        String sha1 = lastBuildRevision.get().getString("SHA1").substring(0, 8);
+        if (pluginVersion.isPresent()) {
+          return pluginVersion.map(
+              version ->
+                  new PluginInfo(pluginName, pluginDescription.orElse(""), version, sha1, pluginUrl));
+        } else {
+          return Optional.of(new PluginInfo(pluginName, pluginDescription.orElse(""), "", sha1, pluginUrl));
+        }
       }
     }
 
@@ -225,6 +275,18 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
 
     int jarExtPos = pluginJarParts[filePos].indexOf(".jar");
     return pluginJarParts[filePos].substring(0, jarExtPos);
+  }
+
+  private String pluginNameOfJs(String[] pluginJsParts) {
+    int filePos = pluginJsParts.length - 1;
+    int pathPos = filePos - 1;
+
+    if (pluginJsParts[filePos].startsWith(pluginJsParts[pathPos])) {
+      return pluginJsParts[pathPos];
+    }
+
+    int jsExtPos = pluginJsParts[filePos].indexOf(".js");
+    return pluginJsParts[filePos].substring(0, jsExtPos);
   }
 
   private boolean isMavenBuild(String[] pluginPathParts) {
