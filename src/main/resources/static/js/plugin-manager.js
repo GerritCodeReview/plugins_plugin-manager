@@ -129,7 +129,8 @@ var app = angular.module('PluginManager', []).controller(
         };
         $("button#" + id).addClass("hidden");
         $("span#installing-" + id).removeClass("hidden");
-        $http.put($scope.getBaseUrl() + '/a/plugins/' + id + ".jar", pluginInstallData).then(
+        var fileEnding = url.endsWith('.js') ? ".js" : ".jar";
+        $http.put($scope.getBaseUrl() + '/a/plugins/' + id + fileEnding, pluginInstallData).then(
             function successCallback(response) {
               $("span#installing-" + id).addClass("hidden");
               $("span#installed-" + id).removeClass("hidden");
