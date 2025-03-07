@@ -23,6 +23,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.MalformedURLException;
+import java.net.URI;
 import java.net.URL;
 
 public class SmartGson {
@@ -50,7 +51,7 @@ public class SmartGson {
   private InputStreamReader getReader(String url) throws IOException {
     URL ciUrl;
     try {
-      ciUrl = new URL(url);
+      ciUrl = URI.create(url).toURL();
     } catch (MalformedURLException e) {
       throw new IllegalArgumentException("Internal error: Gerrit CI URL seems to be malformed", e);
     }

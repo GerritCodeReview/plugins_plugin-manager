@@ -30,7 +30,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.URL;
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -224,7 +224,7 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
               buildExecution.getString("url"), verArtifactJson.get().getString("relativePath"));
       try (BufferedReader reader =
           new BufferedReader(
-              new InputStreamReader(new URL(versionUrl).openStream(), UTF_8), 4096)) {
+              new InputStreamReader(URI.create(versionUrl).toURL().openStream(), UTF_8), 4096)) {
         String line;
         while ((line = reader.readLine()) != null) {
           if (artifactBody.length() > 0) {
