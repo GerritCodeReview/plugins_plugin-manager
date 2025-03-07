@@ -125,7 +125,8 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
 
     Optional<SmartJson> artifactJavaJson = artifacts.flatMap(a -> findArtifact(a, ".jar"));
     if (artifactJavaJson.isPresent()) {
-      Optional<PluginInfo>javaArtifact = getJavaPluginArtifactInfo(buildExecution, artifacts, artifactJavaJson);
+      Optional<PluginInfo> javaArtifact =
+          getJavaPluginArtifactInfo(buildExecution, artifacts, artifactJavaJson);
       if (javaArtifact.isPresent()) {
         return javaArtifact;
       }
@@ -133,7 +134,8 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
 
     Optional<SmartJson> artifactJsJson = artifacts.flatMap(a -> findArtifact(a, ".js"));
     if (artifactJsJson.isPresent()) {
-      Optional<PluginInfo> jsArtifact = getJsPluginArtifactInfo(buildExecution, artifacts, artifactJsJson);
+      Optional<PluginInfo> jsArtifact =
+          getJsPluginArtifactInfo(buildExecution, artifacts, artifactJsJson);
       if (jsArtifact.isPresent()) {
         return jsArtifact;
       }
@@ -142,8 +144,10 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
     return Optional.empty();
   }
 
-
-  private Optional<PluginInfo> getJavaPluginArtifactInfo(Optional<SmartJson> buildExecution, Optional<JsonArray> artifacts, Optional<SmartJson> artifactJson) {
+  private Optional<PluginInfo> getJavaPluginArtifactInfo(
+      Optional<SmartJson> buildExecution,
+      Optional<JsonArray> artifacts,
+      Optional<SmartJson> artifactJson) {
     String pluginPath = artifactJson.get().getString("relativePath");
 
     String[] pluginPathParts = pluginPath.split("/");
@@ -176,7 +180,10 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
     return Optional.empty();
   }
 
-  private Optional<PluginInfo> getJsPluginArtifactInfo(Optional<SmartJson> buildExecution, Optional<JsonArray> artifacts, Optional<SmartJson> artifactJson) {
+  private Optional<PluginInfo> getJsPluginArtifactInfo(
+      Optional<SmartJson> buildExecution,
+      Optional<JsonArray> artifacts,
+      Optional<SmartJson> artifactJson) {
     String pluginPath = artifactJson.get().getString("relativePath");
 
     String[] pluginPathParts = pluginPath.split("/");
