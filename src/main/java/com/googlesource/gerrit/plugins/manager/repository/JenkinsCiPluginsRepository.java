@@ -17,6 +17,7 @@ package com.googlesource.gerrit.plugins.manager.repository;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 import com.google.common.flogger.FluentLogger;
+import com.google.common.base.Splitter;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.inject.Inject;
@@ -36,12 +37,18 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.apache.commons.lang3.StringUtils;
 
 @Singleton
 public class JenkinsCiPluginsRepository implements PluginsRepository {
 
   private static final FluentLogger logger = FluentLogger.forEnclosingClass();
+  private static final String pluginForMavenBuildRegex = ".*\\/plugin-(.+)-mvn-.*";
+  private static final Pattern pluginNameCompiledPattern =
+          Pattern.compile(pluginForMavenBuildRegex);
 
   private final PluginManagerConfig config;
 
@@ -83,7 +90,7 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
 
     try {
       Job[] jobs =
-          gson.get(config.getJenkinsUrl() + "/view/" + viewName + "/api/json", View.class).jobs;
+              gson.get(config.getJenkinsUrl() + "/view/" + viewName + "/api/json", View.class).jobs;
 
       for (Job job : jobs) {
         if (job.color.equals("blue")) {
@@ -95,7 +102,7 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
       }
     } catch (FileNotFoundException e) {
       logger.atWarning().withCause(e).log(
-          "No plugins available for Gerrit version %s", gerritVersion);
+              "No plugins available for Gerrit version %s", gerritVersion);
     }
 
     return plugins;
@@ -106,13 +113,13 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
     Optional<SmartJson> lastSuccessfulBuild = jobDetails.getOptional("lastSuccessfulBuild");
 
     return lastSuccessfulBuild.flatMap(
-        new Function<SmartJson, Optional<PluginInfo>>() {
-          @Override
-          public Optional<PluginInfo> apply(SmartJson build) {
-            String buildUrl = build.getString("url");
-            return getPluginArtifactInfo(buildUrl);
-          }
-        });
+            new Function<SmartJson, Optional<PluginInfo>>() {
+              @Override
+              public Optional<PluginInfo> apply(SmartJson build) {
+                String buildUrl = build.getString("url");
+                return getPluginArtifactInfo(buildUrl);
+              }
+            });
   }
 
   private Optional<PluginInfo> getPluginArtifactInfo(String url) {
@@ -151,19 +158,21 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
     String pluginPath = artifactJson.get().getString("relativePath");
 
     String[] pluginPathParts = pluginPath.split("/");
+    String buildExecutionURL = buildExecution.get().getString("url");
+
     String pluginName =
-        isMavenBuild(pluginPathParts)
-            ? fixPluginNameForMavenBuilds(pluginPathParts)
-            : pluginNameOfJar(pluginPathParts);
+            isMavenBuild(pluginPathParts)
+                    ? fixPluginNameForMavenBuilds(pluginPathParts, buildExecutionURL)
+                    : pluginNameOfJar(pluginPathParts);
 
     String pluginUrl =
-        String.format("%s/artifact/%s", buildExecution.get().getString("url"), pluginPath);
+            String.format("%s/artifact/%s", buildExecutionURL, pluginPath);
 
     Optional<String> pluginVersion =
-        fetchArtifact(buildExecution.get(), artifacts.get(), ".jar-version");
+            fetchArtifact(buildExecution.get(), artifacts.get(), ".jar-version");
     Optional<String> pluginDescription =
-        fetchArtifactJson(buildExecution.get(), artifacts.get(), ".json")
-            .flatMap(json -> json.getOptionalString("description"));
+            fetchArtifactJson(buildExecution.get(), artifacts.get(), ".json")
+                    .flatMap(json -> json.getOptionalString("description"));
 
     for (JsonElement elem : buildExecution.get().get("actions").get().getAsJsonArray()) {
       SmartJson elemJson = SmartJson.of(elem);
@@ -172,8 +181,8 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
       if (lastBuildRevision.isPresent()) {
         String sha1 = lastBuildRevision.get().getString("SHA1").substring(0, 8);
         return pluginVersion.map(
-            version ->
-                new PluginInfo(pluginName, pluginDescription.orElse(""), version, sha1, pluginUrl));
+                version ->
+                        new PluginInfo(pluginName, pluginDescription.orElse(""), version, sha1, pluginUrl));
       }
     }
 
@@ -214,14 +223,14 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
   }
 
   private Optional<String> fetchArtifact(
-      SmartJson buildExecution, JsonArray artifacts, String artifactSuffix) {
+          SmartJson buildExecution, JsonArray artifacts, String artifactSuffix) {
     StringBuilder artifactBody = new StringBuilder();
     Optional<SmartJson> verArtifactJson = findArtifact(artifacts, artifactSuffix);
     if (verArtifactJson.isPresent()) {
       String versionUrl =
-          String.format(
-              "%s/artifact/%s",
-              buildExecution.getString("url"), verArtifactJson.get().getString("relativePath"));
+              String.format(
+                      "%s/artifact/%s",
+                      buildExecution.getString("url"), verArtifactJson.get().getString("relativePath"));
       try (BufferedReader reader =
           new BufferedReader(
               new InputStreamReader(URI.create(versionUrl).toURL().openStream(), UTF_8), 4096)) {
@@ -241,15 +250,15 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
   }
 
   private Optional<SmartJson> fetchArtifactJson(
-      SmartJson buildExecution, JsonArray artifacts, String artifactSuffix) {
+          SmartJson buildExecution, JsonArray artifacts, String artifactSuffix) {
     Optional<SmartJson> jsonArtifact = findArtifact(artifacts, artifactSuffix);
     return jsonArtifact.flatMap(
-        artifactJson ->
-            tryGetJson(
-                String.format(
-                    "%s/artifact/%s",
-                    buildExecution.getString("url"),
-                    jsonArtifact.get().getString("relativePath"))));
+            artifactJson ->
+                    tryGetJson(
+                            String.format(
+                                    "%s/artifact/%s",
+                                    buildExecution.getString("url"),
+                                    jsonArtifact.get().getString("relativePath"))));
   }
 
   private Optional<SmartJson> tryGetJson(String url) {
@@ -261,11 +270,59 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
     }
   }
 
-  private String fixPluginNameForMavenBuilds(String[] pluginPathParts) {
+  /** Existing code in this method, looks for <plugin>-<version> as the format.
+   *
+   * Maven Plugins can now support hyphens in the repo and plugin name without incorrect assumptions
+   * and incorrect viewing in the plugin list as long as the plugin view name is correct.
+   *
+   * @param pluginPathParts Parts of the plugin path split into an array.
+   * @param buildExecutionURL The build execution URL information for this specific plugin job.
+   * @return The correct name of the maven based plugin - from with the target/mvn.jar source, or the build
+   * execution information from the build job if the name of the plugin is more complicated.
+   */
+  public static String fixPluginNameForMavenBuilds(String[] pluginPathParts, String buildExecutionURL ) {
     String mavenPluginFilename =
-        StringUtils.substringBeforeLast(pluginPathParts[pluginPathParts.length - 1], ".");
+            StringUtils.substringBeforeLast(
+                    pluginPathParts[pluginPathParts.length - 1], ".");
+
     int versionDelim = mavenPluginFilename.indexOf('-');
-    return versionDelim > 0 ? mavenPluginFilename.substring(0, versionDelim) : mavenPluginFilename;
+    List<String> expectedMvnPluginNameParts = Splitter.on('-')
+            .splitToList(mavenPluginFilename);
+
+    // either return the first path ( not the version number ) or the entire string if only 0 or 1 hyphen.
+    // If more we have more decision logic to make.
+    if (versionDelim == -1 || expectedMvnPluginNameParts.size() == 1) {
+      // no hyphens so its just called "bob.jar" etc.
+      return mavenPluginFilename;
+    }
+    // old logic always tool full name as above, or the first section - so record it off for all fallbacks below until we
+    // decide to change this behaviour.
+    final String fallbackName = expectedMvnPluginNameParts.get(0);
+
+    if (versionDelim == 1) {
+      // just hyphenated once, so its bob-<version>.jar, so return the first section
+      // not the 2nd version part, keeping the same old logic.
+      return fallbackName;
+    }
+
+    // Any more and we need to do more work here, so lets try to pull apart the maven plugin name.
+    // The easiest way is the build url has the name always of the format /someurl/job/plugin-<name>-mvn-<branch>
+    // See new test examples in PluginsCheckMavenNamingTest class.
+    final Matcher matchPluginName = pluginNameCompiledPattern.matcher(buildExecutionURL);
+
+    if ( !matchPluginName.matches() ){
+      // not expected format - use fallback name again
+      logger.atFine()
+              .log("Build url isn't in the correct format, it should start with plugin-<name>-mvn-*, " +
+                      "investigate naming convention of the maven job: %s", buildExecutionURL);
+      return fallbackName;
+    }
+
+    final String fullNameByJob = matchPluginName.group(1);
+    // ensure the fallback name, is within this new full plugin name we obtained.
+    // e.g. if "ai-code-review" contains "ai" the fallback then lets use the correct new name, if for some
+    // reason someone named the job something completely different, then all bets are off, and use fallback.
+    return fullNameByJob.contains(fallbackName) ? fullNameByJob : fallbackName;
   }
 
   private String pluginNameOfJar(String[] pluginJarParts) {
@@ -292,7 +349,7 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
     return pluginJsParts[filePos].substring(0, jsExtPos);
   }
 
-  private boolean isMavenBuild(String[] pluginPathParts) {
+  public static boolean isMavenBuild(String[] pluginPathParts) {
     return pluginPathParts[pluginPathParts.length - 2].equals("target");
   }
 
