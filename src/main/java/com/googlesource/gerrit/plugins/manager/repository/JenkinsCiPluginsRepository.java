@@ -16,6 +16,7 @@ package com.googlesource.gerrit.plugins.manager.repository;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
 
+import com.google.common.annotations.VisibleForTesting;
 import com.google.common.flogger.FluentLogger;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -261,7 +262,8 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
     }
   }
 
-  private String fixPluginNameForMavenBuilds(String[] pluginPathParts) {
+  @VisibleForTesting
+  static String fixPluginNameForMavenBuilds(String[] pluginPathParts) {
     String mavenPluginFilename =
         StringUtils.substringBeforeLast(pluginPathParts[pluginPathParts.length - 1], ".");
     int versionDelim = mavenPluginFilename.indexOf('-');
@@ -292,7 +294,8 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
     return pluginJsParts[filePos].substring(0, jsExtPos);
   }
 
-  private boolean isMavenBuild(String[] pluginPathParts) {
+  @VisibleForTesting
+  static boolean isMavenBuild(String[] pluginPathParts) {
     return pluginPathParts[pluginPathParts.length - 2].equals("target");
   }
 
