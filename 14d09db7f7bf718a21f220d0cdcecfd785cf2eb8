@@ -34,6 +34,24 @@
       "parentUuid": "3ba97b9f_2be6a7b8",
       "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0964de41_79af7c7e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2025-05-19T14:25:42Z",
+      "side": 1,
+      "message": "Ideally I think we could have added a new field \"e.g. name\" just like how we obtain the \"description\" from the google repository build url and therefore build name.\nTo be honest even the repo name looks to be what is u sed e.g. github as its useful when grouping more than one jar to a common name e.g. github-plugin and github-oauth dont appear as 2 assets, they appear as one grouped by the repo name. \n\nAs I wanted to reduce the risk here, I kept the previous split logic and use it in most csaes and as all fallbacks conditions, with the only exception being for more complex named hyphenated repos / plugins.",
+      "parentUuid": "d03cefa8_638bc373",
+      "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
