@@ -16,6 +16,24 @@
       "message": "I believe this needs to be fixed in the CI job definition of the ai-code-review plugin, as the version should not be in the jar name.",
       "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d03cefa8_638bc373",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2025-05-19T14:12:38Z",
+      "side": 1,
+      "message": "I do not believe this to be true, all of the current maven builds, build correctly witht the version number on the end - its part of the maven standard build process.  E.g. look at the current github maven build which works.  The only reason that it works, is that you are looking for the first hyphen, actually the jars are called github-plugin-\u003cversion\u003e.jar and github-oauth-\u003cversion\u003e.jar.\n\nhttps://gerrit-ci.gerritforge.com/view/Plugins-stable-3.9/job/plugin-github-mvn-stable-3.9/\n\nAs such I want a simple change that works with all of the current maven builds without changing all of the current maven builds.  I believe it would be incorrect to prevent normal maven behaviour, simply to allow this bug in the fixMavenName method to continue.\n\nThe alternative would be to name the ai-code-review plugin to ai_code_review but again, I think this wouldn\u0027t be correct.\n\nI believe the suggested fix, applies to all maven builds equally and fixes them using the simplest approach which is falling back to the available reponame which is in a more predictable naming convention and has no version number.",
+      "parentUuid": "3ba97b9f_2be6a7b8",
+      "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
