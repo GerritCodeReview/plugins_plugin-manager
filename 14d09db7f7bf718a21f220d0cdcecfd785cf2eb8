@@ -52,6 +52,24 @@
       "parentUuid": "d03cefa8_638bc373",
       "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c55ea000_42802b3d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2025-05-19T14:32:40Z",
+      "side": 1,
+      "message": "Finally, I tried lucas suggesting by passing in the build information locally, removing the \"version\" from the name.\nUnfortunately we end up with another incorrecly named plugin, with the same issue, as its then called \"ai-code\" and not \"ai-code-review\".",
+      "parentUuid": "0964de41_79af7c7e",
+      "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
