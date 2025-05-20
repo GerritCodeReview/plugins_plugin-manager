@@ -70,6 +70,23 @@
       "parentUuid": "0964de41_79af7c7e",
       "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d30853e2_4564a38e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-05-20T07:52:01Z",
+      "side": 1,
+      "message": "The Change 77701 is the culprit, and yes, the fix I made 9 years ago for adjusting maven plugin names was too simplistic. Why not simply using the last index of `-` in https://gerrit-review.googlesource.com/c/plugins/plugin-manager/+/77701/comment/c237a121_0a0f3fd0/? It should be really a one-liner change.",
+      "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
