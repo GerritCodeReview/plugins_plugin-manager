@@ -87,6 +87,24 @@
       "message": "The Change 77701 is the culprit, and yes, the fix I made 9 years ago for adjusting maven plugin names was too simplistic. Why not simply using the last index of `-` in https://gerrit-review.googlesource.com/c/plugins/plugin-manager/+/77701/comment/c237a121_0a0f3fd0/? It should be really a one-liner change.",
       "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7e85e576_19ceb6ac",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2025-05-20T15:00:07Z",
+      "side": 1,
+      "message": "I could do that, and it was my initial thought.\nBut when checking there are maven builds that have hypens in the name look at these examples:\nhttps://gerrit-ci.gerritforge.com/job/plugin-github-mvn-stable-3.9/\nhttps://gerrit-ci.gerritforge.com/job/plugin-github-mvn-stable-3.10/\n\ne.g. \ngithub-oauth-3.10.0-rc3.jar\ngithub-plugin-3.10.0-rc3.jar\n\nThis presented 2 issues.\n1) Using the last hyphen did not work when the version info had any hypenated suffix, which we see quite often as \"\u003cversion\u003e-rc1\" etc.  I do see this used a lot on different plugins.\n\n2) Take the last hyphen for the github plugins even if there was no -rcX suffix, isn\u0027t correct and would actually change the names presented to 2 different names. as there are 2 different plugin jars.\nOne github-oauth and one github-plugin, but luckily the repository name is github.\n\nAs such my fix was to reduce risk, and leave \"github\" assets as a single item on the list which correctly installs  both of the assets. \n\nMaybe the github install should have 2 options appear, one as github-plugin and another as github-auth, but I decided to leave this untouched to reduce the impact of this change.",
+      "parentUuid": "d30853e2_4564a38e",
+      "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
