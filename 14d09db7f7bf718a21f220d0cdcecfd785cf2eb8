@@ -123,6 +123,24 @@
       "parentUuid": "7e85e576_19ceb6ac",
       "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "80f71134_abcd3b31",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-05-21T14:26:27Z",
+      "side": 1,
+      "message": "\u003e Finally, I tried lucas suggesting by passing in the build information locally, removing the \"version\" from the name.\n\u003e Unfortunately we end up with another incorrecly named plugin, with the same issue, as its then called \"ai-code\" and not \"ai-code-review\".\n\nThe GitHub plugin isn\u0027t built with Maven anymore. Can you point to the other incorrectly named plugin by just removing the version from the artifact name?",
+      "parentUuid": "c55ea000_42802b3d",
+      "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
