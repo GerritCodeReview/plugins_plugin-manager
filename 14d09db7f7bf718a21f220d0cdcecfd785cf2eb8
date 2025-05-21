@@ -105,6 +105,24 @@
       "parentUuid": "d30853e2_4564a38e",
       "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "60e305b6_6642ab19",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2025-05-21T14:00:13Z",
+      "side": 1,
+      "message": "I can add some tests with the \u003cplugin\u003e-1.0.0-rc0 type issue, and showing my fix works if you want to the test cases.   Is there anyone else that I should add to this review to get more eyes on it?",
+      "parentUuid": "7e85e576_19ceb6ac",
+      "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
