@@ -177,6 +177,23 @@
       "parentUuid": "80f71134_abcd3b31",
       "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2892bbe4_156a149f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2025-05-22T13:57:04Z",
+      "side": 1,
+      "message": "So I have seen the fixes for github, which have 2 assets now.\n\ntarget/github-oauth-3.10.3.jar\ntarget/github-plugin-3.10.3.jar\n\nThe name is currently github for this plugin, as it has more than one asset, it seems correct to have it grouped by the repository name \"github\"\n\ntarget/ai-code-review-3.10.0.jar\n\nLast hyphen will called it correctly \"ai-code-review\", but for all maven plugins we must agree to never use -SNAPSHOT, or -RC type conventions in the version number. \n\n\nSo if we take the last hyphen it works for ai-code-review just fine as there is only one asset, but this doesn\u0027t work for the github assets, as you end up with 2 names, github-plugin, and github-auth?  \n\nWhat is you suggestion on the fix with these 2 3.10 plugins with this in mind.\n\nThanks for your replies on this topic.",
+      "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
