@@ -216,6 +216,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "166e0877_1f15f70e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-05-22T14:10:39Z",
+      "side": 1,
+      "message": "I believe there are multiple issues here with the individual projects’ builds. One change at a time on each of those projects and you’ll get them sorted. Or better just convert them into Bazel",
+      "parentUuid": "903f4a8d_6e229660",
+      "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d7984a8d_61157b62",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepository.java",
         "patchSetId": 3
