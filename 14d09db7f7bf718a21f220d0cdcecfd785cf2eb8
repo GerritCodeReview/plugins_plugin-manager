@@ -194,6 +194,116 @@
       "message": "So I have seen the fixes for github, which have 2 assets now.\n\ntarget/github-oauth-3.10.3.jar\ntarget/github-plugin-3.10.3.jar\n\nThe name is currently github for this plugin, as it has more than one asset, it seems correct to have it grouped by the repository name \"github\"\n\ntarget/ai-code-review-3.10.0.jar\n\nLast hyphen will called it correctly \"ai-code-review\", but for all maven plugins we must agree to never use -SNAPSHOT, or -RC type conventions in the version number. \n\n\nSo if we take the last hyphen it works for ai-code-review just fine as there is only one asset, but this doesn\u0027t work for the github assets, as you end up with 2 names, github-plugin, and github-auth?  \n\nWhat is you suggestion on the fix with these 2 3.10 plugins with this in mind.\n\nThanks for your replies on this topic.",
       "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9388d9af_277a72e9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-05-22T14:08:18Z",
+      "side": 1,
+      "message": "The plugin manager doesn’t know how to list or install multiple assets, and configure the plugin and restart Gerrit as needed. GitHub plugin isn’t the right example ;-)",
+      "parentUuid": "2892bbe4_156a149f",
+      "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d7984a8d_61157b62",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepository.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-05-22T14:08:18Z",
+      "side": 1,
+      "message": "Why do we care about the build URL?",
+      "range": {
+        "startLine": 279,
+        "startChar": 0,
+        "endLine": 279,
+        "endChar": 95
+      },
+      "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1a524b42_e2983a5e",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsCheckMavenNamingTest.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-05-22T14:08:18Z",
+      "side": 1,
+      "message": "Why should this jar name considered coming from a Maven build?\n\nSee the Bazel build for the plugin at https://gerrit-ci.gerritforge.com/job/plugin-github-bazel-master/: the jar is called `github-plugin.jar`.",
+      "range": {
+        "startLine": 16,
+        "startChar": 2,
+        "endLine": 16,
+        "endChar": 36
+      },
+      "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0f871658_68ddc393",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsCheckMavenNamingTest.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-05-22T14:08:18Z",
+      "side": 1,
+      "message": "It\u0027s not a good practise to use external resources for a test validation.",
+      "range": {
+        "startLine": 34,
+        "startChar": 4,
+        "endLine": 34,
+        "endChar": 74
+      },
+      "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "996eae37_475791e7",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsCheckMavenNamingTest.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-05-22T14:08:18Z",
+      "side": 1,
+      "message": "Same as above.",
+      "range": {
+        "startLine": 46,
+        "startChar": 4,
+        "endLine": 46,
+        "endChar": 82
+      },
+      "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
