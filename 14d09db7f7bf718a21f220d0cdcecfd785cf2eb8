@@ -250,6 +250,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc06330b_c4c2580a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4095417
+      },
+      "writtenOn": "2025-05-27T16:29:49Z",
+      "side": 1,
+      "message": "ในวันที่ อ. 27 พ.ค. 2025 22:07 น. Trevor Getty (Gerrit) \u003cnoreply-gerritcodereview+gyT6DnnPl-Qe1svx6ImKcg\u003d\u003d@\u003e เขียนว่า: google.com",
+      "tag": "mailMessageId\u003d\u003cCAHO6n8WzxXujJVJ2bhJB859UmRhVh+NEcyGJ2uyYK\u003d7pcpP+uA@mail.gmail.com\u003e",
+      "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d7984a8d_61157b62",
