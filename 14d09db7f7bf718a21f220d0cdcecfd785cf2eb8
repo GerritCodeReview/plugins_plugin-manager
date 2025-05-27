@@ -234,6 +234,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "aa11d46e_22ab9c1b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2025-05-27T15:07:34Z",
+      "side": 1,
+      "message": "I totally agree with multiple issues, but I am trying to fix them without external fixes, although fixing each external issue is definately another approach. \n\nConversion to bazel is a different discussion and something I dont agree on as much, I am pro maven, and like the Jgit approach of supporting both maven and bazel, such that we get the maven plugins support for convergence reporting, OWASP scanning etc, and keep bazel for people that are doing quick repeatable builds. \n\nJGit project does this very well, allowing anyone to pick it up with no bazel on their machine, just Intelli-J which comes with maven and work away. \n\n\nI have left a decision on the jira points above, do I fix using the simple approach ignoring the issue that it creates for 3.9 / 3.10 github plugin, and it can be fixed in the old versions as separate bits of work by someone. \nOr do we accept this fix, which allows the old issues to remain working, and this fix to work in any stable stream.   \n\nMy reasoning, is I would really like this in 3.10, to get the \"ai-code-review\" showing correctly, but it would break github.  So a github build change would have to go in.\n\nI will leave this decision with you and update the code appropriately for the plugin manager.",
+      "parentUuid": "166e0877_1f15f70e",
+      "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d7984a8d_61157b62",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepository.java",
         "patchSetId": 3
