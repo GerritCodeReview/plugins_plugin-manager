@@ -22,6 +22,30 @@
       },
       "revId": "2808425de3d91a319d7497e127af1336ca6692c0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d4d6bd15_4b2b327b",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepository.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 267,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2025-05-27T14:58:57Z",
+      "side": 0,
+      "message": "Last index of works in most cases just fine:\n\ne.g. the plugin I started this for, ai-code-review, works as it should and fixes the problem. \n\nBut when I tested the rest of the plugins in all versions that is where breaks appeared as described earlier. \n\nHere is what happens for stable-3.9 or stable-3.10 installations of the github plugin using the last hyphen. \n1) Originally they failed due to hyphens in the version numbers, e.g. 3.10.0-rc10, you have since changed the output of these 2 builds to no longer have hyphens which made this issue disappear. \n\n2) I continued along this line but found that the dual assets within the github plugin then created the second problem:\n\n\nLets take stable-3.10:\n\nhttps://gerrit-ci.gerritforge.com/view/Plugins-stable-3.10/job/plugin-github-mvn-stable-3.10/\ngithub-oauth-3.10.3.jar\ngithub-oauth-3.10.3.jar-version\t\ngithub-oauth-3.10.3.json\ngithub-plugin-3.10.3.jar\ngithub-plugin-3.10.3.jar-version\ngithub-plugin-3.10.3.json\n\nIf we change to use the last hyphen it actually gets 2 result names:\n\"github-oauth\u0027\n\"github-plugin\"\n\nIt uses the first it finds with a .json file, which happens to be \"github-oauth\" - and this is what will appear in the plugin manager view.\nAlthough if you click on github-oauth it will fail to install, as really it is looking for the github-plugin description, and repo \"github\".  The previous bug of first hyphen, just happens to make the github plugin work, due to first hyphen choice, but breaks any other plugins with hyphens. \n\nI will attach how this appears when using this approach to the jira, showing that taking the last hyphen breaks the 3.10 branch appearance and working of the github plugin. \n\nNow with that in mind, the current plugin builds for master has \"github\" as a bazel build, so it will work fine when master is pushed to a stable-3.12 location etc. reason being actually it has a single github.json file discussed below, not as much the change to bazel build.\n\n\nAs last index of would break the earlier github builds, and require other changes I had created code which meant this was not required, and really only was used for more complex names, although it can be used in all occasions, and just get rid of the indexOf code completely. \n\nThis approach uses the repository name ( i.e. the build url name ) which works just fine as the repository is called \"github\" for the broken case, or \"ai-code-review\" for the original failing plugin. \n \nCorrectly grouping the plugin as \"github\" keep the view working correctly for all older cases with no external build changes required. \n\nAs such, I tried to use the most reliable code for this small method which kept the change very compact, and which works in all cases, without exception.\nIt has the additional benefit of allowing version numbers with or without hyphens in them ( it doesnt\u0027 care ), and introduced no external requirements or build changes. \n\n\nSo I think we can either:\n1) LastHyphen Approach - Use this approach but fix up any broken maven builds builds to match this new expectation, this means at least the mvn github build on 3.10 to produce a single github.json file, not the 2 it has currently ( which matches the bazel build output more ).  \n\nor\n\n2) Go with the additional fallback type code I have written to use the repo name code here, which works in all cases and can be back ported and fix any existing stream issues in previous stable versions.",
+      "parentUuid": "8dc6254f_91eab9c7",
+      "range": {
+        "startLine": 267,
+        "startChar": 43,
+        "endLine": 267,
+        "endChar": 50
+      },
+      "revId": "2808425de3d91a319d7497e127af1336ca6692c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
