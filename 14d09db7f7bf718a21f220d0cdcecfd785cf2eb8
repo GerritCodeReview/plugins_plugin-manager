@@ -270,6 +270,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "00002558_07b9afc7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2025-05-27T17:00:43Z",
+      "side": 1,
+      "message": "Quick links to how a change to using lastIndexOf (hyphen) appears for github plugin in 3.10.\n\nName change from github to github-oauth:\nhttps://issues.gerritcodereview.com/417683832#attachment66177330\n\nThen clicking install fails with:\nhttps://issues.gerritcodereview.com/417683832#attachment66180377",
+      "parentUuid": "aa11d46e_22ab9c1b",
+      "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d7984a8d_61157b62",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepository.java",
         "patchSetId": 3
