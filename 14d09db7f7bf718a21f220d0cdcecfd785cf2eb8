@@ -288,6 +288,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6d4f3544_9c88f709",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2025-05-28T13:50:01Z",
+      "side": 1,
+      "message": "Within the actual ticket we discussed the github plugin issue, and as long we we dont back port the lastIndexOf to the 3.10 release it will remain untouched.  As it works for master, and current 3.12 builds as far as I am aware I will update to the simple fix here, with some simple tests.   Making the update now.",
+      "parentUuid": "00002558_07b9afc7",
+      "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d7984a8d_61157b62",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepository.java",
         "patchSetId": 3
