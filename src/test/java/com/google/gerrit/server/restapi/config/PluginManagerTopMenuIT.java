@@ -24,6 +24,7 @@ import com.google.gerrit.acceptance.testsuite.request.RequestScopeOperations;
 import com.google.gerrit.extensions.client.MenuItem;
 import com.google.gerrit.extensions.webui.TopMenu.MenuEntry;
 import com.google.gerrit.server.config.ConfigResource;
+import com.google.gerrit.server.restapi.config.topmenus.ListTopMenus;
 import com.google.inject.Inject;
 import java.util.List;
 import java.util.Optional;
