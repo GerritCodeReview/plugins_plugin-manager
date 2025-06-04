@@ -46,6 +46,30 @@
       },
       "revId": "2808425de3d91a319d7497e127af1336ca6692c0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b0e250aa_50432384",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepository.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 267,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2025-06-04T10:00:03Z",
+      "side": 0,
+      "message": "Acknowledged",
+      "parentUuid": "d4d6bd15_4b2b327b",
+      "range": {
+        "startLine": 267,
+        "startChar": 43,
+        "endLine": 267,
+        "endChar": 50
+      },
+      "revId": "2808425de3d91a319d7497e127af1336ca6692c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }

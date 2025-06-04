@@ -304,6 +304,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "64ab2880_5ed25038",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2025-06-04T10:00:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6d4f3544_9c88f709",
+      "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d7984a8d_61157b62",
@@ -341,6 +359,30 @@
       "side": 1,
       "message": "See above, its really to get the repo name. \n\nThe new approach is to use the plugin build job name as the plugin name which appears in the list.  This is most easily obtained from the current build path on the ci jobs, as they always have the format: \n   \u003csomeurl\u003e/plugin-\u003cname\u003e-mvn-\u003cbranch\u003e/    \n \n \nIn the same way that we use asset url for the pluginParts to check is it a maven build, which has a full path of:\n\nhttps://gerrit-ci.gerritforge.com/view/Plugins-stable-3.10/job/plugin-github-mvn-stable-3.10/lastSuccessfulBuild/artifact/github-plugin/target/github-plugin-3.10.3.jar\n\nBut only checks that the last 2 parts are of the format: \"target/xxx.jar\" to decide that it was built by maven and not bazel. \n\n\nI am then using this build URL as a way of grouping the maven assets, for this plugin, as they have 2 json / jar files but we want only one name ( historically and currently in the master bazel build as github ). \n\nThis was the only way I saw of fixing the current older builds like 3.10 / 3.9 without changing the current builds was to take the \"plugin-github-mvn\" middle part as its reliable and matches exactly what was needed for the maven build at this time.",
       "parentUuid": "d7984a8d_61157b62",
+      "range": {
+        "startLine": 279,
+        "startChar": 0,
+        "endLine": 279,
+        "endChar": 95
+      },
+      "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e4505b72_79d7df85",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepository.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2025-06-04T10:00:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "758de2d2_0bbb989b",
       "range": {
         "startLine": 279,
         "startChar": 0,
@@ -398,6 +440,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b733fa5_95ab4252",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsCheckMavenNamingTest.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2025-06-04T10:00:03Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "3ccad82c_8c499aee",
+      "range": {
+        "startLine": 16,
+        "startChar": 2,
+        "endLine": 16,
+        "endChar": 36
+      },
+      "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0f871658_68ddc393",
@@ -445,6 +511,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "478f6807_91987b6d",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsCheckMavenNamingTest.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2025-06-04T10:00:03Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "c33ccd01_8f1c6d46",
+      "range": {
+        "startLine": 34,
+        "startChar": 4,
+        "endLine": 34,
+        "endChar": 74
+      },
+      "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "996eae37_475791e7",
@@ -482,6 +572,30 @@
       "side": 1,
       "message": "ditto - as above.   I will change them to be super clear, I just wanted to use real examples.",
       "parentUuid": "996eae37_475791e7",
+      "range": {
+        "startLine": 46,
+        "startChar": 4,
+        "endLine": 46,
+        "endChar": 82
+      },
+      "revId": "14d09db7f7bf718a21f220d0cdcecfd785cf2eb8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8037f050_3aebf749",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsCheckMavenNamingTest.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2025-06-04T10:00:03Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "63d0c122_e3632575",
       "range": {
         "startLine": 46,
         "startChar": 4,
