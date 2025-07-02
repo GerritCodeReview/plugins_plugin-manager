@@ -24,6 +24,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8c82597e_96a96381",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2025-07-02T13:29:20Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "4ad924e9_389204ea",
+      "range": {
+        "startLine": 7,
+        "startChar": 17,
+        "endLine": 7,
+        "endChar": 29
+      },
+      "revId": "43b3b4348921283b80b25ca0780e266c050d0484",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4b7ceaa9_5ee66aea",
@@ -37,6 +61,30 @@
       "writtenOn": "2025-07-01T16:55:11Z",
       "side": 1,
       "message": "Invalid bug footer.",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 63
+      },
+      "revId": "43b3b4348921283b80b25ca0780e266c050d0484",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3e465b54_b8854ab1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2025-07-02T13:29:20Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "4b7ceaa9_5ee66aea",
       "range": {
         "startLine": 20,
         "startChar": 0,
