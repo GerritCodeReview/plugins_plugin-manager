@@ -93,6 +93,30 @@
       },
       "revId": "43b3b4348921283b80b25ca0780e266c050d0484",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2e4d145f_9303c4c4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-07-03T07:54:37Z",
+      "side": 1,
+      "message": "I didn\u0027t say to remove it, but I may have not suggested the correct format.\nSee below:\n\n```suggestion\nBug: Issue 417683832\n```\n\nAlso, the `Bug:` should be in the footer of the commit message and not in the middle.",
+      "parentUuid": "3e465b54_b8854ab1",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 63
+      },
+      "revId": "43b3b4348921283b80b25ca0780e266c050d0484",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
