@@ -1,5 +1,4 @@
-load("//tools/bzl:junit.bzl", "junit_tests")
-load("//tools/bzl:plugin.bzl", "PLUGIN_TEST_DEPS", "gerrit_plugin")
+load("@com_googlesource_gerrit_bazlets//:gerrit_plugin.bzl", "gerrit_plugin", "gerrit_plugin_tests")
 
 gerrit_plugin(
     name = "plugin-manager",
@@ -15,12 +14,12 @@ gerrit_plugin(
     resources = glob(["src/main/resources/**/*"]),
 )
 
-junit_tests(
+gerrit_plugin_tests(
     name = "plugin_manager_tests",
     srcs = glob(["src/test/java/**/*.java"]),
     data = ["//:release.war"],
     visibility = ["//visibility:public"],
-    deps = PLUGIN_TEST_DEPS + [
+    deps = [
         ":plugin-manager__plugin",
     ],
 )
