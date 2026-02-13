@@ -37,6 +37,7 @@ public class PluginsRepositoryTest {
           "download-commands",
           "gitiles",
           "hooks",
+          "oauth",
           "plugin-manager",
           "replication",
           "replication-api",
