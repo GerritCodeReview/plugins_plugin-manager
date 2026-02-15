@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "eae017bd_59714037",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-02-15T04:57:01Z",
+      "side": 1,
+      "message": "```suggestion\nDepends-On: https://gerrit-review.googlesource.com/c/gerrit/+/552381\nChange-Id: Id7394329c5dbaf30f7973b793ab560f7b8584b06\n```",
+      "revId": "22907c376ad623579632900a06d42713f34680ef",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "d1bf0c9d_08c24b51",
@@ -14,6 +31,41 @@
       "writtenOn": "2026-02-15T04:54:26Z",
       "side": 1,
       "message": "AFAIK the gerrit-oauth-provider plugins isn\u0027t core, or am I missing something?\nI don\u0027t see where it was added to the `.gitmodules` file.",
+      "revId": "22907c376ad623579632900a06d42713f34680ef",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2b9a7ee0_9531fb06",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-02-15T04:57:01Z",
+      "side": 1,
+      "message": "I see,",
+      "revId": "22907c376ad623579632900a06d42713f34680ef",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d581da97_dbad395c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-02-15T04:57:01Z",
+      "side": 1,
+      "message": "I see, it was added on https://gerrit-review.googlesource.com/c/gerrit/+/552381.",
+      "parentUuid": "d1bf0c9d_08c24b51",
       "revId": "22907c376ad623579632900a06d42713f34680ef",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
