@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d1bf0c9d_08c24b51",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-02-15T04:54:26Z",
+      "side": 1,
+      "message": "AFAIK the gerrit-oauth-provider plugins isn\u0027t core, or am I missing something?\nI don\u0027t see where it was added to the `.gitmodules` file.",
+      "revId": "22907c376ad623579632900a06d42713f34680ef",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
