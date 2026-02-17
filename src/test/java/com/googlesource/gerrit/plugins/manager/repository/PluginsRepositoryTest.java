@@ -38,6 +38,7 @@ public class PluginsRepositoryTest {
           "gerrit-oauth-provider",
           "gitiles",
           "hooks",
+          "javamelody",
           "plugin-manager",
           "replication",
           "replication-api",
