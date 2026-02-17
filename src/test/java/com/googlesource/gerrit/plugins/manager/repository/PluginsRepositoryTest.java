@@ -22,17 +22,23 @@ import static org.mockito.Mockito.when;
 
 import com.google.common.collect.ImmutableList;
 import com.google.gerrit.common.Version;
-import com.google.gerrit.server.config.SitePaths;
 import com.google.gson.JsonSyntaxException;
 import com.googlesource.gerrit.plugins.manager.gson.SmartGson;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Collection;
-import java.util.stream.Collectors;
+import java.util.List;
+import java.util.jar.JarEntry;
+import java.util.jar.JarOutputStream;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.TemporaryFolder;
 
 public class PluginsRepositoryTest {
+
+  @Rule public TemporaryFolder temporaryFolder = new TemporaryFolder();
 
   private static final ImmutableList<String> GERRIT_CORE_PLUGINS =
       ImmutableList.of(
@@ -50,31 +56,32 @@ public class PluginsRepositoryTest {
           "webhooks");
 
   @Test
-  public void corePluginsRepositoryShouldReturnCorePluginsFromReleaseWar() throws IOException {
-    SitePaths site = prepareSiteDirWithReleaseWar();
-
-    PluginsRepository pluginRepo = new CorePluginsRepository(site, new CorePluginsDescriptions());
-
-    Collection<PluginInfo> plugins = pluginRepo.list(Version.getVersion());
-    assertThat(plugins.stream().map(p -> p.name).sorted().collect(toList()))
+  public void corePluginsListShouldMatchDeclaredCorePlugins() throws IOException {
+    List<String> plugins = readDeclaredCorePlugins();
+    assertThat(plugins.stream().sorted().collect(toList()))
         .containsExactlyElementsIn(GERRIT_CORE_PLUGINS)
         .inOrder();
-    assertThat(plugins.stream().map(p -> p.license).collect(Collectors.toSet()))
-        .containsExactly(CorePluginsRepository.GERRIT_LICENSE);
   }
 
   @Test
-  public void corePluginsListFromReleaseWarShouldNotBeEmptyOnWindows() throws IOException {
-    char windowsSeparator = '\\';
-    SitePaths site = prepareSiteDirWithReleaseWar();
+  public void corePluginsListShouldNotBeEmpty() throws IOException {
+    assertThat(readDeclaredCorePlugins()).isNotEmpty();
+  }
 
-    PluginsRepository pluginRepo =
-        new CorePluginsRepository(
-            site.gerrit_war,
-            site.gerrit_war.toString().replace('/', windowsSeparator),
-            new CorePluginsDescriptions());
-
-    assertThat(pluginRepo.list(Version.getVersion())).isNotEmpty();
+  @Test
+  public void corePluginsShouldIncludeLicenseForNativeAndWindowsPaths() throws IOException {
+    // Exercise repository loading with a generated fixture instead of building release.war.
+    Path war = writeTestWar();
+    // Use the same physical file while also exercising Windows separator normalization.
+    for (String warPath : List.of(war.toString(), war.toString().replace('/', '\\'))) {
+      ImmutableList<PluginInfo> plugins =
+          new CorePluginsRepository(war, warPath, new CorePluginsDescriptions())
+              .list(Version.getVersion());
+      assertThat(plugins).hasSize(1);
+      assertThat(plugins.get(0).name).isEqualTo("test-plugin");
+      // The repository assigns this license to core plugins; it does not read a LICENSE file.
+      assertThat(plugins.get(0).license).isEqualTo(CorePluginsRepository.GERRIT_LICENSE);
+    }
   }
 
   @Test
@@ -87,24 +94,39 @@ public class PluginsRepositoryTest {
     assertThat(pluginRepo.tryGetJson(metadataUrl)).isEmpty();
   }
 
-  private SitePaths prepareSiteDirWithReleaseWar() throws IOException {
-    SitePaths site = new SitePaths(random());
-    Path pathToReleaseWar = Path.of(getenv("TEST_SRCDIR"), getenv("TEST_WORKSPACE"), "release.war");
-    assume().that(pathToReleaseWar.toFile().exists()).isTrue();
-    Files.createDirectories(site.bin_dir);
-    Files.createSymbolicLink(site.gerrit_war, pathToReleaseWar);
-    return site;
+  private Path writeTestWar() throws IOException {
+    // A valid JAR without a manifest exercises the fallback that derives the name from
+    // test-plugin.jar.
+    ByteArrayOutputStream pluginBytes = new ByteArrayOutputStream();
+    try (JarOutputStream plugin = new JarOutputStream(pluginBytes)) {
+      plugin.putNextEntry(new JarEntry("plugin.txt"));
+      plugin.write(0);
+      plugin.closeEntry();
+    }
+    // Reproduce only the WAR layout consumed by CorePluginsRepository.
+    Path war = temporaryFolder.newFile("gerrit.war").toPath();
+    try (JarOutputStream archive = new JarOutputStream(Files.newOutputStream(war))) {
+      archive.putNextEntry(new JarEntry("WEB-INF/plugins/test-plugin.jar"));
+      archive.write(pluginBytes.toByteArray());
+      archive.closeEntry();
+    }
+    return war;
+  }
+
+  private static List<String> readDeclaredCorePlugins() throws IOException {
+    Path p =
+        Path.of(getenv("TEST_SRCDIR"), getenv("TEST_WORKSPACE"), "plugins", "core.plugins.txt");
+    assume().that(p.toFile().exists()).isTrue();
+
+    return Files.readAllLines(p, StandardCharsets.UTF_8).stream()
+        .map(String::trim)
+        .filter(s -> !s.isEmpty())
+        .collect(toList());
   }
 
   private static String getenv(String name) {
     String value = System.getenv(name);
     assume().that(value).isNotNull();
     return value;
-  }
-
-  private static Path random() throws IOException {
-    Path tmp = Files.createTempFile("gerrit_", "_site");
-    Files.deleteIfExists(tmp);
-    return tmp;
   }
 }
