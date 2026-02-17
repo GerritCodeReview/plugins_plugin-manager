@@ -35,6 +35,7 @@ public class PluginsRepositoryTest {
           "commit-message-length-validator",
           "delete-project",
           "download-commands",
+          "gerrit-javamelody",
           "gerrit-oauth-provider",
           "gitiles",
           "hooks",
