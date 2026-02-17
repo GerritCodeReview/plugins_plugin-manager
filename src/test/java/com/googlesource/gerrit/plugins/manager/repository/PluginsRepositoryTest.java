@@ -19,12 +19,11 @@ import static com.google.common.truth.TruthJUnit.assume;
 import static java.util.stream.Collectors.toList;
 
 import com.google.common.collect.ImmutableList;
-import com.google.gerrit.common.Version;
-import com.google.gerrit.server.config.SitePaths;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Collection;
+import java.util.List;
 import org.junit.Test;
 
 public class PluginsRepositoryTest {
@@ -35,10 +34,10 @@ public class PluginsRepositoryTest {
           "commit-message-length-validator",
           "delete-project",
           "download-commands",
-          "gerrit-oauth-provider",
           "gitiles",
           "hooks",
           "javamelody",
+          "oauth",
           "plugin-manager",
           "replication",
           "replication-api",
@@ -47,49 +46,32 @@ public class PluginsRepositoryTest {
           "webhooks");
 
   @Test
-  public void corePluginsRepositoryShouldReturnCorePluginsFromReleaseWar() throws IOException {
-    SitePaths site = prepareSiteDirWithReleaseWar();
-
-    PluginsRepository pluginRepo = new CorePluginsRepository(site, new CorePluginsDescriptions());
-
-    Collection<PluginInfo> plugins = pluginRepo.list(Version.getVersion());
-    assertThat(plugins.stream().map(p -> p.name).sorted().collect(toList()))
+  public void corePluginsListShouldMatchDeclaredCorePlugins() throws IOException {
+    List<String> plugins = readDeclaredCorePlugins();
+    assertThat(plugins.stream().sorted().collect(toList()))
         .containsExactlyElementsIn(GERRIT_CORE_PLUGINS)
         .inOrder();
   }
 
   @Test
-  public void corePluginsListFromReleaseWarShouldNotBeEmptyOnWindows() throws IOException {
-    char windowsSeparator = '\\';
-    SitePaths site = prepareSiteDirWithReleaseWar();
-
-    PluginsRepository pluginRepo =
-        new CorePluginsRepository(
-            site.gerrit_war,
-            site.gerrit_war.toString().replace('/', windowsSeparator),
-            new CorePluginsDescriptions());
-
-    assertThat(pluginRepo.list(Version.getVersion())).isNotEmpty();
+  public void corePluginsListShouldNotBeEmpty() throws IOException {
+    assertThat(readDeclaredCorePlugins()).isNotEmpty();
   }
 
-  private SitePaths prepareSiteDirWithReleaseWar() throws IOException {
-    SitePaths site = new SitePaths(random());
-    Path pathToReleaseWar = Path.of(getenv("TEST_SRCDIR"), getenv("TEST_WORKSPACE"), "release.war");
-    assume().that(pathToReleaseWar.toFile().exists()).isTrue();
-    Files.createDirectories(site.bin_dir);
-    Files.createSymbolicLink(site.gerrit_war, pathToReleaseWar);
-    return site;
+  private static List<String> readDeclaredCorePlugins() throws IOException {
+    Path p =
+        Path.of(getenv("TEST_SRCDIR"), getenv("TEST_WORKSPACE"), "plugins", "core.plugins.txt");
+    assume().that(p.toFile().exists()).isTrue();
+
+    return Files.readAllLines(p, StandardCharsets.UTF_8).stream()
+        .map(String::trim)
+        .filter(s -> !s.isEmpty())
+        .collect(toList());
   }
 
   private static String getenv(String name) {
     String value = System.getenv(name);
     assume().that(value).isNotNull();
     return value;
-  }
-
-  private static Path random() throws IOException {
-    Path tmp = Files.createTempFile("gerrit_", "_site");
-    Files.deleteIfExists(tmp);
-    return tmp;
   }
 }
