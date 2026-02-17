@@ -17,7 +17,7 @@ gerrit_plugin(
 gerrit_plugin_tests(
     name = "plugin_manager_tests",
     srcs = glob(["src/test/java/**/*.java"]),
-    data = ["//:release.war"],
+    data = ["//plugins:core_plugins_list"],
     visibility = ["//visibility:public"],
     deps = [
         ":plugin-manager__plugin",
