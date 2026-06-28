@@ -15,7 +15,7 @@
 package com.googlesource.gerrit.plugins.manager.repository;
 
 import static com.google.common.truth.Truth.assertThat;
-import static com.google.common.truth.TruthJUnit.assume;
+import static com.google.common.truth.Truth.assertWithMessage;
 import static java.util.stream.Collectors.toList;
 
 import com.google.common.collect.ImmutableList;
@@ -72,16 +72,34 @@ public class PluginsRepositoryTest {
 
   private SitePaths prepareSiteDirWithReleaseWar() throws IOException {
     SitePaths site = new SitePaths(random());
-    Path pathToReleaseWar = Path.of(getenv("TEST_SRCDIR"), getenv("TEST_WORKSPACE"), "release.war");
-    assume().that(pathToReleaseWar.toFile().exists()).isTrue();
+    Path pathToReleaseWar =
+        Path.of(
+            requiredEnv("TEST_SRCDIR"),
+            requiredEnv("TEST_WORKSPACE"),
+            warName());
+    assertWithMessage("WAR runfile must exist: %s", pathToReleaseWar)
+        .that(Files.exists(pathToReleaseWar))
+        .isTrue();
     Files.createDirectories(site.bin_dir);
     Files.createSymbolicLink(site.gerrit_war, pathToReleaseWar);
     return site;
   }
 
-  private static String getenv(String name) {
+  /**
+   * The WAR under test follows the servlet flavour: the default test target inspects {@code
+   * release.war}; the flavoured test twin passes the matching WAR's runfile name via {@code
+   * PLUGIN_MANAGER_TEST_WAR}.
+   */
+  private static String warName() {
+    String war = System.getenv("PLUGIN_MANAGER_TEST_WAR");
+    return war != null ? war : "release.war";
+  }
+
+  private static String requiredEnv(String name) {
     String value = System.getenv(name);
-    assume().that(value).isNotNull();
+    assertWithMessage("Missing required env var: %s", name)
+        .that(value)
+        .isNotNull();
     return value;
   }
 
