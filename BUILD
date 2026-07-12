@@ -13,29 +13,30 @@ MANIFEST_ENTRIES = [
     "Implementation-URL: https://gerrit-review.googlesource.com/#/admin/projects/plugins/plugin-manager",
 ]
 
-# The sources are jakarta-canonical (the JGit-style reversed bridge): the
-# default ee8 jar is generated through the shared bazlets `to_javax`
-# transform and stamps `Gerrit-Flavour: ee8`; the ee11 jar compiles the
-# canonical sources directly and self-selects the jakarta configuration.
+# The sources are jakarta-canonical (the JGit-style reversed bridge). The
+# unsuffixed jar is the EE11 default: it compiles the canonical sources
+# directly, stamps `Gerrit-Flavour: ee11` and self-selects the jakarta
+# configuration. The -ee8 jar is the legacy flavour, generated through the
+# shared bazlets `to_javax` transform and stamping `Gerrit-Flavour: ee8`.
 # Build one or both:
 #   bazelisk build //plugins/plugin-manager:plugin-manager \
-#       //plugins/plugin-manager:plugin-manager-ee11
+#       //plugins/plugin-manager:plugin-manager-ee8
 gerrit_plugin(
     name = "plugin-manager",
     srcs = SRCS,
     canonical = "jakarta",
-    flavour = "ee8",
+    flavour = "ee11",
     manifest_entries = MANIFEST_ENTRIES,
     resources = RESOURCES,
 )
 
 # `dir_name = "plugin-manager"` keeps stamping/versioning shared with the default.
 gerrit_plugin(
-    name = "plugin-manager-ee11",
+    name = "plugin-manager-ee8",
     srcs = SRCS,
     canonical = "jakarta",
     dir_name = "plugin-manager",
-    flavour = "ee11",
+    flavour = "ee8",
     manifest_entries = MANIFEST_ENTRIES,
     resources = RESOURCES,
 )
