@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e343efcf_6d59fe00",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5008258
+      },
+      "writtenOn": "2026-07-15T17:05:47Z",
+      "side": 1,
+      "message": "476082: Fix plugin names having hyphens | https://gerrit-review.googlesource.com/c/plugins/plugin-manager/+/476082",
+      "revId": "578aa64d05fa982f41c2db72253c9b43c3f0d03e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
