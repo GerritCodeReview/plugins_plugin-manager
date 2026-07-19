@@ -1,13 +1,13 @@
 {
   "checks": {
     "zuul-check:plugins_plugin-manager": {
-      "state": "FAILED",
-      "message": "Change failed",
-      "url": "https://ci.gerritcodereview.com/t/gerrit/buildset/b9204c97abd042da8969fb932e23ca0e",
-      "started": "2026-07-19T07:09:11Z",
+      "state": "SCHEDULED",
+      "message": "Change has been enqueued in check",
+      "url": "https://ci.gerritcodereview.com/t/gerrit/status/change/606643,1",
+      "started": "2026-07-19T07:13:29Z",
       "finished": "2026-07-19T07:11:32Z",
       "created": "2026-07-12T17:37:28Z",
-      "updated": "2026-07-19T07:11:34Z"
+      "updated": "2026-07-19T07:13:29Z"
     }
   }
 }
