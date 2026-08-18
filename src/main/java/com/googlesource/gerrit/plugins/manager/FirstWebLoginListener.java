@@ -38,7 +38,7 @@ public class FirstWebLoginListener implements WebLoginListener {
   private final String pluginUrlPath;
 
   @Inject
-  public FirstWebLoginListener(
+  FirstWebLoginListener(
       PluginLoader pluginLoader,
       @PluginData Path pluginData,
       @PluginCanonicalWebUrlPath String pluginUrlPath,

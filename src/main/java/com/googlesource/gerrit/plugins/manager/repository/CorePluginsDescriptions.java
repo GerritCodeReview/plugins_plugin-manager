@@ -24,7 +24,7 @@ public class CorePluginsDescriptions {
   private final HashMap<String, String> pluginsDescriptions;
 
   @Inject
-  public CorePluginsDescriptions() {
+  CorePluginsDescriptions() {
     pluginsDescriptions = new HashMap<>();
     pluginsDescriptions.put("codemirror-editor", "CodeMirror plugin for polygerrit");
     pluginsDescriptions.put(

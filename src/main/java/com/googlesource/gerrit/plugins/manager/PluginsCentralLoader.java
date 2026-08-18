@@ -43,7 +43,7 @@ public class PluginsCentralLoader extends CacheLoader<ListKey, Collection<Plugin
   private final DynamicSet<PluginsRepository> repositories;
 
   @Inject
-  public PluginsCentralLoader(DynamicSet<PluginsRepository> repositories) {
+  PluginsCentralLoader(DynamicSet<PluginsRepository> repositories) {
     this.repositories = repositories;
   }
 

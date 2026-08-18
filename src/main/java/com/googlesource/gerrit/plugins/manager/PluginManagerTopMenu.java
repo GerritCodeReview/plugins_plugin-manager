@@ -31,7 +31,7 @@ public class PluginManagerTopMenu implements TopMenu {
   private final List<MenuEntry> menuEntries;
 
   @Inject
-  public PluginManagerTopMenu(
+  PluginManagerTopMenu(
       @PluginCanonicalWebUrlPath String myUrl, PluginLoader loader, PluginManagerConfig config) {
     this.loader = loader;
     this.config = config;

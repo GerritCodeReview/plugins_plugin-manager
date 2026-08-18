@@ -36,7 +36,7 @@ public class ListAvailablePlugins implements RestReadView<TopLevelResource> {
   private final PluginsCentralCache pluginsCache;
 
   @Inject
-  public ListAvailablePlugins(PluginsCentralCache pluginsCache) {
+  ListAvailablePlugins(PluginsCentralCache pluginsCache) {
     this.pluginsCache = pluginsCache;
   }
 

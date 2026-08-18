@@ -33,7 +33,7 @@ public class PluginManagerConfig {
   private final PermissionBackend permissions;
 
   @Inject
-  public PluginManagerConfig(
+  PluginManagerConfig(
       PluginConfigFactory configFactory,
       @PluginName String pluginName,
       Provider<CurrentUser> currentUserProvider,

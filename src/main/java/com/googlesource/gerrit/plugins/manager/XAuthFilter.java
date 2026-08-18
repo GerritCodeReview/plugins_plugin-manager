@@ -41,7 +41,7 @@ public class XAuthFilter implements Filter {
   private DynamicItem<WebSession> webSession;
 
   @Inject
-  public XAuthFilter(DynamicItem<WebSession> webSession) {
+  XAuthFilter(DynamicItem<WebSession> webSession) {
     this.webSession = webSession;
   }
 

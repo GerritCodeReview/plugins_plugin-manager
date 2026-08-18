@@ -62,7 +62,7 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
   private final Provider<SmartGson> gsonProvider;
 
   @Inject
-  public JenkinsCiPluginsRepository(Provider<SmartGson> gsonProvider, PluginManagerConfig config) {
+  JenkinsCiPluginsRepository(Provider<SmartGson> gsonProvider, PluginManagerConfig config) {
     this.gsonProvider = gsonProvider;
     this.config = config;
   }

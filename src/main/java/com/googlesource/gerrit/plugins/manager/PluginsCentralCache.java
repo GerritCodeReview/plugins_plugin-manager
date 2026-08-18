@@ -32,7 +32,7 @@ public class PluginsCentralCache {
   public static final String PLUGINS_LIST_CACHE_NAME = "plugins_list";
 
   @Inject
-  public PluginsCentralCache(
+  PluginsCentralCache(
       @Named(PLUGINS_LIST_CACHE_NAME) LoadingCache<ListKey, Collection<PluginInfo>> pluginsCache) {
     this.pluginsCache = pluginsCache;
   }

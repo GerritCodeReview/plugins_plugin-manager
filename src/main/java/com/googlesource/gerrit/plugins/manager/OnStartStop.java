@@ -32,7 +32,7 @@ public class OnStartStop implements LifecycleListener {
   private final PluginManagerConfig config;
 
   @Inject
-  public OnStartStop(
+  OnStartStop(
       PluginsCentralCache pluginsCache, @PluginName String pluginName, PluginManagerConfig config) {
     this.pluginsCache = pluginsCache;
     this.pluginName = pluginName;

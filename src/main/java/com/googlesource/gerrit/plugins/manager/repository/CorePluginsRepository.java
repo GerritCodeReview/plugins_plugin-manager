@@ -47,7 +47,7 @@ public class CorePluginsRepository implements PluginsRepository {
   private static final char UNIX_FILE_SEPARATOR = '/';
 
   @Inject
-  public CorePluginsRepository(SitePaths site, CorePluginsDescriptions pd) {
+  CorePluginsRepository(SitePaths site, CorePluginsDescriptions pd) {
     this(site.gerrit_war, site.gerrit_war.toString(), pd);
   }
 
