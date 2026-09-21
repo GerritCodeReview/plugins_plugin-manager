@@ -20,6 +20,7 @@ import com.google.common.annotations.VisibleForTesting;
 import com.google.common.flogger.FluentLogger;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
+import com.google.gson.JsonSyntaxException;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.google.inject.Singleton;
@@ -256,10 +257,12 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
   private Optional<SmartJson> tryGetJson(String url) {
     try {
       return Optional.of(gsonProvider.get().get(url));
+    } catch (JsonSyntaxException jse) {
+      logger.atWarning().withCause(jse).log("Invalid JSON from %s", url);
     } catch (IOException e) {
       logger.atSevere().withCause(e).log("Cannot get JSON from %s", url);
-      return Optional.empty();
     }
+    return Optional.empty();
   }
 
   @VisibleForTesting
