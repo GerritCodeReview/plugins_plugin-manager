@@ -22,5 +22,6 @@ junit_tests(
     visibility = ["//visibility:public"],
     deps = PLUGIN_TEST_DEPS + [
         ":plugin-manager__plugin",
+        "//lib/mockito",
     ],
 )
