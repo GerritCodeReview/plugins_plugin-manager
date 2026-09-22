@@ -17,10 +17,14 @@ package com.googlesource.gerrit.plugins.manager.repository;
 import static com.google.common.truth.Truth.assertThat;
 import static com.google.common.truth.TruthJUnit.assume;
 import static java.util.stream.Collectors.toList;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 import com.google.common.collect.ImmutableList;
 import com.google.gerrit.common.Version;
 import com.google.gerrit.server.config.SitePaths;
+import com.google.gson.JsonSyntaxException;
+import com.googlesource.gerrit.plugins.manager.gson.SmartGson;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -68,6 +72,16 @@ public class PluginsRepositoryTest {
             new CorePluginsDescriptions());
 
     assertThat(pluginRepo.list(Version.getVersion())).isNotEmpty();
+  }
+
+  @Test
+  public void malformedPluginMetadataShouldBeIgnored() throws IOException {
+    String metadataUrl = "https://example.com/plugin.json";
+    SmartGson gson = mock(SmartGson.class);
+    when(gson.get(metadataUrl)).thenThrow(new JsonSyntaxException("Expected a JSON object"));
+    JenkinsCiPluginsRepository pluginRepo = new JenkinsCiPluginsRepository(() -> gson, null);
+
+    assertThat(pluginRepo.tryGetJson(metadataUrl)).isEmpty();
   }
 
   private SitePaths prepareSiteDirWithReleaseWar() throws IOException {
