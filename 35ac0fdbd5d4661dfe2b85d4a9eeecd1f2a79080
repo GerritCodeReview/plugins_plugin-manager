@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "86ffdf0a_b61c84f8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-09-22T07:58:47Z",
+      "side": 1,
+      "message": "@ponch78@gmail.com remember to bump the plugin on the Gerrit stable-3.14 branch",
+      "revId": "35ac0fdbd5d4661dfe2b85d4a9eeecd1f2a79080",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
