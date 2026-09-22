@@ -21,5 +21,6 @@ gerrit_plugin_tests(
     visibility = ["//visibility:public"],
     deps = [
         ":plugin-manager__plugin",
+        "//lib/mockito",
     ],
 )
