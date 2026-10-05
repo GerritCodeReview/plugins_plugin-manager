@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ed5a6fac_a6932095",
+        "filename": "src/main/resources/static/intro.html",
+        "patchSetId": 3
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-05T21:16:55Z",
+      "side": 1,
+      "message": "This can be externalised.",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 252,
+        "endChar": 9
+      },
+      "revId": "b2400b424a6c9ec8a1401cc7d20df1908358cbc8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
