@@ -1,146 +1,348 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-<meta name="description" content="Gerrit Plugin Manager">
-<meta name="author" content="Gerrit Code Review">
-<link rel="icon" href="/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerrit Code Review - Welcome</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #2563eb;
+            --primary-hover: #1d4ed8;
+            --text-dark: #1f2937;
+            --text-body: #4b5563;
+            --text-light: #9ca3af;
+            --bg-light: #f9fafb;
+            --bg-card: #ffffff;
+            --border-light: #e5e7eb;
+            --btn-skip: #e5e7eb;
+            --btn-skip-hover: #d1d5db;
+        }
 
-<title>Gerrit Plugin Manager - Introduction</title>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<!-- Bootstrap core CSS -->
-<link
-  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
-  rel="stylesheet"
-  integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
-  crossorigin="anonymous">
-<link href="css/style.css" rel="stylesheet">
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-body);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+        /* Header Styles */
+        header {
+            background-color: var(--primary-blue);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
 
-<!-- Custom styles for this template -->
-<link href="css/jumbotron.css" rel="stylesheet">
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-<script src="js/ie-emulation-modes-warning.js"></script>
+        .header-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
 
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+        .skip-btn {
+            background-color: var(--btn-skip);
+            color: var(--text-dark);
+            text-decoration: none;
+            padding: 0.5rem 1.25rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .skip-btn:hover {
+            background-color: var(--btn-skip-hover);
+            transform: translateY(-1px);
+        }
+
+        /* Main Layout */
+        main {
+            flex: 1;
+            padding-bottom: 4rem;
+        }
+
+        .hero-section {
+            max-width: 900px;
+            margin: 4rem auto 3rem;
+            padding: 0 1.5rem;
+            text-align: center;
+        }
+
+        .hero-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-image {
+            width: 160px;
+            height: auto;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.1;
+            text-align: left;
+            letter-spacing: -0.05em;
+        }
+
+        .hero-intro-text {
+            font-size: 1.125rem;
+            color: var(--text-body);
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+            text-align: left;
+        }
+
+        .hero-intro-text strong {
+            color: var(--text-dark);
+        }
+
+        .install-btn {
+            display: inline-block;
+            background-color: var(--primary-blue);
+            color: white;
+            text-decoration: none;
+            padding: 0.875rem 2.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            font-size: 1.125rem;
+            box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.4);
+            transition: all 0.2s ease;
+        }
+
+        .install-btn:hover {
+            background-color: var(--primary-hover);
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .features-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: 1rem;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .feature-text {
+            flex: 1;
+            margin-bottom: 1.5rem;
+            font-size: 0.9375rem;
+        }
+
+        .feature-actions {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .icon-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-color: #f3f4f6;
+            color: var(--text-body);
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .icon-btn svg {
+            width: 22px;
+            height: 22px;
+            fill: currentColor;
+        }
+
+        /* Action Icon Hover Colors */
+        .icon-btn.youtube:hover { background-color: #ff0000; color: white; }
+        .icon-btn.google:hover { background-color: #4285F4; color: white; }
+        .icon-btn.x-twitter:hover { background-color: #000000; color: white; }
+        .icon-btn.mastodon:hover { background-color: #6364FF; color: white; }
+        .icon-btn.discord:hover { background-color: #5865F2; color: white; }
+
+        @media (min-width: 768px) {
+            .features-section {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+            .hero-title {
+                text-align: center;
+                font-size: 2.5rem;
+            }
+            .hero-intro-text {
+                text-align: center;
+            }
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: var(--bg-card);
+            border-top: 1px solid var(--border-light);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .footer-text {
+            color: var(--text-light);
+            font-size: 0.875rem;
+        }
+    </style>
 </head>
-
 <body>
 
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed"
-          data-toggle="collapse" data-target="#navbar"
-          aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span> <span
-            class="icon-bar"></span> <span class="icon-bar"></span> <span
-            class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../../../">&raquo; Skip intro</a>
-      </div>
-    </div>
-  </nav>
+    <header>
+        <div class="header-container">
+            <div class="header-title">Gerrit Code Review</div>
+            <a href="/" class="skip-btn">&gt; Skip Intro</a>
+        </div>
+    </header>
 
-  <!-- Main jumbotron for a primary marketing message or call to action -->
-  <div class="jumbotron">
-    <div class="container gerritlogo">
-      <h1>Welcome!</h1>
-      <p><b><a href="https://www.gerritcodereview.com" target="_blank">Gerrit Code Review</a></b> provides web-based code review and repository
-        management for the Git version control system.</p>
-      <p>
-        Before starting using it, you may want to consider <strong>installing
-          some extra plugins</strong> to extend its functionality, including <i>replication
-          to remote locations</i>, integration with <i>Atlassian Jira</i>
-        and other issue trackers workflow, <i>OAuth 2.0
-          authentication</i> with external providers such as <i>Google
-          Account</i>, <i>GitHub</i> and <i>GitLab</i> and many others.
-      </p>
-      <p>
-      <p>
-        Once you're done with your plugins selection, click on the
-        top-right <strong>"&gt; Go to Gerrit"</strong> link on the
-        top-right corner to access the Gerrit Code Review main screen.
-      </p>
-      <a class="btn btn-primary btn-lg" href="index.html" role="button">Install
-        plugins &raquo;</a>
-      </p>
-    </div>
-  </div>
+    <main>
+        <section class="hero-section">
+            <div class="hero-header">
+                <img src="Gerrit-Code-Review.png" alt="Gerrit Diffy" class="hero-image">
+                <h1 class="hero-title">Welcome to<br>Gerrit v3.15</h1>
+            </div>
+            
+            <p class="hero-intro-text">
+                Elevate your development workflow with Gerrit Code Review, the premier web-based code review and
+                repository management platform. Supercharge your team's productivity seamlessly by connecting with
+                your existing Git services, including <strong>GitHub</strong> and <strong>GitLab</strong>.
+                <br><br>
+                Unlock next-generation insights by extending Gerrit with cutting-edge plugins—integrate popular
+                AI review models like <strong>Google Gemini, OpenAI ChatGPT, and Anthropic Claude</strong>
+                to act as your automated co-reviewers!
+                <br><br>
+                Customize your environment below, or click the top-right <strong>'&gt; Skip Intro'</strong> button
+                to access your main Gerrit dashboard.
+            </p>
 
-  <div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-      <div class="col-md-4">
-        <h2><span class="glyphicon glyphicon-film" aria-hidden="true"></span>&nbsp;Learn more</h2>
-        <p>Before starting using Gerrit Code Review, you may want to
-          spend a few minutes learning the basic concepts and how its
-          workflow works.</p>
-        <p>Get information from the source, with an introduction
-          video starring Shawn Pearce, the Gerrit Code Review project
-          founder, at the EclipseCon 2013.</p>
-        <p>
-          <a class="btn btn-default"
-            href="https://www.youtube.com/watch?v=Wxx8XndqZ7A&t=15s"
-            target="_blank" role="button">Watch Video &raquo;</a>
-        </p>
-      </div>
-      <div class="col-md-4">
-        <h2><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;Get involved</h2>
-        <p>Gerrit Code Review is backed by a thriving Community of
-          users and contributors. The main channel to get in touch is
-          through the "repo-discuss" mailing list.</p>
-        <p>Join the discussions and feel free to ask questions.
-          Share your thoughts on how to improve Gerrit workflow and user
-          experience.
-        <p>
-          <a class="btn btn-default"
-            href="https://groups.google.com/forum/#!forum/repo-discuss"
-            target="_blank" role="button">Repo-discuss mailing list
-            &raquo;</a>
-        </p>
-      </div>
-      <div class="col-md-4">
-        <h2><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>&nbsp;Keep in touch</h2>
-        <p>
-          Get the latest news about Gerrit Code Review releases and
-          events by following the official social network channels of
-          the project, including <a
-            href="https://plus.google.com/communities/111271594706618791655"
-            target="_blank">Google+</a> and <a
-            href="https://twitter.com/gerritreview">Twitter</a>.
-        </p>
-        <p>Follow Gerrit and tweet about your experience to share
-          your thoughts and achievements with your daily code reviews.
-        <p>
-          <a href="https://twitter.com/gerritreview"
-            class="twitter-follow-button" data-show-count="false">Follow
-            @gerritreview</a>
-          <script async src="//platform.twitter.com/widgets.js"
-            charset="utf-8"></script>
-        </p>
-      </div>
-    </div>
+            <a href="index.html" class="install-btn">Install Plugins</a>
+        </section>
 
-    <hr>
+        <section class="features-section">
+            
+            <!-- Card 1 -->
+            <div class="feature-card">
+                <h3 class="feature-title">Learn more</h3>
+                <p class="feature-text">
+                    Before starting using Gerrit Code Review, you may want to spend a few minutes learning the basic
+                    concepts and how its workflow works. Get information from the source, with a collection of tutorials
+                    and past Gerrit conferences videos and talks, organized in topic-focused playlists.
+                </p>
+                <div class="feature-actions">
+                    <a href="https://www.youtube.com/@GerritForgeTV/playlists" class="icon-btn youtube" title="Watch on YouTube" target="_blank">
+                        <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="feature-card">
+                <h3 class="feature-title">Get involved</h3>
+                <p class="feature-text">
+                    Gerrit Code Review is backed by a thriving Community of users and contributors.
+                    The main channel to get in touch is through the 'repo-discuss' mailing list. Join the discussions,
+                    ask questions, and share your thoughts on how to improve the workflow and user experience.
+                </p>
+                <div class="feature-actions">
+                    <a href="https://groups.google.com/u/1/g/repo-discuss" class="icon-btn google" title="Join the Google Group" target="_blank">
+                        <svg viewBox="0 0 24 24"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="feature-card">
+                <h3 class="feature-title">Keep in touch</h3>
+                <p class="feature-text">
+                    Get the latest news about Gerrit Code Review releases and events by following the official social network channels of the project on X and Mastodon. Join our Discord server to interact live with the Gerrit community and share your daily code review achievements.
+                </p>
+                <div class="feature-actions">
+                    <a href="https://x.com/GerritReview" class="icon-btn x-twitter" title="Follow us on X" target="_blank">
+                        <svg viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+                    </a>
+                    <a href="https://mastodon.social/@gerritreview" class="icon-btn mastodon" title="Follow us on Mastodon" target="_blank">
+                        <svg viewBox="0 0 24 24"><path d="M23.268 5.313c-.35-2.228-2.618-3.616-2.618-3.616C17.58.63 14.92 1.5 11.963 1.5h-.022c-2.957 0-5.617-.87-8.687.197 0 0-2.268 1.388-2.618 3.616-.364 2.336-.543 6.273-.131 9.774 1.11 9.42 12.012 8.435 12.012 8.435 4.544-.22 8.358-2.457 8.358-2.457l-.372-3.41c-2.316 1.387-5.596 1.706-8.384 1.353-2.946-.374-4.832-1.89-5.185-4.857-.023-.195-.037-.384-.047-.562 2.652 1.31 6.574 1.735 9.742 1.107 4.512-.89 6.077-4.145 6.077-4.145.45-3.376.516-7.79.54-10.239zM8.344 14.288v-4.996c0-1.282.463-2.383 1.389-2.383.997 0 1.496.862 1.496 2.584v3.083h2.646V9.493c0-1.722.499-2.584 1.496-2.584.926 0 1.389 1.101 1.389 2.383v4.996h2.518v-5.26c0-1.428-.352-2.529-1.055-3.302-.734-.805-1.7-1.208-2.898-1.208-1.472 0-2.57.65-3.284 1.95L12.013 8.3l-.025-1.844c-.714-1.3-1.812-1.95-3.284-1.95-1.198 0-2.164.403-2.898 1.208-.703.773-1.055 1.874-1.055 3.302v5.26h2.518z"/></svg>
+                    </a>
+                    <a href="https://discord.gg/eEZQrtzAwV" class="icon-btn discord" title="Join our Discord" target="_blank">
+                        <svg viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+    </main>
 
     <footer>
-      <p><a href="https://www.gerritcodereview.com" href="_blank">Gerrit Code Review</a> - Copyright &copy; 2018 The Android Open Source Project -
-        Licensed under the Apache License, Version 2.0.</p>
+        <p class="footer-text">
+            Gerrit Code Review - Copyright &copy; 2026 The Android Open Source Project - Licensed under the Apache License, Version 2.0.
+        </p>
     </footer>
-  </div>
-  <!-- /container -->
+
 </body>
 </html>
