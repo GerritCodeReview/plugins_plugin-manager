@@ -1,0 +1,240 @@
+:root {
+    --primary-blue: #2563eb;
+    --primary-hover: #1d4ed8;
+    --text-dark: #1f2937;
+    --text-body: #4b5563;
+    --text-light: #9ca3af;
+    --bg-light: #f9fafb;
+    --bg-card: #ffffff;
+    --border-light: #e5e7eb;
+    --btn-skip: #e5e7eb;
+    --btn-skip-hover: #d1d5db;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-body);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-blue);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+.skip-btn {
+    background-color: var(--btn-skip);
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.skip-btn:hover {
+    background-color: var(--btn-skip-hover);
+    transform: translateY(-1px);
+}
+
+/* Main Layout */
+main {
+    flex: 1;
+    padding-bottom: 4rem;
+}
+
+.hero-section {
+    max-width: 900px;
+    margin: 4rem auto 3rem;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+.hero-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-image {
+    width: 160px;
+    height: auto;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1.1;
+    text-align: left;
+    letter-spacing: -0.05em;
+}
+
+.hero-intro-text {
+    font-size: 1.125rem;
+    color: var(--text-body);
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+    text-align: left;
+}
+
+.hero-intro-text strong {
+    color: var(--text-dark);
+}
+
+.install-btn {
+    display: inline-block;
+    background-color: var(--primary-blue);
+    color: white;
+    text-decoration: none;
+    padding: 0.875rem 2.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1.125rem;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.4);
+    transition: all 0.2s ease;
+}
+
+.install-btn:hover {
+    background-color: var(--primary-hover);
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.4);
+    transform: translateY(-2px);
+}
+
+.features-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+
+.feature-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.feature-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.feature-text {
+    flex: 1;
+    margin-bottom: 1.5rem;
+    font-size: 0.9375rem;
+}
+
+.feature-actions {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #f3f4f6;
+    color: var(--text-body);
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.icon-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+}
+
+/* Action Icon Hover Colors */
+.icon-btn.youtube:hover { background-color: #ff0000; color: white; }
+.icon-btn.google:hover { background-color: #4285F4; color: white; }
+.icon-btn.x-twitter:hover { background-color: #000000; color: white; }
+.icon-btn.mastodon:hover { background-color: #6364FF; color: white; }
+.icon-btn.discord:hover { background-color: #5865F2; color: white; }
+
+@media (min-width: 768px) {
+    .features-section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    .hero-title {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    .hero-intro-text {
+        text-align: center;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--border-light);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-text {
+    color: var(--text-light);
+    font-size: 0.875rem;
+}
