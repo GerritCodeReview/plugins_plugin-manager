@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a6c6e0cf_279ac34c",
+        "filename": "src/main/resources/static/intro.html",
+        "patchSetId": 10
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-05T22:03:15Z",
+      "side": 1,
+      "message": "This can be retrieved with a REST-API call to the backend, so that we don\u0027t risk to have a stale version here.",
+      "range": {
+        "startLine": 25,
+        "startChar": 60,
+        "endLine": 25,
+        "endChar": 65
+      },
+      "revId": "e0132d78127ab9336e3faa98d98995a85371b2b1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
