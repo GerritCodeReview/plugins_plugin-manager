@@ -33,6 +33,24 @@
       "message": "You probably want to include BlueSky? https://bsky.app/profile/gerritreview.bsky.social",
       "revId": "99e2bfa978d4cd93bd09adac074d2d569b4f36fa",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "46d79a01_dcaaa10e",
+        "filename": "src/main/resources/static/intro.html",
+        "patchSetId": 6
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-05T21:51:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "759c1935_ec09579a",
+      "revId": "99e2bfa978d4cd93bd09adac074d2d569b4f36fa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
