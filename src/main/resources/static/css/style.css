@@ -1,46 +1,79 @@
-.inprogress {
-  background-image: url("../images/spinner-24px.gif");
-  background-repeat: no-repeat;
-  background-position-y: 7px;
+.search-container {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  padding: 0 1.5rem;
 }
-
-.hidden {
-  display: none;
-}
-
-h5 {
-  margin: 0px;
-}
-
-td {
-  height: 40px;
-}
-
-.main {
-  margin-top: 51px;
-}
-
-button.btn-xs {
-  width: 65px;
-}
-
-button.btn-sm {
-  width: 83px;
-}
-
-button.btn-100 {
+.search-input {
   width: 100%;
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--border-light);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: inherit;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+}
+.status-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.375rem 0.75rem;
+  border-radius: 1rem;
+}
+.status-success { background: #dcfce7; color: #166534; }
+.status-warning { background: #fee2e2; color: #991b1b; }
+.status-default { background: #f3f4f6; color: #374151; }
+.hidden { display: none !important; }
+.version-info {
+  font-size: 0.875rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.update-info { color: var(--primary-blue); font-weight: 600; }
+
+/* Adjusted install button for card context */
+.card-btn {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
 }
 
-.label-success {
-  background-color: #888888;
+/* Plugin Icon Header Styles */
+.plugin-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.plugin-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: var(--bg-light);
+  color: var(--primary-blue);
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.feature-title {
+  margin-bottom: 0;
 }
 
-div.top-header {
-  padding-left: 35px;
-  padding-right: 35px;
+/* Dynamic Card Style for Installable Plugins */
+.feature-card.card-installable {
+  border-color: var(--primary-blue);
+  box-shadow: 0 4px 12px -2px rgba(37, 99, 235, 0.25);
 }
 
-.navbar-form input.searchbox {
-  width: 400px;
+/* Dynamic Card Style for Upgradable Plugins */
+.feature-card.card-upgradable {
+  border-color: #f97316; /* Vibrant orange */
+  box-shadow: 0 4px 12px -2px rgba(249, 115, 22, 0.25);
 }
