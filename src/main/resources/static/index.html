@@ -1,83 +1,116 @@
 <!DOCTYPE html>
 <html ng-app="PluginManager">
 <head>
-<meta charset="UTF-8">
-<title>Gerrit Plugin Manager</title>
-<script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-<script src="js/plugin-manager.js"></script>
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<link
-  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
-  rel="stylesheet"
-  integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
-  crossorigin="anonymous">
-<link href="css/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Gerrit Plugin Manager</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="js/plugin-manager.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="css/intro.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body role="document" ng-controller="LoadInstalledPlugins as plugins">
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container top-header">
-      <div class="navbar-header">
-        <a class="navbar-brand">Gerrit Plugins</a>
+<body ng-controller="LoadInstalledPlugins as plugins">
+
+  <header>
+      <div class="header-container">
+          <div class="header-title">Gerrit Code Review</div>
+          <button type="button" class="skip-btn" style="border: none; cursor: pointer;" ng-click="plugins.goToGerrit()">
+              Done &raquo; Go To Gerrit
+          </button>
       </div>
-      <div class="navbar-collapse collapse">
-        <form class="navbar-form navbar-left" role="search">
-          <div class="form-group">
-            <input type="text" class="form-control searchbox" placeholder="Search" ng-model="searchPlugin">
+  </header>
+
+  <main>
+      <div class="hero-section">
+          <div class="hero-header">
+              <img src="images/diffy-gerrit-code-review.png" alt="Gerrit Diffy" class="hero-image">
+              <h2 class="hero-title">Plugin Manager</h2>
           </div>
-        </form>
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <div class="navbar-form navbar-right">
-              <button type="button"
-                  class="btn btn-sm btn-primary btn-100"
-                  ng-click="plugins.goToGerrit()">Done &raquo; Go To Gerrit</button>
-            </div>
-          </li>
-        </ul>
       </div>
-    </div>
-  </nav>
-  <div class="container main" role="main">
-    <div class="col-md-12">
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>Plugin Name</th>
-            <th>Version</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr ng-repeat="prop in plugins.list | filter:searchPlugin">
-            <td><h4>{{prop.id}}<br/><small>{{prop.description.split('.')[0]}}</small></h4></td>
-            <td>
-              <p>{{prop.version}}</p>
-              <div ng-if="prop.update_version">
-              <span class="glyphicon glyphicon-save"></span><b>&nbsp;{{prop.update_version}}</b>
+
+      <div class="search-container">
+          <p class="hero-intro-text">
+              Browse, install, and keep your Gerrit Code Review environment up to date with the latest plugins built
+              on <a href="https://gerrit-ci.gerritforge.com/plugin-manager/">Gerrit-CI</a>.
+          </p>
+          <input type="text" class="search-input" placeholder="Search for plugins..." ng-model="searchPlugin">
+      </div>
+
+      <div class="features-section">
+          <!-- Plugin Feature Cards with dynamic border/shading via ng-class -->
+          <div class="feature-card"
+               ng-repeat="prop in plugins.list | filter:searchPlugin"
+               ng-class="{
+               'card-installable': prop.version == '' && prop.update_version != undefined,
+               'card-upgradable': prop.version != '' && prop.update_version != ''
+             }">
+
+              <!-- Icon and Title Wrapper -->
+              <div class="plugin-header">
+                  <div class="plugin-icon-wrapper">
+                      <!-- SVG Plug Icon -->
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M12 22v-5"/>
+                          <path d="M9 8V2"/>
+                          <path d="M15 8V2"/>
+                          <path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/>
+                      </svg>
+                  </div>
+                  <h3 class="feature-title">{{prop.id}}</h3>
               </div>
-            </td>
-            <td>
-              <h4>
-                <span id="installing-{{prop.id}}"
-                  class="label label-default hidden">Installing</span>
-                <span
-                  id="installed-{{prop.id}}"
-                  class="label label-success {{ (prop.version != '' && prop.update_version == '') ? '':'hidden' }}">Up to date</span>
-                <span
-                  id="failed-{{prop.id}}" class="label label-warning hidden">Failed</span>
-                <button id="{{prop.id}}" type="button"
-                  class="btn btn-sm btn-primary {{ (prop.version == '' && prop.update_version != undefined) ? '':'hidden' }}"
-                  ng-click="install(prop.id,prop.url)">Install</button>
-                <button id="{{prop.id}}" type="button"
-                  class="btn btn-sm btn-primary {{ (prop.version != '' && prop.update_version != '') ? '':'hidden' }}"
-                  ng-click="install(prop.id,prop.url)">Upgrade</button>
-              </h4>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+
+              <div class="version-info">
+                  <span>Version: {{prop.version || 'Not installed'}}</span>
+                  <div ng-if="prop.update_version" class="update-info"
+                       ng-style="prop.version != '' ? {'color': '#f97316'} : {}">
+                      <svg style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"
+                           fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                      </svg>
+                      Update available: {{prop.update_version}}
+                  </div>
+              </div>
+
+              <p class="feature-text">{{prop.description.split('.')[0]}}</p>
+
+              <div class="feature-actions">
+                  <!-- Status Labels -->
+                  <span id="installing-{{prop.id}}" class="status-label status-default hidden">Installing...</span>
+                  <span id="installed-{{prop.id}}"
+                        class="status-label status-success {{ (prop.version != '' && prop.update_version == '') ? '':'hidden' }}">Up to date</span>
+                  <span id="failed-{{prop.id}}" class="status-label status-warning hidden">Failed</span>
+
+                  <!-- Action Buttons -->
+                  <button id="install-{{prop.id}}" type="button"
+                          class="install-btn card-btn {{ (prop.version == '' && prop.update_version != undefined) ? '':'hidden' }}"
+                          ng-click="install(prop.id,prop.url)">
+                      Install
+                  </button>
+
+                  <button id="upgrade-{{prop.id}}" type="button"
+                          class="install-btn card-btn {{ (prop.version != '' && prop.update_version != '') ? '':'hidden' }}"
+                          style="{{ (prop.version != '' && prop.update_version != '') ? 'background-color: #f97316; box-shadow: 0 4px 6px -1px rgba(249, 115, 22, 0.4);' : '' }}"
+                          onmouseover="this.style.backgroundColor='#ea580c'"
+                          onmouseout="this.style.backgroundColor='#f97316'"
+                          ng-click="install(prop.id,prop.url)">
+                      Upgrade
+                  </button>
+              </div>
+          </div>
+      </div>
+  </main>
+
+  <footer>
+      <p class="footer-text">
+          Gerrit Code Review - Copyright &copy; 2026 The Android Open Source Project - Licensed under the Apache License,
+          Version 2.0.
+      </p>
+  </footer>
+
 </body>
 </html>
