@@ -127,7 +127,8 @@ var app = angular.module('PluginManager', []).controller(
         var pluginInstallData = {
           "url" : url
         };
-        $("button#" + id).addClass("hidden");
+        $("button#install-" + id).addClass("hidden");
+        $("button#upgrade-" + id).addClass("hidden");
         $("span#installing-" + id).removeClass("hidden");
         var fileEnding = url.endsWith('.js') ? ".js" : ".jar";
         $http.put($scope.getBaseUrl() + '/a/plugins/' + id + fileEnding, pluginInstallData).then(
