@@ -22,7 +22,7 @@
         <section class="hero-section">
             <div class="hero-header">
                 <img src="images/diffy-gerrit-code-review.png" alt="Gerrit Diffy" class="hero-image">
-                <h1 class="hero-title">Welcome to<br>Gerrit v3.15</h1>
+                <h2 class="hero-title">Welcome to<br>Gerrit v<version id="gerrit-version">3.15</version></h2>
             </div>
 
             <p class="hero-intro-text">
@@ -105,6 +105,32 @@
             Gerrit Code Review - Copyright &copy; 2026 The Android Open Source Project - Licensed under the Apache License, Version 2.0.
         </p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('/config/server/version')
+                .then(response => {
+                    if (!response.ok) {
+                        console.error('Error fetching Gerrit version: HTTP status ', response.status);
+                        return "";
+                    }
+                    return response.text();
+                })
+                .then(text => {
+                    const lines = text.trim().split('\n').filter(line => line.length > 0);
+                    if (lines.length > 1) {
+                        const version = lines[lines.length - 1].replace(/"/g, '');
+                        const versionElement = document.getElementById('gerrit-version');
+                        if (versionElement) {
+                            versionElement.textContent = version;
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching Gerrit version:', error);
+                });
+        });
+    </script>
 
 </body>
 </html>
