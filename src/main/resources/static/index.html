@@ -8,6 +8,7 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="/styles/fonts.css" rel="stylesheet">
     <link href="css/intro.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -16,7 +17,8 @@
 
   <header>
       <div class="header-container">
-          <div class="header-title">Gerrit Code Review</div>
+          <div class="header-title">Gerrit</div>
+          <input type="text" class="search-input" placeholder="Search for plugins..." ng-model="searchPlugin">
           <button type="button" class="skip-btn" style="border: none; cursor: pointer;" ng-click="plugins.goToGerrit()">
               Done &raquo; Go To Gerrit
           </button>
@@ -36,7 +38,6 @@
               Browse, install, and keep your Gerrit Code Review environment up to date with the latest plugins built
               on <a href="https://gerrit-ci.gerritforge.com/plugin-manager/">Gerrit-CI</a>.
           </p>
-          <input type="text" class="search-input" placeholder="Search for plugins..." ng-model="searchPlugin">
       </div>
 
       <div class="features-section">
