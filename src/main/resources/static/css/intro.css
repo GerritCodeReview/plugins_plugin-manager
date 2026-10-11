@@ -4,11 +4,12 @@
     --text-dark: #1f2937;
     --text-body: #4b5563;
     --text-light: #9ca3af;
+    --text-lighter: #e1e7f1;
     --bg-light: #f9fafb;
     --bg-card: #ffffff;
     --border-light: #e5e7eb;
-    --btn-skip: #e5e7eb;
-    --btn-skip-hover: #d1d5db;
+    --btn-skip: #314972;
+    --btn-skip-hover: #3d5d92;
 }
 
 * {
@@ -18,10 +19,11 @@
 }
 
 body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.4;
     background-color: var(--bg-light);
     color: var(--text-body);
-    line-height: 1.6;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -40,27 +42,45 @@ header {
 .header-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem 1.5rem;
+    padding: 0.15rem 0.15rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 48px;
 }
 
 .header-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    letter-spacing: -0.025em;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.header-title::before {
+    background-image: url("/diffy.png");
+    --icon-width: 1em;
+    --icon-height: 1em;
+    background-size: 1em 1em;
+    background-repeat: no-repeat;
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right: clamp(0px, 1em, 8px);
+    margin-bottom: -4px;
+    flex-shrink: 0;
 }
 
 .skip-btn {
     background-color: var(--btn-skip);
-    color: var(--text-dark);
+    color: var(--text-lighter);
     text-decoration: none;
     padding: 0.5rem 1.25rem;
     border-radius: 0.5rem;
-    font-weight: 600;
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-left: auto;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
 }
 
 .skip-btn:hover {
@@ -100,7 +120,6 @@ main {
     color: var(--text-dark);
     line-height: 1.1;
     text-align: left;
-    letter-spacing: -0.05em;
 }
 
 .hero-intro-text {
