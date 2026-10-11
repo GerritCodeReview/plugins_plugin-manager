@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff8ed016_d27801e4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5224725
+      },
+      "writtenOn": "2026-10-11T17:01:14Z",
+      "side": 1,
+      "message": "Align plugin-manager header bar with Gerrit | https://gerrit-review.googlesource.com/c/plugins/plugin-manager/+/642406",
+      "revId": "38e76706d9718d4be5586a1cd80516b50785bbb0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
