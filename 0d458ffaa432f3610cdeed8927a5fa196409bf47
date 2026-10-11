@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "24dd264a_fdc0d97e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5224725
+      },
+      "writtenOn": "2026-10-11T14:34:02Z",
+      "side": 1,
+      "message": "git fetch --no-filter --no-tags https://gerrit.googlesource.com/plugins/plugin-manager refs/changes/24/641524/1 \u0026\u0026 git checkout -b change-641524 FETCH_HEAD",
+      "revId": "0d458ffaa432f3610cdeed8927a5fa196409bf47",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
