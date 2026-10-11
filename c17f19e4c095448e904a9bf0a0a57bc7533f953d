@@ -24,6 +24,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2e5722e2_4297f526",
+        "filename": "src/main/resources/static/index.html",
+        "patchSetId": 16
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-11T20:34:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aed7abbf_86b0de39",
+      "range": {
+        "startLine": 11,
+        "startChar": 16,
+        "endLine": 11,
+        "endChar": 23
+      },
+      "revId": "c17f19e4c095448e904a9bf0a0a57bc7533f953d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "14db1820_937ccf8c",
@@ -37,6 +61,30 @@
       "writtenOn": "2026-10-11T20:30:26Z",
       "side": 1,
       "message": "This absolute path won\u0027t work if Gerrit isn\u0027t deployed on the root URL. Best to use a relative path.",
+      "range": {
+        "startLine": 11,
+        "startChar": 16,
+        "endLine": 11,
+        "endChar": 24
+      },
+      "revId": "c17f19e4c095448e904a9bf0a0a57bc7533f953d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "480ddc4c_7759790b",
+        "filename": "src/main/resources/static/intro.html",
+        "patchSetId": 16
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-11T20:34:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "14db1820_937ccf8c",
       "range": {
         "startLine": 11,
         "startChar": 16,
