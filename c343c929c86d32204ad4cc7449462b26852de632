@@ -48,6 +48,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b671466c_1d56776f",
+        "filename": "src/main/resources/static/intro.html",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-12T20:15:31Z",
+      "side": 1,
+      "message": "Checks API is the front end, not the backend. It\u0027s pure rendering.\nI would just drop this change if we don\u0027t want to go into the CI/CD implementation details: the short answer is *NO*, Gerrit doesn\u0027t integrate with CI/CD out of the box, unfortunately.",
+      "parentUuid": "fa884d1d_a164b86b",
+      "range": {
+        "startLine": 33,
+        "startChar": 55,
+        "endLine": 34,
+        "endChar": 95
+      },
+      "revId": "c343c929c86d32204ad4cc7449462b26852de632",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f0c96733_b7a285e1",
