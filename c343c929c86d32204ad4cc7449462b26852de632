@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "57789b21_c2c554d4",
+        "filename": "src/main/resources/static/intro.html",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-12T16:01:36Z",
+      "side": 1,
+      "message": "Those are actually two weak points at the moment: both use an obsolete version of the Checks API.\n\n\n\n```suggestion\n                Gerrit fits right into your toolchain: CI/CD systems by using the \u003cstrong\u003eChecks API\u003c/strong\u003e for reporting build and test results straight back to the review, and repositories can\n```",
+      "range": {
+        "startLine": 33,
+        "startChar": 55,
+        "endLine": 34,
+        "endChar": 95
+      },
+      "revId": "c343c929c86d32204ad4cc7449462b26852de632",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f0c96733_b7a285e1",
+        "filename": "src/main/resources/static/intro.html",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-12T16:01:36Z",
+      "side": 1,
+      "message": "It\u0027s not just replication, it is total integration:\n- Authentication\n- Groups\n- Replication\n- PRs to Change import\n\nEither we leave it as it was before, or we make it more specific.",
+      "range": {
+        "startLine": 35,
+        "startChar": 16,
+        "endLine": 35,
+        "endChar": 29
+      },
+      "revId": "c343c929c86d32204ad4cc7449462b26852de632",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
