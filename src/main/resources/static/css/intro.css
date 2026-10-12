@@ -56,7 +56,7 @@ header {
 }
 
 .header-title::before {
-    background-image: url("/diffy.png");
+    background-image: url("../../../../diffy.png");
     --icon-width: 1em;
     --icon-height: 1em;
     background-size: 1em 1em;
