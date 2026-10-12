@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d80cf17_d54ff291",
+        "filename": "src/main/resources/static/intro.html",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2026-10-12T17:40:20Z",
+      "side": 1,
+      "message": "```suggestion\n                    Before starting to use Gerrit Code Review, you may want to spend a few minutes learning the basic\n```",
+      "range": {
+        "startLine": 50,
+        "startChar": 19,
+        "endLine": 50,
+        "endChar": 70
+      },
+      "revId": "232c3c5a9df6600e2b63617d8ef3ac6915955664",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}

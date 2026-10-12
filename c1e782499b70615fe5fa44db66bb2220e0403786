@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f98f55b6_03dfc3d8",
+        "filename": "src/main/resources/static/intro.html",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2026-10-12T17:40:20Z",
+      "side": 1,
+      "message": "```suggestion\n                    concepts and how its workflow operates. Get information straight from the source, with video tutorials and talks from past Gerrit conferences, organized in topic-focused playlists.\n```",
+      "range": {
+        "startLine": 51,
+        "startChar": 7,
+        "endLine": 52,
+        "endChar": 27
+      },
+      "revId": "c1e782499b70615fe5fa44db66bb2220e0403786",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}

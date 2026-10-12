@@ -24,6 +24,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "43e803db_6d1876b0",
+        "filename": "src/main/resources/static/intro.html",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2026-10-12T17:40:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6955eb8e_331ea261",
+      "range": {
+        "startLine": 30,
+        "startChar": 110,
+        "endLine": 30,
+        "endChar": 114
+      },
+      "revId": "13acc6171ee4046931ff7524b4a038fad68c716c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "44790a43_107485c0",
@@ -47,6 +71,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c6f25eb_53b6d5a8",
+        "filename": "src/main/resources/static/intro.html",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2026-10-12T17:40:20Z",
+      "side": 1,
+      "message": "Repeating `you` twice is standard english and grammatically correct. The previous sentence was grammatically incorrect. I\u0027ll change it to `Before starting to use` if it sounds better.",
+      "parentUuid": "44790a43_107485c0",
+      "range": {
+        "startLine": 50,
+        "startChar": 27,
+        "endLine": 50,
+        "endChar": 66
+      },
+      "revId": "13acc6171ee4046931ff7524b4a038fad68c716c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7d0cc7ac_d8583c20",
@@ -60,6 +108,30 @@
       "writtenOn": "2026-10-12T15:58:12Z",
       "side": 1,
       "message": "Without the `,` between tutorial and videos, because those are _\"tutorial videos\"_, not _\"tutorial\"_ and then _\"videos\"_",
+      "range": {
+        "startLine": 51,
+        "startChar": 107,
+        "endLine": 52,
+        "endChar": 26
+      },
+      "revId": "13acc6171ee4046931ff7524b4a038fad68c716c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "be1fe18d_9eb2d97d",
+        "filename": "src/main/resources/static/intro.html",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2026-10-12T17:40:20Z",
+      "side": 1,
+      "message": "This maintains the same meaning as before, but happy to change it",
+      "parentUuid": "7d0cc7ac_d8583c20",
       "range": {
         "startLine": 51,
         "startChar": 107,
