@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6955eb8e_331ea261",
+        "filename": "src/main/resources/static/intro.html",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-12T15:58:12Z",
+      "side": 1,
+      "message": "```suggestion\n                repository management platform. Supercharge your team\u0027s productivity by seamlessly connecting to\n```",
+      "range": {
+        "startLine": 30,
+        "startChar": 110,
+        "endLine": 30,
+        "endChar": 114
+      },
+      "revId": "13acc6171ee4046931ff7524b4a038fad68c716c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "44790a43_107485c0",
+        "filename": "src/main/resources/static/intro.html",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-12T15:58:12Z",
+      "side": 1,
+      "message": "Avoid repeating _you_ twice: the previous form was more fluid.",
+      "range": {
+        "startLine": 50,
+        "startChar": 27,
+        "endLine": 50,
+        "endChar": 66
+      },
+      "revId": "13acc6171ee4046931ff7524b4a038fad68c716c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7d0cc7ac_d8583c20",
+        "filename": "src/main/resources/static/intro.html",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-12T15:58:12Z",
+      "side": 1,
+      "message": "Without the `,` between tutorial and videos, because those are _\"tutorial videos\"_, not _\"tutorial\"_ and then _\"videos\"_",
+      "range": {
+        "startLine": 51,
+        "startChar": 107,
+        "endLine": 52,
+        "endChar": 26
+      },
+      "revId": "13acc6171ee4046931ff7524b4a038fad68c716c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
