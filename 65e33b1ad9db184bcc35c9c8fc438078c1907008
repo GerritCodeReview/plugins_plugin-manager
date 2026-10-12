@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "15ad7633_27f19701",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-12T16:03:43Z",
+      "side": 1,
+      "message": "Why do we want to avoid installing plugins and encourage skipping the intro by placing it at the center of the page and making it blue?\n\n\nWhat\u0027s wrong with keeping it to the top-right, as we also do with the plugin manager page?",
+      "revId": "65e33b1ad9db184bcc35c9c8fc438078c1907008",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
