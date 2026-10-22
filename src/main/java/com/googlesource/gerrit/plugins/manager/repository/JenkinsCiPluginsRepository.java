@@ -303,11 +303,11 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
     return pluginPathParts[pluginPathParts.length - 2].equals("target");
   }
 
-  private Optional<SmartJson> findArtifact(JsonArray artifacts, String string) {
+  private Optional<SmartJson> findArtifact(JsonArray artifacts, String artifactSuffix) {
     for (int i = 0; i < artifacts.size(); i++) {
       SmartJson artifact = SmartJson.of(artifacts.get(i));
       String path = artifact.getString("relativePath");
-      if (path.endsWith(string) && !path.endsWith("-static" + string)) {
+      if (path.endsWith(artifactSuffix) && !path.endsWith("-static" + artifactSuffix)) {
         return Optional.of(artifact);
       }
     }
