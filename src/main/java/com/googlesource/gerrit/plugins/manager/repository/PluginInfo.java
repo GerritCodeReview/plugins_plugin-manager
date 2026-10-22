@@ -14,6 +14,7 @@
 
 package com.googlesource.gerrit.plugins.manager.repository;
 
+import com.google.gerrit.common.Nullable;
 import com.google.gerrit.extensions.restapi.Url;
 
 public class PluginInfo {
@@ -23,13 +24,21 @@ public class PluginInfo {
   public final String version;
   public final String sha1;
   public final String url;
+  public final String license;
 
-  public PluginInfo(String name, String description, String version, String sha1, String url) {
+  public PluginInfo(
+      String name,
+      String description,
+      String version,
+      String sha1,
+      String url,
+      @Nullable String license) {
     this.id = Url.encode(name);
     this.name = name;
     this.description = description;
     this.version = version;
     this.sha1 = sha1;
     this.url = url;
+    this.license = license;
   }
 }
