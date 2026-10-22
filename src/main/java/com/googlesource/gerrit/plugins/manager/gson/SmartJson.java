@@ -14,7 +14,9 @@
 
 package com.googlesource.gerrit.plugins.manager.gson;
 
+import com.google.gson.Gson;
 import com.google.gson.JsonElement;
+import java.util.Map;
 import java.util.Optional;
 import java.util.function.Function;
 
@@ -28,6 +30,10 @@ public class SmartJson {
 
   public static SmartJson of(JsonElement fromJson) {
     return new SmartJson(fromJson);
+  }
+
+  public static SmartJson of(Map<?, ?> jsonTreeMap) {
+    return of(new Gson().toJsonTree(jsonTreeMap, Map.class));
   }
 
   public Optional<String> getOptionalString(String fieldName) {
@@ -65,5 +71,9 @@ public class SmartJson {
 
   public JsonElement get() {
     return jsonElem;
+  }
+
+  public void add(String property, JsonElement value) {
+    jsonElem.getAsJsonObject().add(property, value);
   }
 }

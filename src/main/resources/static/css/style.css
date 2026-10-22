@@ -64,6 +64,57 @@
   border-radius: 0.5rem;
   flex-shrink: 0;
 }
+.license-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: var(--bg-light);
+  color: var(--primary-blue);
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+/* Push the footer to the bottom and space children horizontally */
+.feature-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  width: 100%;
+}
+
+/* Updated License Container */
+.feature-license {
+  position: relative;
+  display: inline-flex;
+  cursor: help;
+}
+
+/* Tooltip base state (Hidden) */
+.feature-license .license-popup {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 120%;
+  right: 0;
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+/* Tooltip hover state (Visible) */
+.feature-license:hover .license-popup {
+  visibility: visible;
+  opacity: 1;
+}
 .feature-title {
   margin-bottom: 0;
 }
