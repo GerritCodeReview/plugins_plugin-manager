@@ -14,8 +14,6 @@
 
 package com.googlesource.gerrit.plugins.manager.repository;
 
-import static java.nio.charset.StandardCharsets.UTF_8;
-
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.flogger.FluentLogger;
 import com.google.gson.JsonArray;
@@ -31,8 +29,6 @@ import com.googlesource.gerrit.plugins.manager.gson.SmartJson;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -44,6 +40,9 @@ import org.apache.commons.lang3.StringUtils;
 public class JenkinsCiPluginsRepository implements PluginsRepository {
 
   private static final FluentLogger logger = FluentLogger.forEnclosingClass();
+  private static final int FETCH_ALL_LINES = 0;
+  private static final int FETCH_LICENSE_LINES = 2;
+  public static final String LICENSE_FILE = "LICENSE";
 
   private final PluginManagerConfig config;
 
@@ -163,6 +162,8 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
 
     Optional<String> pluginVersion =
         fetchArtifact(buildExecution.get(), artifacts.get(), ".jar-version");
+    Optional<String> pluginLicense =
+        fetchArtifact(buildExecution.get(), artifacts.get(), LICENSE_FILE, FETCH_LICENSE_LINES);
     Optional<String> pluginDescription =
         fetchArtifactJson(buildExecution.get(), artifacts.get(), ".json")
             .flatMap(json -> json.getOptionalString("description"));
@@ -175,7 +176,13 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
         String sha1 = lastBuildRevision.get().getString("SHA1").substring(0, 8);
         return pluginVersion.map(
             version ->
-                new PluginInfo(pluginName, pluginDescription.orElse(""), version, sha1, pluginUrl));
+                new PluginInfo(
+                    pluginName,
+                    pluginDescription.orElse(""),
+                    version,
+                    sha1,
+                    pluginUrl,
+                    pluginLicense.orElse(null)));
       }
     }
 
@@ -196,6 +203,8 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
 
     Optional<String> pluginVersion =
         fetchArtifact(buildExecution.get(), artifacts.get(), ".js-version");
+    Optional<String> pluginLicense =
+        fetchArtifact(buildExecution.get(), artifacts.get(), LICENSE_FILE, FETCH_LICENSE_LINES);
     Optional<String> pluginDescription =
         fetchArtifactJson(buildExecution.get(), artifacts.get(), ".json")
             .flatMap(json -> json.getOptionalString("description"));
@@ -208,7 +217,13 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
         String sha1 = lastBuildRevision.get().getString("SHA1").substring(0, 8);
         return pluginVersion.map(
             version ->
-                new PluginInfo(pluginName, pluginDescription.orElse(""), version, sha1, pluginUrl));
+                new PluginInfo(
+                    pluginName,
+                    pluginDescription.orElse(""),
+                    version,
+                    sha1,
+                    pluginUrl,
+                    pluginLicense.orElse(null)));
       }
     }
 
@@ -217,6 +232,11 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
 
   private Optional<String> fetchArtifact(
       SmartJson buildExecution, JsonArray artifacts, String artifactSuffix) {
+    return fetchArtifact(buildExecution, artifacts, artifactSuffix, FETCH_ALL_LINES);
+  }
+
+  private Optional<String> fetchArtifact(
+      SmartJson buildExecution, JsonArray artifacts, String artifactSuffix, int maxLines) {
     StringBuilder artifactBody = new StringBuilder();
     Optional<SmartJson> verArtifactJson = findArtifact(artifacts, artifactSuffix);
     if (verArtifactJson.isPresent()) {
@@ -225,10 +245,11 @@ public class JenkinsCiPluginsRepository implements PluginsRepository {
               "%s/artifact/%s",
               buildExecution.getString("url"), verArtifactJson.get().getString("relativePath"));
       try (BufferedReader reader =
-          new BufferedReader(
-              new InputStreamReader(URI.create(versionUrl).toURL().openStream(), UTF_8), 4096)) {
+          new BufferedReader(gsonProvider.get().getReader(versionUrl), 4096)) {
         String line;
-        while ((line = reader.readLine()) != null) {
+        for (int numLines = 0;
+            (maxLines == 0 || numLines < maxLines) && (line = reader.readLine()) != null;
+            numLines++) {
           if (artifactBody.length() > 0) {
             artifactBody.append("\n");
           }

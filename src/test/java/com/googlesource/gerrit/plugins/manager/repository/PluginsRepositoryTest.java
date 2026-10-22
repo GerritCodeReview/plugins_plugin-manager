@@ -29,6 +29,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Collection;
+import java.util.stream.Collectors;
 import org.junit.Test;
 
 public class PluginsRepositoryTest {
@@ -58,6 +59,8 @@ public class PluginsRepositoryTest {
     assertThat(plugins.stream().map(p -> p.name).sorted().collect(toList()))
         .containsExactlyElementsIn(GERRIT_CORE_PLUGINS)
         .inOrder();
+    assertThat(plugins.stream().map(p -> p.license).collect(Collectors.toSet()))
+        .containsExactly(CorePluginsRepository.GERRIT_LICENSE);
   }
 
   @Test
