@@ -63,18 +63,20 @@ var app = angular.module('PluginManager', []).controller(
                       version : plugin.version,
                       sha1 : '',
                       url : plugin.url,
-                      update_version : ''
+                      update_version : '',
+                      license: plugin.license,
                     });
                   } else {
                     plugins.list[currPluginIdx] = {
-                      id : plugin.id,
-                      description : plugin.description,
-                      index_url : plugin.index_url,
-                      version : plugin.version,
-                      sha1 : '',
-                      url : plugin.url,
-                      update_version : ''
-                    }
+                      id: plugin.id,
+                      description: plugin.description,
+                      index_url: plugin.index_url,
+                      version: plugin.version,
+                      sha1: "",
+                      url: plugin.url,
+                      update_version: "",
+                      license: plugin.license,
+                    };
                   }
                 }
               });
@@ -110,6 +112,7 @@ var app = angular.module('PluginManager', []).controller(
                       currPlugin.sha1 = plugin.sha1;
                       currPlugin.url = plugin.url;
                       currPlugin.description = plugin.description;
+                      currPlugin.license = plugin.license;
 
                       if (currRow < 0) {
                         plugins.list.push(currPlugin);
