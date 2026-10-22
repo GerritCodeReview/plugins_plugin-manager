@@ -37,6 +37,8 @@ import java.util.jar.JarInputStream;
 import java.util.jar.Manifest;
 
 public class CorePluginsRepository implements PluginsRepository {
+  public static final String GERRIT_LICENSE = "Apache License Version 2.0";
+
   private static final FluentLogger logger = FluentLogger.forEnclosingClass();
   private static final String GERRIT_VERSION = Version.getVersion();
 
@@ -75,7 +77,8 @@ public class CorePluginsRepository implements PluginsRepository {
                       pluginsDescriptions.get(pluginName).orElse(""),
                       pluginAttributes.getValue("Implementation-Version"),
                       "",
-                      pluginUrl.toString());
+                      pluginUrl.toString(),
+                      GERRIT_LICENSE);
                 })
             .orElseGet(
                 () ->
@@ -84,7 +87,8 @@ public class CorePluginsRepository implements PluginsRepository {
                         "",
                         "",
                         "",
-                        pluginUrl.toString()));
+                        pluginUrl.toString(),
+                        GERRIT_LICENSE));
       } catch (IOException e) {
         logger.atSevere().withCause(e).log("Unable to open plugin %s", pluginUrl);
         return null;
