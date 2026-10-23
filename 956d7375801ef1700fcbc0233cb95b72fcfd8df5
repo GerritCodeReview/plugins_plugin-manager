@@ -18,6 +18,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fff73af8_b6db413b",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/CorePluginsRepository.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-23T07:03:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cd2ebc9d_52c0ef4c",
+      "revId": "956d7375801ef1700fcbc0233cb95b72fcfd8df5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f669b77a_c73c23e0",
@@ -31,6 +49,24 @@
       "writtenOn": "2026-10-23T06:51:45Z",
       "side": 1,
       "message": "Make the icon focusable so `:focus-within` works, and label it for screen readers:\n```suggestion\n                        \u003cdiv class\u003d\"license-icon-wrapper\" tabindex\u003d\"0\" aria-label\u003d\"{{ prop.license }}\"\u003e\n```",
+      "revId": "956d7375801ef1700fcbc0233cb95b72fcfd8df5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "67d86a31_0690eb62",
+        "filename": "src/main/resources/static/index.html",
+        "patchSetId": 4
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-23T07:03:53Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "f669b77a_c73c23e0",
       "revId": "956d7375801ef1700fcbc0233cb95b72fcfd8df5",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
