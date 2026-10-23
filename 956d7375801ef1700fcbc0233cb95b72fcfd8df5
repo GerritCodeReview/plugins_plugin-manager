@@ -86,6 +86,24 @@
       "message": "No test for the CI path: the `LICENSE` fetch and `maxLines \u003d\u003d 2` truncation.",
       "revId": "956d7375801ef1700fcbc0233cb95b72fcfd8df5",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ae32f7d9_5a598c04",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsRepositoryTest.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-23T07:54:23Z",
+      "side": 1,
+      "message": "\u003e No test for the CI path: the `LICENSE` fetch and `maxLines \u003d\u003d 2` truncation.\n\nTrue, the `JenkinsCiPluginsRepository` has no coverage yet.\nWill add a brand-new test class to start covering this use case in the next PS.",
+      "parentUuid": "84264d9f_2308aee9",
+      "revId": "956d7375801ef1700fcbc0233cb95b72fcfd8df5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
