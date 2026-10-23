@@ -104,6 +104,24 @@
       "parentUuid": "84264d9f_2308aee9",
       "revId": "956d7375801ef1700fcbc0233cb95b72fcfd8df5",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "59e9ee88_e62b785d",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/PluginsRepositoryTest.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-23T19:29:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ae32f7d9_5a598c04",
+      "revId": "956d7375801ef1700fcbc0233cb95b72fcfd8df5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
