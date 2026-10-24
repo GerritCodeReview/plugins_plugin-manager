@@ -1,0 +1,174 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "70e30fbe_42f2757f",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/gson/SmartGson.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2026-10-24T03:55:21Z",
+      "side": 1,
+      "message": "This was `private` before this change and is now `public` only so the test can stub it with Mockito, which exposes it as API outside the package just for a test seam. Since the test is in the same package, `@VisibleForTesting` + package-private gives the same mockability without a public contract:\n\n```java\n@VisibleForTesting\nInputStreamReader getReader(String url) throws IOException {\n```",
+      "revId": "2f8d1f6990bfcdc67593e7bee40af39915985905",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cb4ad10d_06f6dbb8",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepository.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2026-10-24T03:55:21Z",
+      "side": 1,
+      "message": "The license fetch here in `loadWebPlugins` duplicates the one in `loadJarPlugins`, but the new test only publishes `.jar`/`.jar-version` artifacts, so only the jar branch runs — this web-plugin copy has no coverage. A test publishing `.js`/`.js-version` would exercise it (or parametrize both paths instead of copying the test).",
+      "revId": "2f8d1f6990bfcdc67593e7bee40af39915985905",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "464bc260_9d9e113e",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepository.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2026-10-24T03:55:21Z",
+      "side": 1,
+      "message": "The Apache `LICENSE` header published by Gerrit-CI is centered, so every line has leading spaces and `append(line)` keeps them. A CI plugin\u0027s `license` then becomes e.g. `\"            Apache License\\n      Version 2.0, January 2004\"`, while `CorePluginsRepository.GERRIT_LICENSE` is `\"Apache License\\nVersion 2.0, January 2004\"` with no indent — so the same license renders differently in the tooltip for core vs CI plugins. Strip to normalize:\n\n```java\nartifactBody.append(line.strip());\n```",
+      "revId": "2f8d1f6990bfcdc67593e7bee40af39915985905",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b8f0f846_7abede05",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepositoryTest.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2026-10-24T03:55:21Z",
+      "side": 1,
+      "message": "Happy-path covers a plugin that publishes a `LICENSE`, but none for one that doesn\u0027t, so the `@Nullable license` field and the `pluginLicense.orElse(null)` branch are uncovered. Add e.g.:\n\n```java\n@Test\npublic void artifactPublishedWithoutLicense_pluginLicenseShouldBeNull() throws IOException {\n  testBuildDetailJson.add(\n      \"artifacts\",\n      artifacts(TEST_PLUGIN_NAME + \".jar\", TEST_PLUGIN_NAME + \".jar-version\",\n          TEST_PLUGIN_NAME + \".json\"));\n  when(gsonMock.getReader(getArtifactUrl(TEST_PLUGIN_NAME + \".jar-version\")))\n      .thenReturn(readerOf(TEST_PLUGIN_VERSION_1_0));\n  when(gsonMock.get(getArtifactUrl(TEST_PLUGIN_NAME + \".json\")))\n      .thenReturn(SmartJson.of(Map.of(\"description\", TEST_PLUGIN_DESCRIPTION)));\n\n  PluginInfo plugin \u003d\n      new JenkinsCiPluginsRepository(Providers.of(gsonMock), configMock)\n          .list(TEST_GERRIT_VERSION).getFirst();\n\n  assertThat(plugin.license).isNull();\n}\n```",
+      "revId": "2f8d1f6990bfcdc67593e7bee40af39915985905",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1ea7604e_1b1bd752",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepositoryTest.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2026-10-24T03:55:21Z",
+      "side": 1,
+      "message": "This is derived from the centered text block, so it carries the leading indentation and locks in the whitespace from the license fetch (L256). If `fetchArtifact` strips lines, this should become the clean value below, which also equals `CorePluginsRepository.GERRIT_LICENSE` — a cross-check that both repositories emit the same string for Apache 2.0:\n\n```java\nassertThat(pluginInfo.license)\n    .isEqualTo(\"Apache License\\nVersion 2.0, January 2004\");\n```",
+      "revId": "2f8d1f6990bfcdc67593e7bee40af39915985905",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c06e46b5_319e68cb",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepositoryTest.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2026-10-24T03:55:21Z",
+      "side": 1,
+      "message": "The `artifacts(...)` helper suggested on L124 drops the `gson.toJsonTree(...)` call, after which this `gson` field and its `new Gson()` in `setUp` (L84) are unused — `SmartJson.of(Map)` creates its own `Gson` internally. Remove both.",
+      "revId": "2f8d1f6990bfcdc67593e7bee40af39915985905",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4974093e_e5c19172",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepositoryTest.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2026-10-24T03:55:21Z",
+      "side": 1,
+      "message": "Typo: `...OnePluginWihLicense` -\u003e `...OnePluginWithLicense`.",
+      "revId": "2f8d1f6990bfcdc67593e7bee40af39915985905",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d1267c50_951e3057",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepositoryTest.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2026-10-24T03:55:21Z",
+      "side": 1,
+      "message": "`jsonArtifact(...)` already returns a `JsonObject`, so wrapping the artifacts in a `List`, running `gson.toJsonTree(..., List.class)`, then `getAsJsonArray()` is a detour. A direct helper is clearer, e.g.:\n\n```java\nprivate static JsonArray artifacts(String... fileNames) {\n  JsonArray arr \u003d new JsonArray();\n  for (String fileName : fileNames) {\n    arr.add(jsonArtifact(fileName));\n  }\n  return arr;\n}\n```\n\nthen `testBuildDetailJson.add(\"artifacts\", artifacts(TEST_PLUGIN_NAME + \".jar\", ...))`.",
+      "revId": "2f8d1f6990bfcdc67593e7bee40af39915985905",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "585da4c1_e76c0fcf",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepositoryTest.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2026-10-24T03:55:21Z",
+      "side": 1,
+      "message": "Use the production constant `JenkinsCiPluginsRepository.LICENSE_FILE` instead of the literal `\"LICENSE\"` here (and at L136) so the test stays tied to the exact value the code fetches.",
+      "revId": "2f8d1f6990bfcdc67593e7bee40af39915985905",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "800ecee7_f83f35ca",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepositoryTest.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2026-10-24T03:55:21Z",
+      "side": 1,
+      "message": "This returns an `InputStreamReader`, not an `InputStream`, so the name misreads at the call sites (`getReader(...).thenReturn(inputStreamOf(...))`). Rename to `readerOf`.",
+      "revId": "2f8d1f6990bfcdc67593e7bee40af39915985905",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
