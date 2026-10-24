@@ -71,6 +71,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c77cd38f_80a85b5f",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepository.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-24T20:14:14Z",
+      "side": 1,
+      "message": "Done, the test is now simulating and asserting the license for JS plugins as well.",
+      "parentUuid": "cb4ad10d_06f6dbb8",
+      "revId": "2f8d1f6990bfcdc67593e7bee40af39915985905",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "464bc260_9d9e113e",
@@ -84,6 +102,24 @@
       "writtenOn": "2026-10-24T03:55:21Z",
       "side": 1,
       "message": "The Apache `LICENSE` header published by Gerrit-CI is centered, so every line has leading spaces and `append(line)` keeps them. A CI plugin\u0027s `license` then becomes e.g. `\"            Apache License\\n      Version 2.0, January 2004\"`, while `CorePluginsRepository.GERRIT_LICENSE` is `\"Apache License\\nVersion 2.0, January 2004\"` with no indent — so the same license renders differently in the tooltip for core vs CI plugins. Strip to normalize:\n\n```java\nartifactBody.append(line.strip());\n```",
+      "revId": "2f8d1f6990bfcdc67593e7bee40af39915985905",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "09ff2d0d_89d2e5d2",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepository.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-24T20:14:14Z",
+      "side": 1,
+      "message": "The rendering is performed by the frontend; I wouldn\u0027t implement simulated rendering on the backend.\nI\u0027d rather align the license returned by the core plugins with the LICENSE file in the Apache 2.0 plugins repository.\n\nDone, PTAL 🙏",
+      "parentUuid": "464bc260_9d9e113e",
       "revId": "2f8d1f6990bfcdc67593e7bee40af39915985905",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
