@@ -141,6 +141,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f413543e_2f410ef4",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepositoryTest.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-24T20:22:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b8f0f846_7abede05",
+      "revId": "2f8d1f6990bfcdc67593e7bee40af39915985905",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1ea7604e_1b1bd752",
@@ -154,6 +172,24 @@
       "writtenOn": "2026-10-24T03:55:21Z",
       "side": 1,
       "message": "This is derived from the centered text block, so it carries the leading indentation and locks in the whitespace from the license fetch (L256). If `fetchArtifact` strips lines, this should become the clean value below, which also equals `CorePluginsRepository.GERRIT_LICENSE` — a cross-check that both repositories emit the same string for Apache 2.0:\n\n```java\nassertThat(pluginInfo.license)\n    .isEqualTo(\"Apache License\\nVersion 2.0, January 2004\");\n```",
+      "revId": "2f8d1f6990bfcdc67593e7bee40af39915985905",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bb2f9e38_682652d9",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepositoryTest.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-24T20:22:48Z",
+      "side": 1,
+      "message": "See my comment about not implementing the rendering on the backend. If we keep all the rendering on the frontend, there is no need to change any tests or cross-checks.\n\nAlso, the plugin manager simply exposes the first two lines of the LICENSE file archived in the plugin and doesn\u0027t attempt to make any interpretation or matching of the lines with Apache 2.0.",
+      "parentUuid": "1ea7604e_1b1bd752",
       "revId": "2f8d1f6990bfcdc67593e7bee40af39915985905",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
@@ -175,6 +211,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "88693b59_6dd6c593",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepositoryTest.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-24T20:22:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c06e46b5_319e68cb",
+      "revId": "2f8d1f6990bfcdc67593e7bee40af39915985905",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4974093e_e5c19172",
@@ -188,6 +242,24 @@
       "writtenOn": "2026-10-24T03:55:21Z",
       "side": 1,
       "message": "Typo: `...OnePluginWihLicense` -\u003e `...OnePluginWithLicense`.",
+      "revId": "2f8d1f6990bfcdc67593e7bee40af39915985905",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5cefe402_0c7a8f3b",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepositoryTest.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-24T20:22:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4974093e_e5c19172",
       "revId": "2f8d1f6990bfcdc67593e7bee40af39915985905",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
@@ -209,6 +281,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9276dac9_17dfd7cc",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepositoryTest.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-24T20:22:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d1267c50_951e3057",
+      "revId": "2f8d1f6990bfcdc67593e7bee40af39915985905",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "585da4c1_e76c0fcf",
@@ -226,6 +316,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2f06d56a_74793094",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepositoryTest.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-24T20:22:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "585da4c1_e76c0fcf",
+      "revId": "2f8d1f6990bfcdc67593e7bee40af39915985905",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "800ecee7_f83f35ca",
@@ -239,6 +347,24 @@
       "writtenOn": "2026-10-24T03:55:21Z",
       "side": 1,
       "message": "This returns an `InputStreamReader`, not an `InputStream`, so the name misreads at the call sites (`getReader(...).thenReturn(inputStreamOf(...))`). Rename to `readerOf`.",
+      "revId": "2f8d1f6990bfcdc67593e7bee40af39915985905",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c40e5e73_e2a06228",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepositoryTest.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-24T20:22:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "800ecee7_f83f35ca",
       "revId": "2f8d1f6990bfcdc67593e7bee40af39915985905",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
