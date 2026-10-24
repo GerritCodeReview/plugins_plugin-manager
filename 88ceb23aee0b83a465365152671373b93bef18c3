@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "64cf5eb8_18da69c9",
+        "filename": "src/main/resources/static/css/intro.css",
+        "patchSetId": 2
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-24T20:57:41Z",
+      "side": 1,
+      "message": "0.9 seems too dark. Reduce to 0.5.\n\n\n\n```suggestion\n    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);\n```",
+      "range": {
+        "startLine": 178,
+        "startChar": 47,
+        "endLine": 178,
+        "endChar": 50
+      },
+      "revId": "88ceb23aee0b83a465365152671373b93bef18c3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
