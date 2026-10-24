@@ -48,7 +48,7 @@ public class SmartGson {
     }
   }
 
-  private InputStreamReader getReader(String url) throws IOException {
+  public InputStreamReader getReader(String url) throws IOException {
     URL ciUrl;
     try {
       ciUrl = URI.create(url).toURL();
