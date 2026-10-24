@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "2d1bee66_a2bef320",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/gson/SmartGson.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-24T04:22:15Z",
+      "side": 1,
+      "message": "No, this method is used by `com.googlesource.gerrit.plugins.manager.repository.JenkinsCiPluginsRepository,` which is outside its package, therefore it needs to be public.\n\nIt is also used by Mockito, but it needed to be public anyway; otherwise, it would not have been accessible by production code.",
+      "parentUuid": "70e30fbe_42f2757f",
+      "revId": "2f8d1f6990bfcdc67593e7bee40af39915985905",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "cb4ad10d_06f6dbb8",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepository.java",
         "patchSetId": 10
