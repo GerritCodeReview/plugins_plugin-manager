@@ -194,6 +194,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "60d63595_755b3983",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/manager/repository/JenkinsCiPluginsRepositoryTest.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2026-10-25T04:20:08Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "bb2f9e38_682652d9",
+      "revId": "2f8d1f6990bfcdc67593e7bee40af39915985905",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c06e46b5_319e68cb",
